@@ -1,0 +1,51 @@
+{
+  "name": "@lifeomic/prim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/prim.js",
+  "types": "dist/prim.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx prim.tsx prim.test.tsx",
+    "clean": "rm -rf dist",
+    "prebuild": "yarn clean",
+    "deploy": "lifeomic-publish-npm-package --publish-tagged-commits-only"
+  },
+  "keywords": [
+    "tailwingcss",
+    "tailwind",
+    "react-native",
+    "react",
+    "typescript"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.2",
+    "react": "^16.13.1",
+    "react-native": "^0.63.2",
+    "use-memo-one": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/runtime": "^7.11.2",
+    "@lifeomic/dev-tools": "^5.4.2",
+    "@lifeomic/typescript-tools": "^11.0.0",
+    "@testing-library/react-native": "^7.0.2",
+    "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/jest": "^26.0.13",
+    "@types/react": "^16.9.49",
+    "@types/react-native": "^0.63.18",
+    "@types/react-test-renderer": "^16.9.3",
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.9.0",
+    "jest": "^26.4.2",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "prettier": "^2.1.1",
+    "react-test-renderer": "^16.13.1",
+    "typescript": "^4.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
