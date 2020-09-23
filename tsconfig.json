@@ -27,5 +27,5 @@
     "forceConsistentCasingInFileNames": true
   },
 
-  "exclude": ["node_modules", "dist/", "**/*.test.*", "*.config.js"]
+  "exclude": ["node_modules", "dist/*", "**/*.js", "**/*.test.*"]
 }

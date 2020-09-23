@@ -1,0 +1,5 @@
+dist/
+work/
+node_modules/
+coverage/
+package.json
