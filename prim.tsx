@@ -1,5 +1,5 @@
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import React, { Component, forwardRef, useContext } from 'react'
+import React, { Component, useContext } from 'react'
 import { StyleProp, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { useMemoOne } from 'use-memo-one'
 
@@ -222,12 +222,9 @@ export default function configurePrim<
   type PrimTheme = ReturnType<typeof primTheme>
   const PrimContext = React.createContext<null | PrimTheme>(null)
   const usePrim = () => {
-    const primTheme = useContext(PrimContext)
-    if (!primTheme) {
-      throw new Error(
-        'Please make sure Prim is configured properly and referenced from within the proper context provider',
-      )
-    }
+    // the exported PrimProvider does not allow the PrimeTheme to be null
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const primTheme = useContext(PrimContext)!
     return primTheme
   }
 
@@ -255,7 +252,8 @@ export default function configurePrim<
     styles: (prim: PrimTheme) => StyleProp<TextStyle>,
   ): React.ForwardRefExoticComponent<
     P & Children & { ref?: React.Ref<InstanceType<T>> }
-  >
+  > &
+    hoistNonReactStatics.NonReactStatics<T>
   function primp<
     P extends { style?: StyleProp<any> },
     T extends React.ComponentClass<P>
@@ -264,29 +262,35 @@ export default function configurePrim<
     styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
   ): React.ForwardRefExoticComponent<
     P & Children & { ref?: React.Ref<InstanceType<T>> }
-  >
-  function primp<T, P extends { ref?: React.Ref<T>; style?: StyleProp<any> }>(
+  > &
+    hoistNonReactStatics.NonReactStatics<T>
+  function primp<
+    P extends { ref?: React.Ref<T>; style?: StyleProp<any> },
+    T extends React.ForwardRefExoticComponent<P>
+  >(
     Component: React.ForwardRefExoticComponent<P>,
     styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
-  ): React.ForwardRefExoticComponent<P & Children>
-  function primp<P extends { style?: StyleProp<any> }>(
-    Component: React.FunctionComponent<P>,
+  ): React.ForwardRefExoticComponent<P & Children> &
+    hoistNonReactStatics.NonReactStatics<T>
+  function primp<P extends { style?: StyleProp<any> }, T extends React.FC<P>>(
+    Component: T,
     styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
-  ): React.ForwardRefExoticComponent<P & Children>
-  function primp<P extends { style?: StyleProp<any> }>(
-    Component: React.ComponentType<P>,
-    styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
-  ) {
+  ): React.ForwardRefExoticComponent<P & Children> &
+    hoistNonReactStatics.NonReactStatics<T>
+  function primp<
+    P extends { style?: StyleProp<any> },
+    T extends React.ComponentType<P>
+  >(Component: T, styles: (prim: PrimTheme) => StyleProp<ViewStyle>) {
     const PrimpedComponent: React.FC<
       P & { forwardedRef?: React.Ref<Component> }
-    > = (props) => {
+    > = ({ forwardedRef, ...props }) => {
       const prim = usePrim()
       const primpedStyles = styles(prim)
       return (
         <Component
           {...(props as any)}
           style={[primpedStyles, props.style]}
-          ref={forwardRef}
+          ref={forwardedRef}
         />
       )
     }
