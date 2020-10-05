@@ -4,27 +4,21 @@ import { render } from '@testing-library/react-native'
 import configurePrim from './prim'
 import { StyleSheet, View } from 'react-native'
 
-const sizeClasses = {
-  se: {
-    px: StyleSheet.hairlineWidth,
-    sm: 22,
-    lg: 44,
-  },
-  x: {
-    px: StyleSheet.hairlineWidth,
-    sm: 32,
-    lg: 64,
-  },
-  tablet: {
-    px: StyleSheet.hairlineWidth,
-    sm: 44,
-    lg: 72,
-  },
+enum ScreenSize {
+  se = 'se',
+  x = 'x',
+  tablet = 'tablet',
+}
+const sizes = {
+  px: StyleSheet.hairlineWidth,
+  sm: 22 as const,
+  lg: 44 as const,
 }
 
-type SizeClass = keyof typeof sizeClasses
-
-function testPrim(initialMode: 'light' | 'dark', initialSizeClass: SizeClass) {
+function testPrim(
+  initialMode: 'light' | 'dark',
+  initialScreenSize: ScreenSize,
+) {
   // light/dark mode
   let setModeHook: ((mode: 'light' | 'dark') => void) | undefined
   function setMode(mode: 'light' | 'dark') {
@@ -33,8 +27,8 @@ function testPrim(initialMode: 'light' | 'dark', initialSizeClass: SizeClass) {
   }
 
   // size class
-  let setSizeClassHook: ((sizeClass: SizeClass) => void) | undefined
-  function setSizeClass(sizeClass: SizeClass) {
+  let setSizeClassHook: ((sizeClass: ScreenSize) => void) | undefined
+  function setSizeClass(sizeClass: ScreenSize) {
     expect(setSizeClassHook).toBeTruthy()
     act(() => setSizeClassHook(sizeClass))
   }
@@ -46,23 +40,20 @@ function testPrim(initialMode: 'light' | 'dark', initialSizeClass: SizeClass) {
         setModeHook = setMode
         return mode
       },
-      useDeviceSizeClass: () => {
-        const [sizeClass, setSizeClass] = useState<SizeClass>(initialSizeClass)
+      useScreenSize: (): ScreenSize => {
+        const [sizeClass, setSizeClass] = useState<ScreenSize>(
+          initialScreenSize,
+        )
         setSizeClassHook = setSizeClass
         return sizeClass
       },
-
-      sizes: sizeClasses,
+      screenSizes: ScreenSize,
+      sizes,
       colors: {
         light: { base: '#fff', trim: '#ddd', fg: '#000' },
         dark: { base: '#000', trim: '#333', fg: '#fff' },
       },
       borderRadii: () => ({ sm: 4, lg: 12 }),
-      text: (colors, sizes) =>
-        StyleSheet.create({
-          body: { color: colors.fg, fontSize: sizes.sm },
-          h1: { color: colors.fg, fontSize: sizes.lg },
-        }),
     }),
     setMode,
     setSizeClass,
@@ -71,14 +62,15 @@ function testPrim(initialMode: 'light' | 'dark', initialSizeClass: SizeClass) {
 
 function renderUsePrim(
   mode: 'light' | 'dark' = 'light',
-  sizeClass: SizeClass = 'se',
+  screenSize: ScreenSize = ScreenSize.se,
 ) {
-  const { PrimProvider, usePrim, ...testAPI } = testPrim(mode, sizeClass)
+  const { PrimProvider, usePrim, ...testAPI } = testPrim(mode, screenSize)
   return {
     ...renderHook(() => usePrim(), { wrapper: PrimProvider }),
     ...testAPI,
   }
 }
+
 describe('usePrim', () => {
   it('styles light mode se sizeClass', () => {
     const { result } = renderUsePrim()
@@ -86,12 +78,12 @@ describe('usePrim', () => {
   })
 
   it('styles dark mode x sizeClass', () => {
-    const { result } = renderUsePrim('dark', 'x')
+    const { result } = renderUsePrim('dark', ScreenSize.x)
     expect(result.current).toMatchSnapshot()
   })
 
   it('styles light mode tablet sizeClass', () => {
-    const { result } = renderUsePrim('light', 'tablet')
+    const { result } = renderUsePrim('light', ScreenSize.tablet)
     expect(result.current).toMatchSnapshot()
   })
 
@@ -122,33 +114,41 @@ describe('usePrim', () => {
     })
   })
 
-  it('updates styles w/ useDeviceSizeClass()', () => {
+  it('size variant specific styles w/ useDeviceSizeClass()', () => {
     const { result, setSizeClass } = renderUsePrim()
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
-      ps: { lg: { paddingStart: 44 } },
+      se: { w: { sm: { width: 22 } } },
+      x: { w: { sm: undefined } },
+      tablet: { w: { sm: undefined } },
     })
-    setSizeClass('tablet')
-    expect(result.current).toMatchObject({
-      w: { sm: { width: 44 } },
-      ps: { lg: { paddingStart: 72 } },
-    })
-    setSizeClass('x')
-    expect(result.current).toMatchObject({
-      w: { sm: { width: 32 } },
-      ps: { lg: { paddingStart: 64 } },
-    })
-    setSizeClass('se')
+    setSizeClass(ScreenSize.tablet)
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
-      ps: { lg: { paddingStart: 44 } },
+      se: { w: { sm: undefined } },
+      x: { w: { sm: undefined } },
+      tablet: { w: { sm: { width: 22 } } },
+    })
+    setSizeClass(ScreenSize.x)
+    expect(result.current).toMatchObject({
+      w: { sm: { width: 22 } },
+      se: { w: { sm: undefined } },
+      x: { w: { sm: { width: 22 } } },
+      tablet: { w: { sm: undefined } },
+    })
+    setSizeClass(ScreenSize.se)
+    expect(result.current).toMatchObject({
+      w: { sm: { width: 22 } },
+      se: { w: { sm: { width: 22 } } },
+      x: { w: { sm: undefined } },
+      tablet: { w: { sm: undefined } },
     })
   })
 })
 
 const { PrimProvider, primp, setMode, setSizeClass } = testPrim(
   'dark',
-  'tablet',
+  ScreenSize.tablet,
 )
 
 function renderPrimped(component: Parameters<typeof render>[0]) {
@@ -158,10 +158,11 @@ function renderPrimped(component: Parameters<typeof render>[0]) {
 describe('primp', () => {
   it('includes primped styles + style props', () => {
     const Card = primp(View, (prm) => [
-      prm.border.color.trim,
-      prm.borderLeft.color.fg,
+      prm.se.border.color.trim,
+      prm.x.borderLeft.color.fg,
       prm.border.width.px,
       prm.minH.lg,
+      prm.tablet.border.width.sm,
     ])
     const { toJSON } = renderPrimped(
       <Card style={{ backgroundColor: 'coral' }} />,
@@ -171,10 +172,11 @@ describe('primp', () => {
         style={
           Array [
             Array [
-              Registered { "borderColor": "#333" },
-              Registered { "borderLeftColor": "#fff" },
+              undefined,
+              undefined,
               Registered { "borderWidth": 0.5 },
-              Registered { "minHeight": 72 },
+              Registered { "minHeight": 44 },
+              Registered { "borderWidth": 22 },
             ],
             Object {
               "backgroundColor": "coral",
@@ -183,17 +185,18 @@ describe('primp', () => {
         }
       />
     `)
-    setSizeClass('x')
+    setSizeClass(ScreenSize.x)
     setMode('light')
     expect(toJSON()).toMatchInlineSnapshot(`
       <View
         style={
           Array [
             Array [
-              Registered { "borderColor": "#ddd" },
+              undefined,
               Registered { "borderLeftColor": "#000" },
               Registered { "borderWidth": 0.5 },
-              Registered { "minHeight": 64 },
+              Registered { "minHeight": 44 },
+              undefined,
             ],
             Object {
               "backgroundColor": "coral",
