@@ -4,6 +4,5 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: ['dist/', 'utils/'],
   setupFilesAfterEnv: ['<rootDir>/jest.afterEnv.js'],
-  snapshotSerializers: ['<rootDir>/jest.snaps.js'],
-  collectCoverageFrom: ['prim.tsx'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
 }

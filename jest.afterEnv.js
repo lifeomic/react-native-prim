@@ -1,6 +1,8 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet as RNStyleSheet } from 'react-native'
 
-export class RegisteredStyle {
+// This makes it clear in the snapshots which styles were created
+// via StyleSheet.create({...})
+export class StyleSheet {
   constructor(styles) {
     Object.assign(this, styles)
   }
@@ -9,12 +11,12 @@ export class RegisteredStyle {
 let ssCreateSpy
 
 beforeAll(() => {
-  ssCreateSpy = jest.spyOn(StyleSheet, 'create')
+  ssCreateSpy = jest.spyOn(RNStyleSheet, 'create')
   ssCreateSpy.mockImplementation((styles) => {
     return Object.keys(styles).reduce((updatedStyles, key) => {
       return {
         ...updatedStyles,
-        [key]: new RegisteredStyle(styles[key]),
+        [key]: new StyleSheet(styles[key]),
       }
     }, {})
   })
