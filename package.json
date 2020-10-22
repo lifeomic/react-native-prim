@@ -9,8 +9,7 @@
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx prim.tsx prim.test.tsx",
     "clean": "rm -rf dist",
-    "prebuild": "yarn clean",
-    "deploy": "lifeomic-publish-npm-package --publish-tagged-commits-only"
+    "prebuild": "yarn clean"
   },
   "keywords": [
     "tailwingcss",
@@ -29,7 +28,6 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/runtime": "^7.11.2",
-    "@lifeomic/dev-tools": "^5.4.2",
     "@testing-library/react-hooks": "^3.4.1",
     "@testing-library/react-native": "^7.0.2",
     "@types/hoist-non-react-statics": "^3.3.1",
