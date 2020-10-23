@@ -2,15 +2,9 @@
   "name": "@lifeomic/prim",
   "version": "1.0.0",
   "description": "Prim is a customizable TypeScript atomic styles framework for React Native.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc --build tsconfig.build.json",
-    "test": "jest",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx index.ts src/**/*.tsx src/**/*.ts",
-    "clean": "rm -rf dist",
-    "prebuild": "yarn clean"
-  },
+  "repository": "git@github.com:lifeomic/react-native-prim.git",
+  "author": "LifeOmic <oss@lifeomic.com>",
+  "license": "MIT",
   "keywords": [
     "tailwingcss",
     "tailwind",
@@ -18,7 +12,19 @@
     "react",
     "typescript"
   ],
-  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc --build tsconfig.build.json",
+    "prebuild": "yarn clean",
+    "postbuild": "cp package.json ./dist/",
+    "test": "jest",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx index.ts src/**/*.tsx src/**/*.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "peerDependencies": {
     "hoist-non-react-statics": ">=3.3.2",
     "react": ">=16.13.1",
@@ -26,10 +32,6 @@
     "use-memo-one": ">=1.1.1"
   },
   "devDependencies": {
-    "hoist-non-react-statics": "^3.3.2",
-    "react": "^16.13.1",
-    "react-native": "^0.63.2",
-    "use-memo-one": "^1.1.1",
     "@babel/core": "^7.11.6",
     "@babel/runtime": "^7.11.2",
     "@testing-library/react-hooks": "^3.4.1",
@@ -43,11 +45,17 @@
     "@typescript-eslint/parser": "^4.2.0",
     "babel-jest": "^26.3.0",
     "eslint": "^7.9.0",
+    "hoist-non-react-statics": "^3.3.2",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
     "metro-react-native-babel-preset": "^0.63.0",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0",
+    "react": "^16.13.1",
+    "react-native": "^0.63.2",
     "react-test-renderer": "^16.13.1",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "use-memo-one": "^1.1.1"
   },
   "publishConfig": {
     "access": "public"
