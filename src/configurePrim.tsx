@@ -42,6 +42,7 @@ export default function configurePrim<
   ScreenSize extends StringValueEnum,
   Spacing extends Record<string, ViewStyle['width']>,
   BorderRadii extends Record<string, ViewStyle['borderRadius']>,
+  BorderWidth extends Record<string, ViewStyle['borderWidth']>,
   FontSize extends Record<string, TextStyle['fontSize']>,
   FontWeight extends Record<string, TextStyle['fontWeight']>
 >(config: {
@@ -53,6 +54,7 @@ export default function configurePrim<
   // for-use spectrum
   useScreenSize: () => keyof ScreenSize
   borderRadius: BorderRadii
+  borderWidth: BorderWidth
   fontSize: FontSize
   fontWeight: FontWeight
 }) {
@@ -141,7 +143,7 @@ export default function configurePrim<
       bg: ssWithValuesForAttribute(colors, 'backgroundColor'),
       border: {
         ...ssWithValuesForAttribute(colors, 'borderColor'),
-        ...ssWithValuesForAttribute(config.spacing, 'borderWidth'),
+        ...ssWithValuesForAttribute(config.borderWidth, 'borderWidth'),
       },
       borderTop: {
         ...ssWithValuesForAttribute(colors, 'borderTopColor'),

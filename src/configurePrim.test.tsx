@@ -15,6 +15,11 @@ const spacing = {
   lg: 44,
 } as const
 
+const borderWidth = {
+  hairline: StyleSheet.hairlineWidth,
+  sm: 1,
+}
+
 function testPrim(
   initialMode: 'light' | 'dark',
   initialScreenSize: ScreenSize,
@@ -54,6 +59,7 @@ function testPrim(
         dark: { base: '#000', trim: '#333', fg: '#fff' },
       },
       borderRadius: { sm: 4, lg: 12 },
+      borderWidth,
       fontSize: { body: 14, title: 24 },
       fontWeight: { regular: '400', bold: '600' },
     }),
@@ -162,7 +168,7 @@ describe('primp', () => {
     const Card = primmed(View, (prm) => [
       prm.se.border.trim,
       prm.x.borderLeft.fg,
-      prm.border.px,
+      prm.border.sm,
       prm.minH.lg,
       prm.tablet.border.sm,
     ])
@@ -177,13 +183,13 @@ describe('primp', () => {
               undefined,
               undefined,
               StyleSheet {
-                "borderWidth": 0.5,
+                "borderWidth": 1,
               },
               StyleSheet {
                 "minHeight": 44,
               },
               StyleSheet {
-                "borderWidth": 22,
+                "borderWidth": 1,
               },
             ],
             Object {
@@ -205,7 +211,7 @@ describe('primp', () => {
                 "borderLeftColor": "#000",
               },
               StyleSheet {
-                "borderWidth": 0.5,
+                "borderWidth": 1,
               },
               StyleSheet {
                 "minHeight": 44,
