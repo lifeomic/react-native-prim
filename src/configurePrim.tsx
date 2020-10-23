@@ -3,6 +3,15 @@ import { StyleProp, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import hoistNonReactStatics from 'hoist-non-react-statics'
 import { useMemoOne } from 'use-memo-one'
 
+// a string-value enum such as this one:
+//   enum CustomScreenSize {
+//     small = 'small'
+//     medium = 'medium'
+//     large = 'large'
+//     extraLarge = 'extraLarge'
+//   }
+// conforms to the following `StringValueEnum` type. this is usefule
+// for creating generic type constraints for such a type.
 type StringValueEnum = {
   [id: string]: string
 }
@@ -21,7 +30,7 @@ const disabledStyleSheet: CreateStyleSheet = function <
   ) as T
 }
 
-interface Children {
+type Children = {
   children?: React.ReactNode
 }
 
@@ -31,17 +40,21 @@ interface Children {
 export default function configurePrim<
   Colors extends Record<string, TextStyle['color']>,
   ScreenSize extends StringValueEnum,
-  Sizes extends Record<string, ViewStyle['width']>,
-  BorderRadii extends Record<string, ViewStyle['borderRadius']>
+  Spacing extends Record<string, ViewStyle['width']>,
+  BorderRadii extends Record<string, ViewStyle['borderRadius']>,
+  FontSize extends Record<string, TextStyle['fontSize']>,
+  FontWeight extends Record<string, TextStyle['fontWeight']>
 >(config: {
   useDarkMode: () => 'light' | 'dark'
   colors: { light: Colors; dark: Colors }
   screenSizes: ScreenSize
-  sizes: Sizes
+  spacing: Spacing
   // useDeviceSizeClass is between experimental and half-baked idea on the fit-
   // for-use spectrum
   useScreenSize: () => keyof ScreenSize
-  borderRadii: (sizes: Sizes) => BorderRadii
+  borderRadius: BorderRadii
+  fontSize: FontSize
+  fontWeight: FontWeight
 }) {
   function primStyles(colors: Colors, ss: CreateStyleSheet) {
     function ssWithValuesForAttribute<
@@ -67,7 +80,7 @@ export default function configurePrim<
       Attribute extends keyof ViewStyle | keyof TextStyle
     >(attribute: Attribute) {
       return {
-        ...ssWithValuesForAttribute(config.sizes, attribute),
+        ...ssWithValuesForAttribute(config.spacing, attribute),
         ...ss({
           full: { [attribute]: '100%' as const },
           half: { [attribute]: '50%' as const },
@@ -127,33 +140,31 @@ export default function configurePrim<
       }),
       bg: ssWithValuesForAttribute(colors, 'backgroundColor'),
       border: {
-        color: ssWithValuesForAttribute(colors, 'borderColor'),
-        width: ssWithValuesForAttribute(config.sizes, 'borderWidth'),
+        ...ssWithValuesForAttribute(colors, 'borderColor'),
+        ...ssWithValuesForAttribute(config.spacing, 'borderWidth'),
       },
       borderTop: {
-        color: ssWithValuesForAttribute(colors, 'borderTopColor'),
-        width: ssWithValuesForAttribute(config.sizes, 'borderTopWidth'),
+        ...ssWithValuesForAttribute(colors, 'borderTopColor'),
+        ...ssWithValuesForAttribute(config.spacing, 'borderTopWidth'),
       },
       borderBottom: {
-        color: ssWithValuesForAttribute(colors, 'borderBottomColor'),
-        width: ssWithValuesForAttribute(config.sizes, 'borderBottomWidth'),
+        ...ssWithValuesForAttribute(colors, 'borderBottomColor'),
+        ...ssWithValuesForAttribute(config.spacing, 'borderBottomWidth'),
       },
       borderRight: {
-        color: ssWithValuesForAttribute(colors, 'borderRightColor'),
-        width: ssWithValuesForAttribute(config.sizes, 'borderRightWidth'),
+        ...ssWithValuesForAttribute(colors, 'borderRightColor'),
+        ...ssWithValuesForAttribute(config.spacing, 'borderRightWidth'),
       },
       borderLeft: {
-        color: ssWithValuesForAttribute(colors, 'borderLeftColor'),
-        width: ssWithValuesForAttribute(config.sizes, 'borderLeftWidth'),
+        ...ssWithValuesForAttribute(colors, 'borderLeftColor'),
+        ...ssWithValuesForAttribute(config.spacing, 'borderLeftWidth'),
       },
-      font: ss({
-        medium: { fontWeight: '500' },
-        semiBold: { fontWeight: '600' },
-        bold: { fontWeight: '700' },
-        italic: { fontStyle: 'italic' },
-      }),
+      font: {
+        ...ssWithValuesForAttribute(config.fontWeight, 'fontWeight'),
+      },
       text: {
-        color: ssWithValuesForAttribute(colors, 'color'),
+        ...ssWithValuesForAttribute(config.fontSize, 'fontSize'),
+        ...ssWithValuesForAttribute(colors, 'color'),
         ...ss({
           left: { textAlign: 'left' },
           center: { textAlign: 'center' },
@@ -182,7 +193,7 @@ export default function configurePrim<
           noTextTransform: {
             textTransform: 'none',
           },
-        }),
+        } as const),
       },
 
       // padding
@@ -215,10 +226,7 @@ export default function configurePrim<
       minH: ssForForAttributeWithRelativeSizes('minHeight'),
       maxH: ssForForAttributeWithRelativeSizes('maxHeight'),
 
-      rounded: ssWithValuesForAttribute(
-        config.borderRadii(config.sizes),
-        'borderRadius',
-      ),
+      rounded: ssWithValuesForAttribute(config.borderRadius, 'borderRadius'),
 
       ...ss({
         absolute: { position: 'absolute' },
@@ -232,14 +240,14 @@ export default function configurePrim<
         z30: { zIndex: 30 },
         z40: { zIndex: 40 },
         z50: { zIndex: 50 },
-      }),
+      } as const),
 
       inset: ss({
         zero: {
-          top: 0 as const,
-          right: 0 as const,
-          bottom: 0 as const,
-          left: 0 as const,
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
         },
         x0: {
           right: 0,
@@ -261,7 +269,7 @@ export default function configurePrim<
         left0: {
           top: 0,
         },
-      }),
+      } as const),
     }
   }
 
@@ -289,8 +297,8 @@ export default function configurePrim<
       }),
       {},
     ) as {
-      [k in keyof ScreenSize]: PrimStyles
-    }
+        [k in keyof ScreenSize]: PrimStyles
+      }
     return {
       mode: currentMode,
       screenSize: currentVariant,
@@ -321,7 +329,7 @@ export default function configurePrim<
     return <PrimContext.Provider value={prim}>{children}</PrimContext.Provider>
   }
 
-  function primp<
+  function primmed<
     P extends { style?: StyleProp<TextStyle> },
     T extends React.ComponentClass<P>
   >(
@@ -331,7 +339,7 @@ export default function configurePrim<
     P & Children & { ref?: React.Ref<InstanceType<T>> }
   > &
     hoistNonReactStatics.NonReactStatics<T>
-  function primp<
+  function primmed<
     P extends { style?: StyleProp<any> },
     T extends React.ComponentClass<P>
   >(
@@ -341,7 +349,7 @@ export default function configurePrim<
     P & Children & { ref?: React.Ref<InstanceType<T>> }
   > &
     hoistNonReactStatics.NonReactStatics<T>
-  function primp<
+  function primmed<
     P extends { ref?: React.Ref<T>; style?: StyleProp<any> },
     T extends React.ForwardRefExoticComponent<P>
   >(
@@ -349,12 +357,12 @@ export default function configurePrim<
     styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
   ): React.ForwardRefExoticComponent<P & Children> &
     hoistNonReactStatics.NonReactStatics<T>
-  function primp<P extends { style?: StyleProp<any> }, T extends React.FC<P>>(
+  function primmed<P extends { style?: StyleProp<any> }, T extends React.FC<P>>(
     Component: T,
     styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
   ): React.ForwardRefExoticComponent<P & Children> &
     hoistNonReactStatics.NonReactStatics<T>
-  function primp<
+  function primmed<
     P extends { style?: StyleProp<any> },
     T extends React.ComponentType<P>
   >(Component: T, styles: (prim: PrimTheme) => StyleProp<ViewStyle>) {
@@ -371,9 +379,8 @@ export default function configurePrim<
         />
       )
     }
-    PrimpedComponent.displayName = `Primped.${
-      Component.displayName || Component.name
-    }`
+    PrimpedComponent.displayName = `Primped.${Component.displayName || Component.name
+      }`
 
     const ForwardRefComponent = React.forwardRef((props, ref) => (
       // I don't know how to implement this without breaking out of the types.
@@ -384,7 +391,7 @@ export default function configurePrim<
   }
 
   return {
-    primp,
+    primmed,
     usePrim,
     PrimProvider,
   }

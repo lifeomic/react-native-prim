@@ -1,0 +1,6478 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`usePrim styles dark mode x sizeClass 1`] = `
+Object {
+  "absolute": StyleSheet {
+    "position": "absolute",
+  },
+  "bg": Object {
+    "base": StyleSheet {
+      "backgroundColor": "#000",
+    },
+    "fg": StyleSheet {
+      "backgroundColor": "#fff",
+    },
+    "trim": StyleSheet {
+      "backgroundColor": "#333",
+    },
+  },
+  "border": Object {
+    "base": StyleSheet {
+      "borderColor": "#000",
+    },
+    "fg": StyleSheet {
+      "borderColor": "#fff",
+    },
+    "lg": StyleSheet {
+      "borderWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderColor": "#333",
+    },
+  },
+  "borderBottom": Object {
+    "base": StyleSheet {
+      "borderBottomColor": "#000",
+    },
+    "fg": StyleSheet {
+      "borderBottomColor": "#fff",
+    },
+    "lg": StyleSheet {
+      "borderBottomWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderBottomWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderBottomWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderBottomColor": "#333",
+    },
+  },
+  "borderLeft": Object {
+    "base": StyleSheet {
+      "borderLeftColor": "#000",
+    },
+    "fg": StyleSheet {
+      "borderLeftColor": "#fff",
+    },
+    "lg": StyleSheet {
+      "borderLeftWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderLeftWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderLeftWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderLeftColor": "#333",
+    },
+  },
+  "borderRight": Object {
+    "base": StyleSheet {
+      "borderRightColor": "#000",
+    },
+    "fg": StyleSheet {
+      "borderRightColor": "#fff",
+    },
+    "lg": StyleSheet {
+      "borderRightWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderRightWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderRightWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderRightColor": "#333",
+    },
+  },
+  "borderTop": Object {
+    "base": StyleSheet {
+      "borderTopColor": "#000",
+    },
+    "fg": StyleSheet {
+      "borderTopColor": "#fff",
+    },
+    "lg": StyleSheet {
+      "borderTopWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderTopWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderTopWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderTopColor": "#333",
+    },
+  },
+  "colors": Object {
+    "base": "#000",
+    "fg": "#fff",
+    "trim": "#333",
+  },
+  "content": Object {
+    "around": StyleSheet {
+      "alignContent": "space-around",
+    },
+    "between": StyleSheet {
+      "alignContent": "space-between",
+    },
+    "center": StyleSheet {
+      "alignContent": "center",
+    },
+    "end": StyleSheet {
+      "alignContent": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignContent": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignContent": "stretch",
+    },
+  },
+  "flex": Object {
+    "col": StyleSheet {
+      "flexDirection": "column",
+    },
+    "colR": StyleSheet {
+      "flexDirection": "column-reverse",
+    },
+    "grow": StyleSheet {
+      "flexGrow": 1,
+    },
+    "grow0": StyleSheet {
+      "flexGrow": 0,
+    },
+    "noWrap": StyleSheet {
+      "flexWrap": "nowrap",
+    },
+    "one": StyleSheet {
+      "flex": 1,
+    },
+    "row": StyleSheet {
+      "flexDirection": "row",
+    },
+    "rowR": StyleSheet {
+      "flexDirection": "row-reverse",
+    },
+    "shrink": StyleSheet {
+      "flexShrink": 1,
+    },
+    "shrink0": StyleSheet {
+      "flexShrink": 0,
+    },
+    "wrap": StyleSheet {
+      "flexWrap": "wrap",
+    },
+  },
+  "font": Object {
+    "bold": StyleSheet {
+      "fontWeight": "600",
+    },
+    "regular": StyleSheet {
+      "fontWeight": "400",
+    },
+  },
+  "h": Object {
+    "full": StyleSheet {
+      "height": "100%",
+    },
+    "half": StyleSheet {
+      "height": "50%",
+    },
+    "lg": StyleSheet {
+      "height": 44,
+    },
+    "px": StyleSheet {
+      "height": 0.5,
+    },
+    "sm": StyleSheet {
+      "height": 22,
+    },
+  },
+  "inset": Object {
+    "bottom0": StyleSheet {
+      "top": 0,
+    },
+    "left0": StyleSheet {
+      "top": 0,
+    },
+    "right0": StyleSheet {
+      "top": 0,
+    },
+    "top0": StyleSheet {
+      "top": 0,
+    },
+    "x0": StyleSheet {
+      "left": 0,
+      "right": 0,
+    },
+    "y0": StyleSheet {
+      "bottom": 0,
+      "top": 0,
+    },
+    "zero": StyleSheet {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    },
+  },
+  "items": Object {
+    "baseline": StyleSheet {
+      "alignItems": "baseline",
+    },
+    "center": StyleSheet {
+      "alignItems": "center",
+    },
+    "end": StyleSheet {
+      "alignItems": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignItems": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignItems": "stretch",
+    },
+  },
+  "justify": Object {
+    "around": StyleSheet {
+      "justifyContent": "space-around",
+    },
+    "between": StyleSheet {
+      "justifyContent": "space-between",
+    },
+    "center": StyleSheet {
+      "justifyContent": "center",
+    },
+    "end": StyleSheet {
+      "justifyContent": "flex-end",
+    },
+    "evenly": StyleSheet {
+      "justifyContent": "space-evenly",
+    },
+    "start": StyleSheet {
+      "justifyContent": "flex-start",
+    },
+  },
+  "m": Object {
+    "full": StyleSheet {
+      "margin": "100%",
+    },
+    "half": StyleSheet {
+      "margin": "50%",
+    },
+    "lg": StyleSheet {
+      "margin": 44,
+    },
+    "px": StyleSheet {
+      "margin": 0.5,
+    },
+    "sm": StyleSheet {
+      "margin": 22,
+    },
+  },
+  "maxH": Object {
+    "full": StyleSheet {
+      "maxHeight": "100%",
+    },
+    "half": StyleSheet {
+      "maxHeight": "50%",
+    },
+    "lg": StyleSheet {
+      "maxHeight": 44,
+    },
+    "px": StyleSheet {
+      "maxHeight": 0.5,
+    },
+    "sm": StyleSheet {
+      "maxHeight": 22,
+    },
+  },
+  "maxW": Object {
+    "full": StyleSheet {
+      "maxWidth": "100%",
+    },
+    "half": StyleSheet {
+      "maxWidth": "50%",
+    },
+    "lg": StyleSheet {
+      "maxWidth": 44,
+    },
+    "px": StyleSheet {
+      "maxWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "maxWidth": 22,
+    },
+  },
+  "mb": Object {
+    "full": StyleSheet {
+      "marginBottom": "100%",
+    },
+    "half": StyleSheet {
+      "marginBottom": "50%",
+    },
+    "lg": StyleSheet {
+      "marginBottom": 44,
+    },
+    "px": StyleSheet {
+      "marginBottom": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginBottom": 22,
+    },
+  },
+  "me": Object {
+    "full": StyleSheet {
+      "marginEnd": "100%",
+    },
+    "half": StyleSheet {
+      "marginEnd": "50%",
+    },
+    "lg": StyleSheet {
+      "marginEnd": 44,
+    },
+    "px": StyleSheet {
+      "marginEnd": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginEnd": 22,
+    },
+  },
+  "minH": Object {
+    "full": StyleSheet {
+      "minHeight": "100%",
+    },
+    "half": StyleSheet {
+      "minHeight": "50%",
+    },
+    "lg": StyleSheet {
+      "minHeight": 44,
+    },
+    "px": StyleSheet {
+      "minHeight": 0.5,
+    },
+    "sm": StyleSheet {
+      "minHeight": 22,
+    },
+  },
+  "minW": Object {
+    "full": StyleSheet {
+      "minWidth": "100%",
+    },
+    "half": StyleSheet {
+      "minWidth": "50%",
+    },
+    "lg": StyleSheet {
+      "minWidth": 44,
+    },
+    "px": StyleSheet {
+      "minWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "minWidth": 22,
+    },
+  },
+  "ml": Object {
+    "full": StyleSheet {
+      "marginLeft": "100%",
+    },
+    "half": StyleSheet {
+      "marginLeft": "50%",
+    },
+    "lg": StyleSheet {
+      "marginLeft": 44,
+    },
+    "px": StyleSheet {
+      "marginLeft": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginLeft": 22,
+    },
+  },
+  "mode": "dark",
+  "mr": Object {
+    "full": StyleSheet {
+      "marginRight": "100%",
+    },
+    "half": StyleSheet {
+      "marginRight": "50%",
+    },
+    "lg": StyleSheet {
+      "marginRight": 44,
+    },
+    "px": StyleSheet {
+      "marginRight": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginRight": 22,
+    },
+  },
+  "ms": Object {
+    "full": StyleSheet {
+      "marginStart": "100%",
+    },
+    "half": StyleSheet {
+      "marginStart": "50%",
+    },
+    "lg": StyleSheet {
+      "marginStart": 44,
+    },
+    "px": StyleSheet {
+      "marginStart": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginStart": 22,
+    },
+  },
+  "mt": Object {
+    "full": StyleSheet {
+      "marginTop": "100%",
+    },
+    "half": StyleSheet {
+      "marginTop": "50%",
+    },
+    "lg": StyleSheet {
+      "marginTop": 44,
+    },
+    "px": StyleSheet {
+      "marginTop": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginTop": 22,
+    },
+  },
+  "mx": Object {
+    "full": StyleSheet {
+      "marginHorizontal": "100%",
+    },
+    "half": StyleSheet {
+      "marginHorizontal": "50%",
+    },
+    "lg": StyleSheet {
+      "marginHorizontal": 44,
+    },
+    "px": StyleSheet {
+      "marginHorizontal": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginHorizontal": 22,
+    },
+  },
+  "my": Object {
+    "full": StyleSheet {
+      "marginVertical": "100%",
+    },
+    "half": StyleSheet {
+      "marginVertical": "50%",
+    },
+    "lg": StyleSheet {
+      "marginVertical": 44,
+    },
+    "px": StyleSheet {
+      "marginVertical": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginVertical": 22,
+    },
+  },
+  "overflow": Object {
+    "hidden": StyleSheet {
+      "overflow": "hidden",
+    },
+    "scroll": StyleSheet {
+      "overflow": "scroll",
+    },
+    "visible": StyleSheet {
+      "overflow": "visible",
+    },
+  },
+  "p": Object {
+    "full": StyleSheet {
+      "padding": "100%",
+    },
+    "half": StyleSheet {
+      "padding": "50%",
+    },
+    "lg": StyleSheet {
+      "padding": 44,
+    },
+    "px": StyleSheet {
+      "padding": 0.5,
+    },
+    "sm": StyleSheet {
+      "padding": 22,
+    },
+  },
+  "pb": Object {
+    "full": StyleSheet {
+      "paddingBottom": "100%",
+    },
+    "half": StyleSheet {
+      "paddingBottom": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingBottom": 44,
+    },
+    "px": StyleSheet {
+      "paddingBottom": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingBottom": 22,
+    },
+  },
+  "pe": Object {
+    "full": StyleSheet {
+      "paddingEnd": "100%",
+    },
+    "half": StyleSheet {
+      "paddingEnd": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingEnd": 44,
+    },
+    "px": StyleSheet {
+      "paddingEnd": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingEnd": 22,
+    },
+  },
+  "pl": Object {
+    "full": StyleSheet {
+      "paddingLeft": "100%",
+    },
+    "half": StyleSheet {
+      "paddingLeft": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingLeft": 44,
+    },
+    "px": StyleSheet {
+      "paddingLeft": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingLeft": 22,
+    },
+  },
+  "pr": Object {
+    "full": StyleSheet {
+      "paddingRight": "100%",
+    },
+    "half": StyleSheet {
+      "paddingRight": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingRight": 44,
+    },
+    "px": StyleSheet {
+      "paddingRight": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingRight": 22,
+    },
+  },
+  "ps": Object {
+    "full": StyleSheet {
+      "paddingStart": "100%",
+    },
+    "half": StyleSheet {
+      "paddingStart": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingStart": 44,
+    },
+    "px": StyleSheet {
+      "paddingStart": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingStart": 22,
+    },
+  },
+  "pt": Object {
+    "full": StyleSheet {
+      "paddingTop": "100%",
+    },
+    "half": StyleSheet {
+      "paddingTop": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingTop": 44,
+    },
+    "px": StyleSheet {
+      "paddingTop": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingTop": 22,
+    },
+  },
+  "px": Object {
+    "full": StyleSheet {
+      "paddingHorizontal": "100%",
+    },
+    "half": StyleSheet {
+      "paddingHorizontal": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingHorizontal": 44,
+    },
+    "px": StyleSheet {
+      "paddingHorizontal": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingHorizontal": 22,
+    },
+  },
+  "py": Object {
+    "full": StyleSheet {
+      "paddingVertical": "100%",
+    },
+    "half": StyleSheet {
+      "paddingVertical": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingVertical": 44,
+    },
+    "px": StyleSheet {
+      "paddingVertical": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingVertical": 22,
+    },
+  },
+  "relative": StyleSheet {
+    "position": "relative",
+  },
+  "rounded": Object {
+    "lg": StyleSheet {
+      "borderRadius": 12,
+    },
+    "sm": StyleSheet {
+      "borderRadius": 4,
+    },
+  },
+  "screenSize": "x",
+  "se": Object {
+    "absolute": undefined,
+    "bg": Object {
+      "base": undefined,
+      "fg": undefined,
+      "trim": undefined,
+    },
+    "border": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderBottom": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderLeft": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderRight": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderTop": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "colors": Object {
+      "base": "#000",
+      "fg": "#fff",
+      "trim": "#333",
+    },
+    "content": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "flex": Object {
+      "col": undefined,
+      "colR": undefined,
+      "grow": undefined,
+      "grow0": undefined,
+      "noWrap": undefined,
+      "one": undefined,
+      "row": undefined,
+      "rowR": undefined,
+      "shrink": undefined,
+      "shrink0": undefined,
+      "wrap": undefined,
+    },
+    "font": Object {
+      "bold": undefined,
+      "regular": undefined,
+    },
+    "h": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "inset": Object {
+      "bottom0": undefined,
+      "left0": undefined,
+      "right0": undefined,
+      "top0": undefined,
+      "x0": undefined,
+      "y0": undefined,
+      "zero": undefined,
+    },
+    "items": Object {
+      "baseline": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "justify": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "evenly": undefined,
+      "start": undefined,
+    },
+    "m": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "me": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ml": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ms": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mx": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "my": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "overflow": Object {
+      "hidden": undefined,
+      "scroll": undefined,
+      "visible": undefined,
+    },
+    "p": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pe": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pl": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ps": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "px": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "py": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "relative": undefined,
+    "rounded": Object {
+      "lg": undefined,
+      "sm": undefined,
+    },
+    "self": Object {
+      "auto": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "text": Object {
+      "base": undefined,
+      "body": undefined,
+      "capitalize": undefined,
+      "center": undefined,
+      "fg": undefined,
+      "justify": undefined,
+      "left": undefined,
+      "lineThrough": undefined,
+      "lowercase": undefined,
+      "noTextTransform": undefined,
+      "noUnderline": undefined,
+      "right": undefined,
+      "title": undefined,
+      "trim": undefined,
+      "underline": undefined,
+      "uppercase": undefined,
+    },
+    "w": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "z00": undefined,
+    "z10": undefined,
+    "z20": undefined,
+    "z30": undefined,
+    "z40": undefined,
+    "z50": undefined,
+  },
+  "self": Object {
+    "auto": StyleSheet {
+      "alignSelf": "auto",
+    },
+    "center": StyleSheet {
+      "alignSelf": "center",
+    },
+    "end": StyleSheet {
+      "alignSelf": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignSelf": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignSelf": "stretch",
+    },
+  },
+  "tablet": Object {
+    "absolute": undefined,
+    "bg": Object {
+      "base": undefined,
+      "fg": undefined,
+      "trim": undefined,
+    },
+    "border": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderBottom": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderLeft": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderRight": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderTop": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "colors": Object {
+      "base": "#000",
+      "fg": "#fff",
+      "trim": "#333",
+    },
+    "content": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "flex": Object {
+      "col": undefined,
+      "colR": undefined,
+      "grow": undefined,
+      "grow0": undefined,
+      "noWrap": undefined,
+      "one": undefined,
+      "row": undefined,
+      "rowR": undefined,
+      "shrink": undefined,
+      "shrink0": undefined,
+      "wrap": undefined,
+    },
+    "font": Object {
+      "bold": undefined,
+      "regular": undefined,
+    },
+    "h": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "inset": Object {
+      "bottom0": undefined,
+      "left0": undefined,
+      "right0": undefined,
+      "top0": undefined,
+      "x0": undefined,
+      "y0": undefined,
+      "zero": undefined,
+    },
+    "items": Object {
+      "baseline": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "justify": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "evenly": undefined,
+      "start": undefined,
+    },
+    "m": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "me": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ml": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ms": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mx": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "my": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "overflow": Object {
+      "hidden": undefined,
+      "scroll": undefined,
+      "visible": undefined,
+    },
+    "p": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pe": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pl": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ps": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "px": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "py": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "relative": undefined,
+    "rounded": Object {
+      "lg": undefined,
+      "sm": undefined,
+    },
+    "self": Object {
+      "auto": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "text": Object {
+      "base": undefined,
+      "body": undefined,
+      "capitalize": undefined,
+      "center": undefined,
+      "fg": undefined,
+      "justify": undefined,
+      "left": undefined,
+      "lineThrough": undefined,
+      "lowercase": undefined,
+      "noTextTransform": undefined,
+      "noUnderline": undefined,
+      "right": undefined,
+      "title": undefined,
+      "trim": undefined,
+      "underline": undefined,
+      "uppercase": undefined,
+    },
+    "w": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "z00": undefined,
+    "z10": undefined,
+    "z20": undefined,
+    "z30": undefined,
+    "z40": undefined,
+    "z50": undefined,
+  },
+  "text": Object {
+    "base": StyleSheet {
+      "color": "#000",
+    },
+    "body": StyleSheet {
+      "fontSize": 14,
+    },
+    "capitalize": StyleSheet {
+      "textTransform": "capitalize",
+    },
+    "center": StyleSheet {
+      "textAlign": "center",
+    },
+    "fg": StyleSheet {
+      "color": "#fff",
+    },
+    "justify": StyleSheet {
+      "textAlign": "justify",
+    },
+    "left": StyleSheet {
+      "textAlign": "left",
+    },
+    "lineThrough": StyleSheet {
+      "textDecorationLine": "line-through",
+      "textDecorationStyle": "solid",
+    },
+    "lowercase": StyleSheet {
+      "textTransform": "lowercase",
+    },
+    "noTextTransform": StyleSheet {
+      "textTransform": "none",
+    },
+    "noUnderline": StyleSheet {
+      "textDecorationLine": "none",
+    },
+    "right": StyleSheet {
+      "textAlign": "right",
+    },
+    "title": StyleSheet {
+      "fontSize": 24,
+    },
+    "trim": StyleSheet {
+      "color": "#333",
+    },
+    "underline": StyleSheet {
+      "textDecorationLine": "underline",
+      "textDecorationStyle": "solid",
+    },
+    "uppercase": StyleSheet {
+      "textTransform": "uppercase",
+    },
+  },
+  "w": Object {
+    "full": StyleSheet {
+      "width": "100%",
+    },
+    "half": StyleSheet {
+      "width": "50%",
+    },
+    "lg": StyleSheet {
+      "width": 44,
+    },
+    "px": StyleSheet {
+      "width": 0.5,
+    },
+    "sm": StyleSheet {
+      "width": 22,
+    },
+  },
+  "x": Object {
+    "absolute": StyleSheet {
+      "position": "absolute",
+    },
+    "bg": Object {
+      "base": StyleSheet {
+        "backgroundColor": "#000",
+      },
+      "fg": StyleSheet {
+        "backgroundColor": "#fff",
+      },
+      "trim": StyleSheet {
+        "backgroundColor": "#333",
+      },
+    },
+    "border": Object {
+      "base": StyleSheet {
+        "borderColor": "#000",
+      },
+      "fg": StyleSheet {
+        "borderColor": "#fff",
+      },
+      "lg": StyleSheet {
+        "borderWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderColor": "#333",
+      },
+    },
+    "borderBottom": Object {
+      "base": StyleSheet {
+        "borderBottomColor": "#000",
+      },
+      "fg": StyleSheet {
+        "borderBottomColor": "#fff",
+      },
+      "lg": StyleSheet {
+        "borderBottomWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderBottomWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderBottomWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderBottomColor": "#333",
+      },
+    },
+    "borderLeft": Object {
+      "base": StyleSheet {
+        "borderLeftColor": "#000",
+      },
+      "fg": StyleSheet {
+        "borderLeftColor": "#fff",
+      },
+      "lg": StyleSheet {
+        "borderLeftWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderLeftWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderLeftWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderLeftColor": "#333",
+      },
+    },
+    "borderRight": Object {
+      "base": StyleSheet {
+        "borderRightColor": "#000",
+      },
+      "fg": StyleSheet {
+        "borderRightColor": "#fff",
+      },
+      "lg": StyleSheet {
+        "borderRightWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderRightWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderRightWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderRightColor": "#333",
+      },
+    },
+    "borderTop": Object {
+      "base": StyleSheet {
+        "borderTopColor": "#000",
+      },
+      "fg": StyleSheet {
+        "borderTopColor": "#fff",
+      },
+      "lg": StyleSheet {
+        "borderTopWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderTopWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderTopWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderTopColor": "#333",
+      },
+    },
+    "colors": Object {
+      "base": "#000",
+      "fg": "#fff",
+      "trim": "#333",
+    },
+    "content": Object {
+      "around": StyleSheet {
+        "alignContent": "space-around",
+      },
+      "between": StyleSheet {
+        "alignContent": "space-between",
+      },
+      "center": StyleSheet {
+        "alignContent": "center",
+      },
+      "end": StyleSheet {
+        "alignContent": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignContent": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignContent": "stretch",
+      },
+    },
+    "flex": Object {
+      "col": StyleSheet {
+        "flexDirection": "column",
+      },
+      "colR": StyleSheet {
+        "flexDirection": "column-reverse",
+      },
+      "grow": StyleSheet {
+        "flexGrow": 1,
+      },
+      "grow0": StyleSheet {
+        "flexGrow": 0,
+      },
+      "noWrap": StyleSheet {
+        "flexWrap": "nowrap",
+      },
+      "one": StyleSheet {
+        "flex": 1,
+      },
+      "row": StyleSheet {
+        "flexDirection": "row",
+      },
+      "rowR": StyleSheet {
+        "flexDirection": "row-reverse",
+      },
+      "shrink": StyleSheet {
+        "flexShrink": 1,
+      },
+      "shrink0": StyleSheet {
+        "flexShrink": 0,
+      },
+      "wrap": StyleSheet {
+        "flexWrap": "wrap",
+      },
+    },
+    "font": Object {
+      "bold": StyleSheet {
+        "fontWeight": "600",
+      },
+      "regular": StyleSheet {
+        "fontWeight": "400",
+      },
+    },
+    "h": Object {
+      "full": StyleSheet {
+        "height": "100%",
+      },
+      "half": StyleSheet {
+        "height": "50%",
+      },
+      "lg": StyleSheet {
+        "height": 44,
+      },
+      "px": StyleSheet {
+        "height": 0.5,
+      },
+      "sm": StyleSheet {
+        "height": 22,
+      },
+    },
+    "inset": Object {
+      "bottom0": StyleSheet {
+        "top": 0,
+      },
+      "left0": StyleSheet {
+        "top": 0,
+      },
+      "right0": StyleSheet {
+        "top": 0,
+      },
+      "top0": StyleSheet {
+        "top": 0,
+      },
+      "x0": StyleSheet {
+        "left": 0,
+        "right": 0,
+      },
+      "y0": StyleSheet {
+        "bottom": 0,
+        "top": 0,
+      },
+      "zero": StyleSheet {
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+      },
+    },
+    "items": Object {
+      "baseline": StyleSheet {
+        "alignItems": "baseline",
+      },
+      "center": StyleSheet {
+        "alignItems": "center",
+      },
+      "end": StyleSheet {
+        "alignItems": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignItems": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignItems": "stretch",
+      },
+    },
+    "justify": Object {
+      "around": StyleSheet {
+        "justifyContent": "space-around",
+      },
+      "between": StyleSheet {
+        "justifyContent": "space-between",
+      },
+      "center": StyleSheet {
+        "justifyContent": "center",
+      },
+      "end": StyleSheet {
+        "justifyContent": "flex-end",
+      },
+      "evenly": StyleSheet {
+        "justifyContent": "space-evenly",
+      },
+      "start": StyleSheet {
+        "justifyContent": "flex-start",
+      },
+    },
+    "m": Object {
+      "full": StyleSheet {
+        "margin": "100%",
+      },
+      "half": StyleSheet {
+        "margin": "50%",
+      },
+      "lg": StyleSheet {
+        "margin": 44,
+      },
+      "px": StyleSheet {
+        "margin": 0.5,
+      },
+      "sm": StyleSheet {
+        "margin": 22,
+      },
+    },
+    "maxH": Object {
+      "full": StyleSheet {
+        "maxHeight": "100%",
+      },
+      "half": StyleSheet {
+        "maxHeight": "50%",
+      },
+      "lg": StyleSheet {
+        "maxHeight": 44,
+      },
+      "px": StyleSheet {
+        "maxHeight": 0.5,
+      },
+      "sm": StyleSheet {
+        "maxHeight": 22,
+      },
+    },
+    "maxW": Object {
+      "full": StyleSheet {
+        "maxWidth": "100%",
+      },
+      "half": StyleSheet {
+        "maxWidth": "50%",
+      },
+      "lg": StyleSheet {
+        "maxWidth": 44,
+      },
+      "px": StyleSheet {
+        "maxWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "maxWidth": 22,
+      },
+    },
+    "mb": Object {
+      "full": StyleSheet {
+        "marginBottom": "100%",
+      },
+      "half": StyleSheet {
+        "marginBottom": "50%",
+      },
+      "lg": StyleSheet {
+        "marginBottom": 44,
+      },
+      "px": StyleSheet {
+        "marginBottom": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginBottom": 22,
+      },
+    },
+    "me": Object {
+      "full": StyleSheet {
+        "marginEnd": "100%",
+      },
+      "half": StyleSheet {
+        "marginEnd": "50%",
+      },
+      "lg": StyleSheet {
+        "marginEnd": 44,
+      },
+      "px": StyleSheet {
+        "marginEnd": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginEnd": 22,
+      },
+    },
+    "minH": Object {
+      "full": StyleSheet {
+        "minHeight": "100%",
+      },
+      "half": StyleSheet {
+        "minHeight": "50%",
+      },
+      "lg": StyleSheet {
+        "minHeight": 44,
+      },
+      "px": StyleSheet {
+        "minHeight": 0.5,
+      },
+      "sm": StyleSheet {
+        "minHeight": 22,
+      },
+    },
+    "minW": Object {
+      "full": StyleSheet {
+        "minWidth": "100%",
+      },
+      "half": StyleSheet {
+        "minWidth": "50%",
+      },
+      "lg": StyleSheet {
+        "minWidth": 44,
+      },
+      "px": StyleSheet {
+        "minWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "minWidth": 22,
+      },
+    },
+    "ml": Object {
+      "full": StyleSheet {
+        "marginLeft": "100%",
+      },
+      "half": StyleSheet {
+        "marginLeft": "50%",
+      },
+      "lg": StyleSheet {
+        "marginLeft": 44,
+      },
+      "px": StyleSheet {
+        "marginLeft": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginLeft": 22,
+      },
+    },
+    "mr": Object {
+      "full": StyleSheet {
+        "marginRight": "100%",
+      },
+      "half": StyleSheet {
+        "marginRight": "50%",
+      },
+      "lg": StyleSheet {
+        "marginRight": 44,
+      },
+      "px": StyleSheet {
+        "marginRight": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginRight": 22,
+      },
+    },
+    "ms": Object {
+      "full": StyleSheet {
+        "marginStart": "100%",
+      },
+      "half": StyleSheet {
+        "marginStart": "50%",
+      },
+      "lg": StyleSheet {
+        "marginStart": 44,
+      },
+      "px": StyleSheet {
+        "marginStart": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginStart": 22,
+      },
+    },
+    "mt": Object {
+      "full": StyleSheet {
+        "marginTop": "100%",
+      },
+      "half": StyleSheet {
+        "marginTop": "50%",
+      },
+      "lg": StyleSheet {
+        "marginTop": 44,
+      },
+      "px": StyleSheet {
+        "marginTop": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginTop": 22,
+      },
+    },
+    "mx": Object {
+      "full": StyleSheet {
+        "marginHorizontal": "100%",
+      },
+      "half": StyleSheet {
+        "marginHorizontal": "50%",
+      },
+      "lg": StyleSheet {
+        "marginHorizontal": 44,
+      },
+      "px": StyleSheet {
+        "marginHorizontal": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginHorizontal": 22,
+      },
+    },
+    "my": Object {
+      "full": StyleSheet {
+        "marginVertical": "100%",
+      },
+      "half": StyleSheet {
+        "marginVertical": "50%",
+      },
+      "lg": StyleSheet {
+        "marginVertical": 44,
+      },
+      "px": StyleSheet {
+        "marginVertical": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginVertical": 22,
+      },
+    },
+    "overflow": Object {
+      "hidden": StyleSheet {
+        "overflow": "hidden",
+      },
+      "scroll": StyleSheet {
+        "overflow": "scroll",
+      },
+      "visible": StyleSheet {
+        "overflow": "visible",
+      },
+    },
+    "p": Object {
+      "full": StyleSheet {
+        "padding": "100%",
+      },
+      "half": StyleSheet {
+        "padding": "50%",
+      },
+      "lg": StyleSheet {
+        "padding": 44,
+      },
+      "px": StyleSheet {
+        "padding": 0.5,
+      },
+      "sm": StyleSheet {
+        "padding": 22,
+      },
+    },
+    "pb": Object {
+      "full": StyleSheet {
+        "paddingBottom": "100%",
+      },
+      "half": StyleSheet {
+        "paddingBottom": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingBottom": 44,
+      },
+      "px": StyleSheet {
+        "paddingBottom": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingBottom": 22,
+      },
+    },
+    "pe": Object {
+      "full": StyleSheet {
+        "paddingEnd": "100%",
+      },
+      "half": StyleSheet {
+        "paddingEnd": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingEnd": 44,
+      },
+      "px": StyleSheet {
+        "paddingEnd": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingEnd": 22,
+      },
+    },
+    "pl": Object {
+      "full": StyleSheet {
+        "paddingLeft": "100%",
+      },
+      "half": StyleSheet {
+        "paddingLeft": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingLeft": 44,
+      },
+      "px": StyleSheet {
+        "paddingLeft": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingLeft": 22,
+      },
+    },
+    "pr": Object {
+      "full": StyleSheet {
+        "paddingRight": "100%",
+      },
+      "half": StyleSheet {
+        "paddingRight": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingRight": 44,
+      },
+      "px": StyleSheet {
+        "paddingRight": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingRight": 22,
+      },
+    },
+    "ps": Object {
+      "full": StyleSheet {
+        "paddingStart": "100%",
+      },
+      "half": StyleSheet {
+        "paddingStart": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingStart": 44,
+      },
+      "px": StyleSheet {
+        "paddingStart": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingStart": 22,
+      },
+    },
+    "pt": Object {
+      "full": StyleSheet {
+        "paddingTop": "100%",
+      },
+      "half": StyleSheet {
+        "paddingTop": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingTop": 44,
+      },
+      "px": StyleSheet {
+        "paddingTop": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingTop": 22,
+      },
+    },
+    "px": Object {
+      "full": StyleSheet {
+        "paddingHorizontal": "100%",
+      },
+      "half": StyleSheet {
+        "paddingHorizontal": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingHorizontal": 44,
+      },
+      "px": StyleSheet {
+        "paddingHorizontal": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingHorizontal": 22,
+      },
+    },
+    "py": Object {
+      "full": StyleSheet {
+        "paddingVertical": "100%",
+      },
+      "half": StyleSheet {
+        "paddingVertical": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingVertical": 44,
+      },
+      "px": StyleSheet {
+        "paddingVertical": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingVertical": 22,
+      },
+    },
+    "relative": StyleSheet {
+      "position": "relative",
+    },
+    "rounded": Object {
+      "lg": StyleSheet {
+        "borderRadius": 12,
+      },
+      "sm": StyleSheet {
+        "borderRadius": 4,
+      },
+    },
+    "self": Object {
+      "auto": StyleSheet {
+        "alignSelf": "auto",
+      },
+      "center": StyleSheet {
+        "alignSelf": "center",
+      },
+      "end": StyleSheet {
+        "alignSelf": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignSelf": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignSelf": "stretch",
+      },
+    },
+    "text": Object {
+      "base": StyleSheet {
+        "color": "#000",
+      },
+      "body": StyleSheet {
+        "fontSize": 14,
+      },
+      "capitalize": StyleSheet {
+        "textTransform": "capitalize",
+      },
+      "center": StyleSheet {
+        "textAlign": "center",
+      },
+      "fg": StyleSheet {
+        "color": "#fff",
+      },
+      "justify": StyleSheet {
+        "textAlign": "justify",
+      },
+      "left": StyleSheet {
+        "textAlign": "left",
+      },
+      "lineThrough": StyleSheet {
+        "textDecorationLine": "line-through",
+        "textDecorationStyle": "solid",
+      },
+      "lowercase": StyleSheet {
+        "textTransform": "lowercase",
+      },
+      "noTextTransform": StyleSheet {
+        "textTransform": "none",
+      },
+      "noUnderline": StyleSheet {
+        "textDecorationLine": "none",
+      },
+      "right": StyleSheet {
+        "textAlign": "right",
+      },
+      "title": StyleSheet {
+        "fontSize": 24,
+      },
+      "trim": StyleSheet {
+        "color": "#333",
+      },
+      "underline": StyleSheet {
+        "textDecorationLine": "underline",
+        "textDecorationStyle": "solid",
+      },
+      "uppercase": StyleSheet {
+        "textTransform": "uppercase",
+      },
+    },
+    "w": Object {
+      "full": StyleSheet {
+        "width": "100%",
+      },
+      "half": StyleSheet {
+        "width": "50%",
+      },
+      "lg": StyleSheet {
+        "width": 44,
+      },
+      "px": StyleSheet {
+        "width": 0.5,
+      },
+      "sm": StyleSheet {
+        "width": 22,
+      },
+    },
+    "z00": StyleSheet {
+      "zIndex": 0,
+    },
+    "z10": StyleSheet {
+      "zIndex": 10,
+    },
+    "z20": StyleSheet {
+      "zIndex": 20,
+    },
+    "z30": StyleSheet {
+      "zIndex": 30,
+    },
+    "z40": StyleSheet {
+      "zIndex": 40,
+    },
+    "z50": StyleSheet {
+      "zIndex": 50,
+    },
+  },
+  "z00": StyleSheet {
+    "zIndex": 0,
+  },
+  "z10": StyleSheet {
+    "zIndex": 10,
+  },
+  "z20": StyleSheet {
+    "zIndex": 20,
+  },
+  "z30": StyleSheet {
+    "zIndex": 30,
+  },
+  "z40": StyleSheet {
+    "zIndex": 40,
+  },
+  "z50": StyleSheet {
+    "zIndex": 50,
+  },
+}
+`;
+
+exports[`usePrim styles light mode se sizeClass 1`] = `
+Object {
+  "absolute": StyleSheet {
+    "position": "absolute",
+  },
+  "bg": Object {
+    "base": StyleSheet {
+      "backgroundColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "backgroundColor": "#000",
+    },
+    "trim": StyleSheet {
+      "backgroundColor": "#ddd",
+    },
+  },
+  "border": Object {
+    "base": StyleSheet {
+      "borderColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderColor": "#ddd",
+    },
+  },
+  "borderBottom": Object {
+    "base": StyleSheet {
+      "borderBottomColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderBottomColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderBottomWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderBottomWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderBottomWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderBottomColor": "#ddd",
+    },
+  },
+  "borderLeft": Object {
+    "base": StyleSheet {
+      "borderLeftColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderLeftColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderLeftWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderLeftWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderLeftWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderLeftColor": "#ddd",
+    },
+  },
+  "borderRight": Object {
+    "base": StyleSheet {
+      "borderRightColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderRightColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderRightWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderRightWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderRightWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderRightColor": "#ddd",
+    },
+  },
+  "borderTop": Object {
+    "base": StyleSheet {
+      "borderTopColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderTopColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderTopWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderTopWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderTopWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderTopColor": "#ddd",
+    },
+  },
+  "colors": Object {
+    "base": "#fff",
+    "fg": "#000",
+    "trim": "#ddd",
+  },
+  "content": Object {
+    "around": StyleSheet {
+      "alignContent": "space-around",
+    },
+    "between": StyleSheet {
+      "alignContent": "space-between",
+    },
+    "center": StyleSheet {
+      "alignContent": "center",
+    },
+    "end": StyleSheet {
+      "alignContent": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignContent": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignContent": "stretch",
+    },
+  },
+  "flex": Object {
+    "col": StyleSheet {
+      "flexDirection": "column",
+    },
+    "colR": StyleSheet {
+      "flexDirection": "column-reverse",
+    },
+    "grow": StyleSheet {
+      "flexGrow": 1,
+    },
+    "grow0": StyleSheet {
+      "flexGrow": 0,
+    },
+    "noWrap": StyleSheet {
+      "flexWrap": "nowrap",
+    },
+    "one": StyleSheet {
+      "flex": 1,
+    },
+    "row": StyleSheet {
+      "flexDirection": "row",
+    },
+    "rowR": StyleSheet {
+      "flexDirection": "row-reverse",
+    },
+    "shrink": StyleSheet {
+      "flexShrink": 1,
+    },
+    "shrink0": StyleSheet {
+      "flexShrink": 0,
+    },
+    "wrap": StyleSheet {
+      "flexWrap": "wrap",
+    },
+  },
+  "font": Object {
+    "bold": StyleSheet {
+      "fontWeight": "600",
+    },
+    "regular": StyleSheet {
+      "fontWeight": "400",
+    },
+  },
+  "h": Object {
+    "full": StyleSheet {
+      "height": "100%",
+    },
+    "half": StyleSheet {
+      "height": "50%",
+    },
+    "lg": StyleSheet {
+      "height": 44,
+    },
+    "px": StyleSheet {
+      "height": 0.5,
+    },
+    "sm": StyleSheet {
+      "height": 22,
+    },
+  },
+  "inset": Object {
+    "bottom0": StyleSheet {
+      "top": 0,
+    },
+    "left0": StyleSheet {
+      "top": 0,
+    },
+    "right0": StyleSheet {
+      "top": 0,
+    },
+    "top0": StyleSheet {
+      "top": 0,
+    },
+    "x0": StyleSheet {
+      "left": 0,
+      "right": 0,
+    },
+    "y0": StyleSheet {
+      "bottom": 0,
+      "top": 0,
+    },
+    "zero": StyleSheet {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    },
+  },
+  "items": Object {
+    "baseline": StyleSheet {
+      "alignItems": "baseline",
+    },
+    "center": StyleSheet {
+      "alignItems": "center",
+    },
+    "end": StyleSheet {
+      "alignItems": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignItems": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignItems": "stretch",
+    },
+  },
+  "justify": Object {
+    "around": StyleSheet {
+      "justifyContent": "space-around",
+    },
+    "between": StyleSheet {
+      "justifyContent": "space-between",
+    },
+    "center": StyleSheet {
+      "justifyContent": "center",
+    },
+    "end": StyleSheet {
+      "justifyContent": "flex-end",
+    },
+    "evenly": StyleSheet {
+      "justifyContent": "space-evenly",
+    },
+    "start": StyleSheet {
+      "justifyContent": "flex-start",
+    },
+  },
+  "m": Object {
+    "full": StyleSheet {
+      "margin": "100%",
+    },
+    "half": StyleSheet {
+      "margin": "50%",
+    },
+    "lg": StyleSheet {
+      "margin": 44,
+    },
+    "px": StyleSheet {
+      "margin": 0.5,
+    },
+    "sm": StyleSheet {
+      "margin": 22,
+    },
+  },
+  "maxH": Object {
+    "full": StyleSheet {
+      "maxHeight": "100%",
+    },
+    "half": StyleSheet {
+      "maxHeight": "50%",
+    },
+    "lg": StyleSheet {
+      "maxHeight": 44,
+    },
+    "px": StyleSheet {
+      "maxHeight": 0.5,
+    },
+    "sm": StyleSheet {
+      "maxHeight": 22,
+    },
+  },
+  "maxW": Object {
+    "full": StyleSheet {
+      "maxWidth": "100%",
+    },
+    "half": StyleSheet {
+      "maxWidth": "50%",
+    },
+    "lg": StyleSheet {
+      "maxWidth": 44,
+    },
+    "px": StyleSheet {
+      "maxWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "maxWidth": 22,
+    },
+  },
+  "mb": Object {
+    "full": StyleSheet {
+      "marginBottom": "100%",
+    },
+    "half": StyleSheet {
+      "marginBottom": "50%",
+    },
+    "lg": StyleSheet {
+      "marginBottom": 44,
+    },
+    "px": StyleSheet {
+      "marginBottom": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginBottom": 22,
+    },
+  },
+  "me": Object {
+    "full": StyleSheet {
+      "marginEnd": "100%",
+    },
+    "half": StyleSheet {
+      "marginEnd": "50%",
+    },
+    "lg": StyleSheet {
+      "marginEnd": 44,
+    },
+    "px": StyleSheet {
+      "marginEnd": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginEnd": 22,
+    },
+  },
+  "minH": Object {
+    "full": StyleSheet {
+      "minHeight": "100%",
+    },
+    "half": StyleSheet {
+      "minHeight": "50%",
+    },
+    "lg": StyleSheet {
+      "minHeight": 44,
+    },
+    "px": StyleSheet {
+      "minHeight": 0.5,
+    },
+    "sm": StyleSheet {
+      "minHeight": 22,
+    },
+  },
+  "minW": Object {
+    "full": StyleSheet {
+      "minWidth": "100%",
+    },
+    "half": StyleSheet {
+      "minWidth": "50%",
+    },
+    "lg": StyleSheet {
+      "minWidth": 44,
+    },
+    "px": StyleSheet {
+      "minWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "minWidth": 22,
+    },
+  },
+  "ml": Object {
+    "full": StyleSheet {
+      "marginLeft": "100%",
+    },
+    "half": StyleSheet {
+      "marginLeft": "50%",
+    },
+    "lg": StyleSheet {
+      "marginLeft": 44,
+    },
+    "px": StyleSheet {
+      "marginLeft": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginLeft": 22,
+    },
+  },
+  "mode": "light",
+  "mr": Object {
+    "full": StyleSheet {
+      "marginRight": "100%",
+    },
+    "half": StyleSheet {
+      "marginRight": "50%",
+    },
+    "lg": StyleSheet {
+      "marginRight": 44,
+    },
+    "px": StyleSheet {
+      "marginRight": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginRight": 22,
+    },
+  },
+  "ms": Object {
+    "full": StyleSheet {
+      "marginStart": "100%",
+    },
+    "half": StyleSheet {
+      "marginStart": "50%",
+    },
+    "lg": StyleSheet {
+      "marginStart": 44,
+    },
+    "px": StyleSheet {
+      "marginStart": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginStart": 22,
+    },
+  },
+  "mt": Object {
+    "full": StyleSheet {
+      "marginTop": "100%",
+    },
+    "half": StyleSheet {
+      "marginTop": "50%",
+    },
+    "lg": StyleSheet {
+      "marginTop": 44,
+    },
+    "px": StyleSheet {
+      "marginTop": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginTop": 22,
+    },
+  },
+  "mx": Object {
+    "full": StyleSheet {
+      "marginHorizontal": "100%",
+    },
+    "half": StyleSheet {
+      "marginHorizontal": "50%",
+    },
+    "lg": StyleSheet {
+      "marginHorizontal": 44,
+    },
+    "px": StyleSheet {
+      "marginHorizontal": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginHorizontal": 22,
+    },
+  },
+  "my": Object {
+    "full": StyleSheet {
+      "marginVertical": "100%",
+    },
+    "half": StyleSheet {
+      "marginVertical": "50%",
+    },
+    "lg": StyleSheet {
+      "marginVertical": 44,
+    },
+    "px": StyleSheet {
+      "marginVertical": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginVertical": 22,
+    },
+  },
+  "overflow": Object {
+    "hidden": StyleSheet {
+      "overflow": "hidden",
+    },
+    "scroll": StyleSheet {
+      "overflow": "scroll",
+    },
+    "visible": StyleSheet {
+      "overflow": "visible",
+    },
+  },
+  "p": Object {
+    "full": StyleSheet {
+      "padding": "100%",
+    },
+    "half": StyleSheet {
+      "padding": "50%",
+    },
+    "lg": StyleSheet {
+      "padding": 44,
+    },
+    "px": StyleSheet {
+      "padding": 0.5,
+    },
+    "sm": StyleSheet {
+      "padding": 22,
+    },
+  },
+  "pb": Object {
+    "full": StyleSheet {
+      "paddingBottom": "100%",
+    },
+    "half": StyleSheet {
+      "paddingBottom": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingBottom": 44,
+    },
+    "px": StyleSheet {
+      "paddingBottom": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingBottom": 22,
+    },
+  },
+  "pe": Object {
+    "full": StyleSheet {
+      "paddingEnd": "100%",
+    },
+    "half": StyleSheet {
+      "paddingEnd": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingEnd": 44,
+    },
+    "px": StyleSheet {
+      "paddingEnd": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingEnd": 22,
+    },
+  },
+  "pl": Object {
+    "full": StyleSheet {
+      "paddingLeft": "100%",
+    },
+    "half": StyleSheet {
+      "paddingLeft": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingLeft": 44,
+    },
+    "px": StyleSheet {
+      "paddingLeft": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingLeft": 22,
+    },
+  },
+  "pr": Object {
+    "full": StyleSheet {
+      "paddingRight": "100%",
+    },
+    "half": StyleSheet {
+      "paddingRight": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingRight": 44,
+    },
+    "px": StyleSheet {
+      "paddingRight": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingRight": 22,
+    },
+  },
+  "ps": Object {
+    "full": StyleSheet {
+      "paddingStart": "100%",
+    },
+    "half": StyleSheet {
+      "paddingStart": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingStart": 44,
+    },
+    "px": StyleSheet {
+      "paddingStart": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingStart": 22,
+    },
+  },
+  "pt": Object {
+    "full": StyleSheet {
+      "paddingTop": "100%",
+    },
+    "half": StyleSheet {
+      "paddingTop": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingTop": 44,
+    },
+    "px": StyleSheet {
+      "paddingTop": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingTop": 22,
+    },
+  },
+  "px": Object {
+    "full": StyleSheet {
+      "paddingHorizontal": "100%",
+    },
+    "half": StyleSheet {
+      "paddingHorizontal": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingHorizontal": 44,
+    },
+    "px": StyleSheet {
+      "paddingHorizontal": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingHorizontal": 22,
+    },
+  },
+  "py": Object {
+    "full": StyleSheet {
+      "paddingVertical": "100%",
+    },
+    "half": StyleSheet {
+      "paddingVertical": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingVertical": 44,
+    },
+    "px": StyleSheet {
+      "paddingVertical": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingVertical": 22,
+    },
+  },
+  "relative": StyleSheet {
+    "position": "relative",
+  },
+  "rounded": Object {
+    "lg": StyleSheet {
+      "borderRadius": 12,
+    },
+    "sm": StyleSheet {
+      "borderRadius": 4,
+    },
+  },
+  "screenSize": "se",
+  "se": Object {
+    "absolute": StyleSheet {
+      "position": "absolute",
+    },
+    "bg": Object {
+      "base": StyleSheet {
+        "backgroundColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "backgroundColor": "#000",
+      },
+      "trim": StyleSheet {
+        "backgroundColor": "#ddd",
+      },
+    },
+    "border": Object {
+      "base": StyleSheet {
+        "borderColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderColor": "#ddd",
+      },
+    },
+    "borderBottom": Object {
+      "base": StyleSheet {
+        "borderBottomColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderBottomColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderBottomWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderBottomWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderBottomWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderBottomColor": "#ddd",
+      },
+    },
+    "borderLeft": Object {
+      "base": StyleSheet {
+        "borderLeftColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderLeftColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderLeftWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderLeftWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderLeftWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderLeftColor": "#ddd",
+      },
+    },
+    "borderRight": Object {
+      "base": StyleSheet {
+        "borderRightColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderRightColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderRightWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderRightWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderRightWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderRightColor": "#ddd",
+      },
+    },
+    "borderTop": Object {
+      "base": StyleSheet {
+        "borderTopColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderTopColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderTopWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderTopWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderTopWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderTopColor": "#ddd",
+      },
+    },
+    "colors": Object {
+      "base": "#fff",
+      "fg": "#000",
+      "trim": "#ddd",
+    },
+    "content": Object {
+      "around": StyleSheet {
+        "alignContent": "space-around",
+      },
+      "between": StyleSheet {
+        "alignContent": "space-between",
+      },
+      "center": StyleSheet {
+        "alignContent": "center",
+      },
+      "end": StyleSheet {
+        "alignContent": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignContent": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignContent": "stretch",
+      },
+    },
+    "flex": Object {
+      "col": StyleSheet {
+        "flexDirection": "column",
+      },
+      "colR": StyleSheet {
+        "flexDirection": "column-reverse",
+      },
+      "grow": StyleSheet {
+        "flexGrow": 1,
+      },
+      "grow0": StyleSheet {
+        "flexGrow": 0,
+      },
+      "noWrap": StyleSheet {
+        "flexWrap": "nowrap",
+      },
+      "one": StyleSheet {
+        "flex": 1,
+      },
+      "row": StyleSheet {
+        "flexDirection": "row",
+      },
+      "rowR": StyleSheet {
+        "flexDirection": "row-reverse",
+      },
+      "shrink": StyleSheet {
+        "flexShrink": 1,
+      },
+      "shrink0": StyleSheet {
+        "flexShrink": 0,
+      },
+      "wrap": StyleSheet {
+        "flexWrap": "wrap",
+      },
+    },
+    "font": Object {
+      "bold": StyleSheet {
+        "fontWeight": "600",
+      },
+      "regular": StyleSheet {
+        "fontWeight": "400",
+      },
+    },
+    "h": Object {
+      "full": StyleSheet {
+        "height": "100%",
+      },
+      "half": StyleSheet {
+        "height": "50%",
+      },
+      "lg": StyleSheet {
+        "height": 44,
+      },
+      "px": StyleSheet {
+        "height": 0.5,
+      },
+      "sm": StyleSheet {
+        "height": 22,
+      },
+    },
+    "inset": Object {
+      "bottom0": StyleSheet {
+        "top": 0,
+      },
+      "left0": StyleSheet {
+        "top": 0,
+      },
+      "right0": StyleSheet {
+        "top": 0,
+      },
+      "top0": StyleSheet {
+        "top": 0,
+      },
+      "x0": StyleSheet {
+        "left": 0,
+        "right": 0,
+      },
+      "y0": StyleSheet {
+        "bottom": 0,
+        "top": 0,
+      },
+      "zero": StyleSheet {
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+      },
+    },
+    "items": Object {
+      "baseline": StyleSheet {
+        "alignItems": "baseline",
+      },
+      "center": StyleSheet {
+        "alignItems": "center",
+      },
+      "end": StyleSheet {
+        "alignItems": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignItems": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignItems": "stretch",
+      },
+    },
+    "justify": Object {
+      "around": StyleSheet {
+        "justifyContent": "space-around",
+      },
+      "between": StyleSheet {
+        "justifyContent": "space-between",
+      },
+      "center": StyleSheet {
+        "justifyContent": "center",
+      },
+      "end": StyleSheet {
+        "justifyContent": "flex-end",
+      },
+      "evenly": StyleSheet {
+        "justifyContent": "space-evenly",
+      },
+      "start": StyleSheet {
+        "justifyContent": "flex-start",
+      },
+    },
+    "m": Object {
+      "full": StyleSheet {
+        "margin": "100%",
+      },
+      "half": StyleSheet {
+        "margin": "50%",
+      },
+      "lg": StyleSheet {
+        "margin": 44,
+      },
+      "px": StyleSheet {
+        "margin": 0.5,
+      },
+      "sm": StyleSheet {
+        "margin": 22,
+      },
+    },
+    "maxH": Object {
+      "full": StyleSheet {
+        "maxHeight": "100%",
+      },
+      "half": StyleSheet {
+        "maxHeight": "50%",
+      },
+      "lg": StyleSheet {
+        "maxHeight": 44,
+      },
+      "px": StyleSheet {
+        "maxHeight": 0.5,
+      },
+      "sm": StyleSheet {
+        "maxHeight": 22,
+      },
+    },
+    "maxW": Object {
+      "full": StyleSheet {
+        "maxWidth": "100%",
+      },
+      "half": StyleSheet {
+        "maxWidth": "50%",
+      },
+      "lg": StyleSheet {
+        "maxWidth": 44,
+      },
+      "px": StyleSheet {
+        "maxWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "maxWidth": 22,
+      },
+    },
+    "mb": Object {
+      "full": StyleSheet {
+        "marginBottom": "100%",
+      },
+      "half": StyleSheet {
+        "marginBottom": "50%",
+      },
+      "lg": StyleSheet {
+        "marginBottom": 44,
+      },
+      "px": StyleSheet {
+        "marginBottom": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginBottom": 22,
+      },
+    },
+    "me": Object {
+      "full": StyleSheet {
+        "marginEnd": "100%",
+      },
+      "half": StyleSheet {
+        "marginEnd": "50%",
+      },
+      "lg": StyleSheet {
+        "marginEnd": 44,
+      },
+      "px": StyleSheet {
+        "marginEnd": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginEnd": 22,
+      },
+    },
+    "minH": Object {
+      "full": StyleSheet {
+        "minHeight": "100%",
+      },
+      "half": StyleSheet {
+        "minHeight": "50%",
+      },
+      "lg": StyleSheet {
+        "minHeight": 44,
+      },
+      "px": StyleSheet {
+        "minHeight": 0.5,
+      },
+      "sm": StyleSheet {
+        "minHeight": 22,
+      },
+    },
+    "minW": Object {
+      "full": StyleSheet {
+        "minWidth": "100%",
+      },
+      "half": StyleSheet {
+        "minWidth": "50%",
+      },
+      "lg": StyleSheet {
+        "minWidth": 44,
+      },
+      "px": StyleSheet {
+        "minWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "minWidth": 22,
+      },
+    },
+    "ml": Object {
+      "full": StyleSheet {
+        "marginLeft": "100%",
+      },
+      "half": StyleSheet {
+        "marginLeft": "50%",
+      },
+      "lg": StyleSheet {
+        "marginLeft": 44,
+      },
+      "px": StyleSheet {
+        "marginLeft": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginLeft": 22,
+      },
+    },
+    "mr": Object {
+      "full": StyleSheet {
+        "marginRight": "100%",
+      },
+      "half": StyleSheet {
+        "marginRight": "50%",
+      },
+      "lg": StyleSheet {
+        "marginRight": 44,
+      },
+      "px": StyleSheet {
+        "marginRight": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginRight": 22,
+      },
+    },
+    "ms": Object {
+      "full": StyleSheet {
+        "marginStart": "100%",
+      },
+      "half": StyleSheet {
+        "marginStart": "50%",
+      },
+      "lg": StyleSheet {
+        "marginStart": 44,
+      },
+      "px": StyleSheet {
+        "marginStart": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginStart": 22,
+      },
+    },
+    "mt": Object {
+      "full": StyleSheet {
+        "marginTop": "100%",
+      },
+      "half": StyleSheet {
+        "marginTop": "50%",
+      },
+      "lg": StyleSheet {
+        "marginTop": 44,
+      },
+      "px": StyleSheet {
+        "marginTop": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginTop": 22,
+      },
+    },
+    "mx": Object {
+      "full": StyleSheet {
+        "marginHorizontal": "100%",
+      },
+      "half": StyleSheet {
+        "marginHorizontal": "50%",
+      },
+      "lg": StyleSheet {
+        "marginHorizontal": 44,
+      },
+      "px": StyleSheet {
+        "marginHorizontal": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginHorizontal": 22,
+      },
+    },
+    "my": Object {
+      "full": StyleSheet {
+        "marginVertical": "100%",
+      },
+      "half": StyleSheet {
+        "marginVertical": "50%",
+      },
+      "lg": StyleSheet {
+        "marginVertical": 44,
+      },
+      "px": StyleSheet {
+        "marginVertical": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginVertical": 22,
+      },
+    },
+    "overflow": Object {
+      "hidden": StyleSheet {
+        "overflow": "hidden",
+      },
+      "scroll": StyleSheet {
+        "overflow": "scroll",
+      },
+      "visible": StyleSheet {
+        "overflow": "visible",
+      },
+    },
+    "p": Object {
+      "full": StyleSheet {
+        "padding": "100%",
+      },
+      "half": StyleSheet {
+        "padding": "50%",
+      },
+      "lg": StyleSheet {
+        "padding": 44,
+      },
+      "px": StyleSheet {
+        "padding": 0.5,
+      },
+      "sm": StyleSheet {
+        "padding": 22,
+      },
+    },
+    "pb": Object {
+      "full": StyleSheet {
+        "paddingBottom": "100%",
+      },
+      "half": StyleSheet {
+        "paddingBottom": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingBottom": 44,
+      },
+      "px": StyleSheet {
+        "paddingBottom": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingBottom": 22,
+      },
+    },
+    "pe": Object {
+      "full": StyleSheet {
+        "paddingEnd": "100%",
+      },
+      "half": StyleSheet {
+        "paddingEnd": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingEnd": 44,
+      },
+      "px": StyleSheet {
+        "paddingEnd": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingEnd": 22,
+      },
+    },
+    "pl": Object {
+      "full": StyleSheet {
+        "paddingLeft": "100%",
+      },
+      "half": StyleSheet {
+        "paddingLeft": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingLeft": 44,
+      },
+      "px": StyleSheet {
+        "paddingLeft": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingLeft": 22,
+      },
+    },
+    "pr": Object {
+      "full": StyleSheet {
+        "paddingRight": "100%",
+      },
+      "half": StyleSheet {
+        "paddingRight": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingRight": 44,
+      },
+      "px": StyleSheet {
+        "paddingRight": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingRight": 22,
+      },
+    },
+    "ps": Object {
+      "full": StyleSheet {
+        "paddingStart": "100%",
+      },
+      "half": StyleSheet {
+        "paddingStart": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingStart": 44,
+      },
+      "px": StyleSheet {
+        "paddingStart": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingStart": 22,
+      },
+    },
+    "pt": Object {
+      "full": StyleSheet {
+        "paddingTop": "100%",
+      },
+      "half": StyleSheet {
+        "paddingTop": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingTop": 44,
+      },
+      "px": StyleSheet {
+        "paddingTop": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingTop": 22,
+      },
+    },
+    "px": Object {
+      "full": StyleSheet {
+        "paddingHorizontal": "100%",
+      },
+      "half": StyleSheet {
+        "paddingHorizontal": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingHorizontal": 44,
+      },
+      "px": StyleSheet {
+        "paddingHorizontal": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingHorizontal": 22,
+      },
+    },
+    "py": Object {
+      "full": StyleSheet {
+        "paddingVertical": "100%",
+      },
+      "half": StyleSheet {
+        "paddingVertical": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingVertical": 44,
+      },
+      "px": StyleSheet {
+        "paddingVertical": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingVertical": 22,
+      },
+    },
+    "relative": StyleSheet {
+      "position": "relative",
+    },
+    "rounded": Object {
+      "lg": StyleSheet {
+        "borderRadius": 12,
+      },
+      "sm": StyleSheet {
+        "borderRadius": 4,
+      },
+    },
+    "self": Object {
+      "auto": StyleSheet {
+        "alignSelf": "auto",
+      },
+      "center": StyleSheet {
+        "alignSelf": "center",
+      },
+      "end": StyleSheet {
+        "alignSelf": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignSelf": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignSelf": "stretch",
+      },
+    },
+    "text": Object {
+      "base": StyleSheet {
+        "color": "#fff",
+      },
+      "body": StyleSheet {
+        "fontSize": 14,
+      },
+      "capitalize": StyleSheet {
+        "textTransform": "capitalize",
+      },
+      "center": StyleSheet {
+        "textAlign": "center",
+      },
+      "fg": StyleSheet {
+        "color": "#000",
+      },
+      "justify": StyleSheet {
+        "textAlign": "justify",
+      },
+      "left": StyleSheet {
+        "textAlign": "left",
+      },
+      "lineThrough": StyleSheet {
+        "textDecorationLine": "line-through",
+        "textDecorationStyle": "solid",
+      },
+      "lowercase": StyleSheet {
+        "textTransform": "lowercase",
+      },
+      "noTextTransform": StyleSheet {
+        "textTransform": "none",
+      },
+      "noUnderline": StyleSheet {
+        "textDecorationLine": "none",
+      },
+      "right": StyleSheet {
+        "textAlign": "right",
+      },
+      "title": StyleSheet {
+        "fontSize": 24,
+      },
+      "trim": StyleSheet {
+        "color": "#ddd",
+      },
+      "underline": StyleSheet {
+        "textDecorationLine": "underline",
+        "textDecorationStyle": "solid",
+      },
+      "uppercase": StyleSheet {
+        "textTransform": "uppercase",
+      },
+    },
+    "w": Object {
+      "full": StyleSheet {
+        "width": "100%",
+      },
+      "half": StyleSheet {
+        "width": "50%",
+      },
+      "lg": StyleSheet {
+        "width": 44,
+      },
+      "px": StyleSheet {
+        "width": 0.5,
+      },
+      "sm": StyleSheet {
+        "width": 22,
+      },
+    },
+    "z00": StyleSheet {
+      "zIndex": 0,
+    },
+    "z10": StyleSheet {
+      "zIndex": 10,
+    },
+    "z20": StyleSheet {
+      "zIndex": 20,
+    },
+    "z30": StyleSheet {
+      "zIndex": 30,
+    },
+    "z40": StyleSheet {
+      "zIndex": 40,
+    },
+    "z50": StyleSheet {
+      "zIndex": 50,
+    },
+  },
+  "self": Object {
+    "auto": StyleSheet {
+      "alignSelf": "auto",
+    },
+    "center": StyleSheet {
+      "alignSelf": "center",
+    },
+    "end": StyleSheet {
+      "alignSelf": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignSelf": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignSelf": "stretch",
+    },
+  },
+  "tablet": Object {
+    "absolute": undefined,
+    "bg": Object {
+      "base": undefined,
+      "fg": undefined,
+      "trim": undefined,
+    },
+    "border": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderBottom": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderLeft": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderRight": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderTop": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "colors": Object {
+      "base": "#fff",
+      "fg": "#000",
+      "trim": "#ddd",
+    },
+    "content": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "flex": Object {
+      "col": undefined,
+      "colR": undefined,
+      "grow": undefined,
+      "grow0": undefined,
+      "noWrap": undefined,
+      "one": undefined,
+      "row": undefined,
+      "rowR": undefined,
+      "shrink": undefined,
+      "shrink0": undefined,
+      "wrap": undefined,
+    },
+    "font": Object {
+      "bold": undefined,
+      "regular": undefined,
+    },
+    "h": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "inset": Object {
+      "bottom0": undefined,
+      "left0": undefined,
+      "right0": undefined,
+      "top0": undefined,
+      "x0": undefined,
+      "y0": undefined,
+      "zero": undefined,
+    },
+    "items": Object {
+      "baseline": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "justify": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "evenly": undefined,
+      "start": undefined,
+    },
+    "m": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "me": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ml": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ms": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mx": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "my": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "overflow": Object {
+      "hidden": undefined,
+      "scroll": undefined,
+      "visible": undefined,
+    },
+    "p": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pe": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pl": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ps": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "px": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "py": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "relative": undefined,
+    "rounded": Object {
+      "lg": undefined,
+      "sm": undefined,
+    },
+    "self": Object {
+      "auto": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "text": Object {
+      "base": undefined,
+      "body": undefined,
+      "capitalize": undefined,
+      "center": undefined,
+      "fg": undefined,
+      "justify": undefined,
+      "left": undefined,
+      "lineThrough": undefined,
+      "lowercase": undefined,
+      "noTextTransform": undefined,
+      "noUnderline": undefined,
+      "right": undefined,
+      "title": undefined,
+      "trim": undefined,
+      "underline": undefined,
+      "uppercase": undefined,
+    },
+    "w": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "z00": undefined,
+    "z10": undefined,
+    "z20": undefined,
+    "z30": undefined,
+    "z40": undefined,
+    "z50": undefined,
+  },
+  "text": Object {
+    "base": StyleSheet {
+      "color": "#fff",
+    },
+    "body": StyleSheet {
+      "fontSize": 14,
+    },
+    "capitalize": StyleSheet {
+      "textTransform": "capitalize",
+    },
+    "center": StyleSheet {
+      "textAlign": "center",
+    },
+    "fg": StyleSheet {
+      "color": "#000",
+    },
+    "justify": StyleSheet {
+      "textAlign": "justify",
+    },
+    "left": StyleSheet {
+      "textAlign": "left",
+    },
+    "lineThrough": StyleSheet {
+      "textDecorationLine": "line-through",
+      "textDecorationStyle": "solid",
+    },
+    "lowercase": StyleSheet {
+      "textTransform": "lowercase",
+    },
+    "noTextTransform": StyleSheet {
+      "textTransform": "none",
+    },
+    "noUnderline": StyleSheet {
+      "textDecorationLine": "none",
+    },
+    "right": StyleSheet {
+      "textAlign": "right",
+    },
+    "title": StyleSheet {
+      "fontSize": 24,
+    },
+    "trim": StyleSheet {
+      "color": "#ddd",
+    },
+    "underline": StyleSheet {
+      "textDecorationLine": "underline",
+      "textDecorationStyle": "solid",
+    },
+    "uppercase": StyleSheet {
+      "textTransform": "uppercase",
+    },
+  },
+  "w": Object {
+    "full": StyleSheet {
+      "width": "100%",
+    },
+    "half": StyleSheet {
+      "width": "50%",
+    },
+    "lg": StyleSheet {
+      "width": 44,
+    },
+    "px": StyleSheet {
+      "width": 0.5,
+    },
+    "sm": StyleSheet {
+      "width": 22,
+    },
+  },
+  "x": Object {
+    "absolute": undefined,
+    "bg": Object {
+      "base": undefined,
+      "fg": undefined,
+      "trim": undefined,
+    },
+    "border": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderBottom": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderLeft": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderRight": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderTop": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "colors": Object {
+      "base": "#fff",
+      "fg": "#000",
+      "trim": "#ddd",
+    },
+    "content": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "flex": Object {
+      "col": undefined,
+      "colR": undefined,
+      "grow": undefined,
+      "grow0": undefined,
+      "noWrap": undefined,
+      "one": undefined,
+      "row": undefined,
+      "rowR": undefined,
+      "shrink": undefined,
+      "shrink0": undefined,
+      "wrap": undefined,
+    },
+    "font": Object {
+      "bold": undefined,
+      "regular": undefined,
+    },
+    "h": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "inset": Object {
+      "bottom0": undefined,
+      "left0": undefined,
+      "right0": undefined,
+      "top0": undefined,
+      "x0": undefined,
+      "y0": undefined,
+      "zero": undefined,
+    },
+    "items": Object {
+      "baseline": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "justify": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "evenly": undefined,
+      "start": undefined,
+    },
+    "m": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "me": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ml": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ms": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mx": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "my": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "overflow": Object {
+      "hidden": undefined,
+      "scroll": undefined,
+      "visible": undefined,
+    },
+    "p": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pe": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pl": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ps": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "px": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "py": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "relative": undefined,
+    "rounded": Object {
+      "lg": undefined,
+      "sm": undefined,
+    },
+    "self": Object {
+      "auto": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "text": Object {
+      "base": undefined,
+      "body": undefined,
+      "capitalize": undefined,
+      "center": undefined,
+      "fg": undefined,
+      "justify": undefined,
+      "left": undefined,
+      "lineThrough": undefined,
+      "lowercase": undefined,
+      "noTextTransform": undefined,
+      "noUnderline": undefined,
+      "right": undefined,
+      "title": undefined,
+      "trim": undefined,
+      "underline": undefined,
+      "uppercase": undefined,
+    },
+    "w": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "z00": undefined,
+    "z10": undefined,
+    "z20": undefined,
+    "z30": undefined,
+    "z40": undefined,
+    "z50": undefined,
+  },
+  "z00": StyleSheet {
+    "zIndex": 0,
+  },
+  "z10": StyleSheet {
+    "zIndex": 10,
+  },
+  "z20": StyleSheet {
+    "zIndex": 20,
+  },
+  "z30": StyleSheet {
+    "zIndex": 30,
+  },
+  "z40": StyleSheet {
+    "zIndex": 40,
+  },
+  "z50": StyleSheet {
+    "zIndex": 50,
+  },
+}
+`;
+
+exports[`usePrim styles light mode tablet sizeClass 1`] = `
+Object {
+  "absolute": StyleSheet {
+    "position": "absolute",
+  },
+  "bg": Object {
+    "base": StyleSheet {
+      "backgroundColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "backgroundColor": "#000",
+    },
+    "trim": StyleSheet {
+      "backgroundColor": "#ddd",
+    },
+  },
+  "border": Object {
+    "base": StyleSheet {
+      "borderColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderColor": "#ddd",
+    },
+  },
+  "borderBottom": Object {
+    "base": StyleSheet {
+      "borderBottomColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderBottomColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderBottomWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderBottomWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderBottomWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderBottomColor": "#ddd",
+    },
+  },
+  "borderLeft": Object {
+    "base": StyleSheet {
+      "borderLeftColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderLeftColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderLeftWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderLeftWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderLeftWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderLeftColor": "#ddd",
+    },
+  },
+  "borderRight": Object {
+    "base": StyleSheet {
+      "borderRightColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderRightColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderRightWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderRightWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderRightWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderRightColor": "#ddd",
+    },
+  },
+  "borderTop": Object {
+    "base": StyleSheet {
+      "borderTopColor": "#fff",
+    },
+    "fg": StyleSheet {
+      "borderTopColor": "#000",
+    },
+    "lg": StyleSheet {
+      "borderTopWidth": 44,
+    },
+    "px": StyleSheet {
+      "borderTopWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "borderTopWidth": 22,
+    },
+    "trim": StyleSheet {
+      "borderTopColor": "#ddd",
+    },
+  },
+  "colors": Object {
+    "base": "#fff",
+    "fg": "#000",
+    "trim": "#ddd",
+  },
+  "content": Object {
+    "around": StyleSheet {
+      "alignContent": "space-around",
+    },
+    "between": StyleSheet {
+      "alignContent": "space-between",
+    },
+    "center": StyleSheet {
+      "alignContent": "center",
+    },
+    "end": StyleSheet {
+      "alignContent": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignContent": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignContent": "stretch",
+    },
+  },
+  "flex": Object {
+    "col": StyleSheet {
+      "flexDirection": "column",
+    },
+    "colR": StyleSheet {
+      "flexDirection": "column-reverse",
+    },
+    "grow": StyleSheet {
+      "flexGrow": 1,
+    },
+    "grow0": StyleSheet {
+      "flexGrow": 0,
+    },
+    "noWrap": StyleSheet {
+      "flexWrap": "nowrap",
+    },
+    "one": StyleSheet {
+      "flex": 1,
+    },
+    "row": StyleSheet {
+      "flexDirection": "row",
+    },
+    "rowR": StyleSheet {
+      "flexDirection": "row-reverse",
+    },
+    "shrink": StyleSheet {
+      "flexShrink": 1,
+    },
+    "shrink0": StyleSheet {
+      "flexShrink": 0,
+    },
+    "wrap": StyleSheet {
+      "flexWrap": "wrap",
+    },
+  },
+  "font": Object {
+    "bold": StyleSheet {
+      "fontWeight": "600",
+    },
+    "regular": StyleSheet {
+      "fontWeight": "400",
+    },
+  },
+  "h": Object {
+    "full": StyleSheet {
+      "height": "100%",
+    },
+    "half": StyleSheet {
+      "height": "50%",
+    },
+    "lg": StyleSheet {
+      "height": 44,
+    },
+    "px": StyleSheet {
+      "height": 0.5,
+    },
+    "sm": StyleSheet {
+      "height": 22,
+    },
+  },
+  "inset": Object {
+    "bottom0": StyleSheet {
+      "top": 0,
+    },
+    "left0": StyleSheet {
+      "top": 0,
+    },
+    "right0": StyleSheet {
+      "top": 0,
+    },
+    "top0": StyleSheet {
+      "top": 0,
+    },
+    "x0": StyleSheet {
+      "left": 0,
+      "right": 0,
+    },
+    "y0": StyleSheet {
+      "bottom": 0,
+      "top": 0,
+    },
+    "zero": StyleSheet {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    },
+  },
+  "items": Object {
+    "baseline": StyleSheet {
+      "alignItems": "baseline",
+    },
+    "center": StyleSheet {
+      "alignItems": "center",
+    },
+    "end": StyleSheet {
+      "alignItems": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignItems": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignItems": "stretch",
+    },
+  },
+  "justify": Object {
+    "around": StyleSheet {
+      "justifyContent": "space-around",
+    },
+    "between": StyleSheet {
+      "justifyContent": "space-between",
+    },
+    "center": StyleSheet {
+      "justifyContent": "center",
+    },
+    "end": StyleSheet {
+      "justifyContent": "flex-end",
+    },
+    "evenly": StyleSheet {
+      "justifyContent": "space-evenly",
+    },
+    "start": StyleSheet {
+      "justifyContent": "flex-start",
+    },
+  },
+  "m": Object {
+    "full": StyleSheet {
+      "margin": "100%",
+    },
+    "half": StyleSheet {
+      "margin": "50%",
+    },
+    "lg": StyleSheet {
+      "margin": 44,
+    },
+    "px": StyleSheet {
+      "margin": 0.5,
+    },
+    "sm": StyleSheet {
+      "margin": 22,
+    },
+  },
+  "maxH": Object {
+    "full": StyleSheet {
+      "maxHeight": "100%",
+    },
+    "half": StyleSheet {
+      "maxHeight": "50%",
+    },
+    "lg": StyleSheet {
+      "maxHeight": 44,
+    },
+    "px": StyleSheet {
+      "maxHeight": 0.5,
+    },
+    "sm": StyleSheet {
+      "maxHeight": 22,
+    },
+  },
+  "maxW": Object {
+    "full": StyleSheet {
+      "maxWidth": "100%",
+    },
+    "half": StyleSheet {
+      "maxWidth": "50%",
+    },
+    "lg": StyleSheet {
+      "maxWidth": 44,
+    },
+    "px": StyleSheet {
+      "maxWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "maxWidth": 22,
+    },
+  },
+  "mb": Object {
+    "full": StyleSheet {
+      "marginBottom": "100%",
+    },
+    "half": StyleSheet {
+      "marginBottom": "50%",
+    },
+    "lg": StyleSheet {
+      "marginBottom": 44,
+    },
+    "px": StyleSheet {
+      "marginBottom": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginBottom": 22,
+    },
+  },
+  "me": Object {
+    "full": StyleSheet {
+      "marginEnd": "100%",
+    },
+    "half": StyleSheet {
+      "marginEnd": "50%",
+    },
+    "lg": StyleSheet {
+      "marginEnd": 44,
+    },
+    "px": StyleSheet {
+      "marginEnd": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginEnd": 22,
+    },
+  },
+  "minH": Object {
+    "full": StyleSheet {
+      "minHeight": "100%",
+    },
+    "half": StyleSheet {
+      "minHeight": "50%",
+    },
+    "lg": StyleSheet {
+      "minHeight": 44,
+    },
+    "px": StyleSheet {
+      "minHeight": 0.5,
+    },
+    "sm": StyleSheet {
+      "minHeight": 22,
+    },
+  },
+  "minW": Object {
+    "full": StyleSheet {
+      "minWidth": "100%",
+    },
+    "half": StyleSheet {
+      "minWidth": "50%",
+    },
+    "lg": StyleSheet {
+      "minWidth": 44,
+    },
+    "px": StyleSheet {
+      "minWidth": 0.5,
+    },
+    "sm": StyleSheet {
+      "minWidth": 22,
+    },
+  },
+  "ml": Object {
+    "full": StyleSheet {
+      "marginLeft": "100%",
+    },
+    "half": StyleSheet {
+      "marginLeft": "50%",
+    },
+    "lg": StyleSheet {
+      "marginLeft": 44,
+    },
+    "px": StyleSheet {
+      "marginLeft": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginLeft": 22,
+    },
+  },
+  "mode": "light",
+  "mr": Object {
+    "full": StyleSheet {
+      "marginRight": "100%",
+    },
+    "half": StyleSheet {
+      "marginRight": "50%",
+    },
+    "lg": StyleSheet {
+      "marginRight": 44,
+    },
+    "px": StyleSheet {
+      "marginRight": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginRight": 22,
+    },
+  },
+  "ms": Object {
+    "full": StyleSheet {
+      "marginStart": "100%",
+    },
+    "half": StyleSheet {
+      "marginStart": "50%",
+    },
+    "lg": StyleSheet {
+      "marginStart": 44,
+    },
+    "px": StyleSheet {
+      "marginStart": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginStart": 22,
+    },
+  },
+  "mt": Object {
+    "full": StyleSheet {
+      "marginTop": "100%",
+    },
+    "half": StyleSheet {
+      "marginTop": "50%",
+    },
+    "lg": StyleSheet {
+      "marginTop": 44,
+    },
+    "px": StyleSheet {
+      "marginTop": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginTop": 22,
+    },
+  },
+  "mx": Object {
+    "full": StyleSheet {
+      "marginHorizontal": "100%",
+    },
+    "half": StyleSheet {
+      "marginHorizontal": "50%",
+    },
+    "lg": StyleSheet {
+      "marginHorizontal": 44,
+    },
+    "px": StyleSheet {
+      "marginHorizontal": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginHorizontal": 22,
+    },
+  },
+  "my": Object {
+    "full": StyleSheet {
+      "marginVertical": "100%",
+    },
+    "half": StyleSheet {
+      "marginVertical": "50%",
+    },
+    "lg": StyleSheet {
+      "marginVertical": 44,
+    },
+    "px": StyleSheet {
+      "marginVertical": 0.5,
+    },
+    "sm": StyleSheet {
+      "marginVertical": 22,
+    },
+  },
+  "overflow": Object {
+    "hidden": StyleSheet {
+      "overflow": "hidden",
+    },
+    "scroll": StyleSheet {
+      "overflow": "scroll",
+    },
+    "visible": StyleSheet {
+      "overflow": "visible",
+    },
+  },
+  "p": Object {
+    "full": StyleSheet {
+      "padding": "100%",
+    },
+    "half": StyleSheet {
+      "padding": "50%",
+    },
+    "lg": StyleSheet {
+      "padding": 44,
+    },
+    "px": StyleSheet {
+      "padding": 0.5,
+    },
+    "sm": StyleSheet {
+      "padding": 22,
+    },
+  },
+  "pb": Object {
+    "full": StyleSheet {
+      "paddingBottom": "100%",
+    },
+    "half": StyleSheet {
+      "paddingBottom": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingBottom": 44,
+    },
+    "px": StyleSheet {
+      "paddingBottom": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingBottom": 22,
+    },
+  },
+  "pe": Object {
+    "full": StyleSheet {
+      "paddingEnd": "100%",
+    },
+    "half": StyleSheet {
+      "paddingEnd": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingEnd": 44,
+    },
+    "px": StyleSheet {
+      "paddingEnd": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingEnd": 22,
+    },
+  },
+  "pl": Object {
+    "full": StyleSheet {
+      "paddingLeft": "100%",
+    },
+    "half": StyleSheet {
+      "paddingLeft": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingLeft": 44,
+    },
+    "px": StyleSheet {
+      "paddingLeft": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingLeft": 22,
+    },
+  },
+  "pr": Object {
+    "full": StyleSheet {
+      "paddingRight": "100%",
+    },
+    "half": StyleSheet {
+      "paddingRight": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingRight": 44,
+    },
+    "px": StyleSheet {
+      "paddingRight": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingRight": 22,
+    },
+  },
+  "ps": Object {
+    "full": StyleSheet {
+      "paddingStart": "100%",
+    },
+    "half": StyleSheet {
+      "paddingStart": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingStart": 44,
+    },
+    "px": StyleSheet {
+      "paddingStart": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingStart": 22,
+    },
+  },
+  "pt": Object {
+    "full": StyleSheet {
+      "paddingTop": "100%",
+    },
+    "half": StyleSheet {
+      "paddingTop": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingTop": 44,
+    },
+    "px": StyleSheet {
+      "paddingTop": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingTop": 22,
+    },
+  },
+  "px": Object {
+    "full": StyleSheet {
+      "paddingHorizontal": "100%",
+    },
+    "half": StyleSheet {
+      "paddingHorizontal": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingHorizontal": 44,
+    },
+    "px": StyleSheet {
+      "paddingHorizontal": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingHorizontal": 22,
+    },
+  },
+  "py": Object {
+    "full": StyleSheet {
+      "paddingVertical": "100%",
+    },
+    "half": StyleSheet {
+      "paddingVertical": "50%",
+    },
+    "lg": StyleSheet {
+      "paddingVertical": 44,
+    },
+    "px": StyleSheet {
+      "paddingVertical": 0.5,
+    },
+    "sm": StyleSheet {
+      "paddingVertical": 22,
+    },
+  },
+  "relative": StyleSheet {
+    "position": "relative",
+  },
+  "rounded": Object {
+    "lg": StyleSheet {
+      "borderRadius": 12,
+    },
+    "sm": StyleSheet {
+      "borderRadius": 4,
+    },
+  },
+  "screenSize": "tablet",
+  "se": Object {
+    "absolute": undefined,
+    "bg": Object {
+      "base": undefined,
+      "fg": undefined,
+      "trim": undefined,
+    },
+    "border": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderBottom": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderLeft": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderRight": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderTop": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "colors": Object {
+      "base": "#fff",
+      "fg": "#000",
+      "trim": "#ddd",
+    },
+    "content": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "flex": Object {
+      "col": undefined,
+      "colR": undefined,
+      "grow": undefined,
+      "grow0": undefined,
+      "noWrap": undefined,
+      "one": undefined,
+      "row": undefined,
+      "rowR": undefined,
+      "shrink": undefined,
+      "shrink0": undefined,
+      "wrap": undefined,
+    },
+    "font": Object {
+      "bold": undefined,
+      "regular": undefined,
+    },
+    "h": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "inset": Object {
+      "bottom0": undefined,
+      "left0": undefined,
+      "right0": undefined,
+      "top0": undefined,
+      "x0": undefined,
+      "y0": undefined,
+      "zero": undefined,
+    },
+    "items": Object {
+      "baseline": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "justify": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "evenly": undefined,
+      "start": undefined,
+    },
+    "m": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "me": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ml": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ms": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mx": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "my": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "overflow": Object {
+      "hidden": undefined,
+      "scroll": undefined,
+      "visible": undefined,
+    },
+    "p": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pe": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pl": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ps": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "px": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "py": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "relative": undefined,
+    "rounded": Object {
+      "lg": undefined,
+      "sm": undefined,
+    },
+    "self": Object {
+      "auto": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "text": Object {
+      "base": undefined,
+      "body": undefined,
+      "capitalize": undefined,
+      "center": undefined,
+      "fg": undefined,
+      "justify": undefined,
+      "left": undefined,
+      "lineThrough": undefined,
+      "lowercase": undefined,
+      "noTextTransform": undefined,
+      "noUnderline": undefined,
+      "right": undefined,
+      "title": undefined,
+      "trim": undefined,
+      "underline": undefined,
+      "uppercase": undefined,
+    },
+    "w": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "z00": undefined,
+    "z10": undefined,
+    "z20": undefined,
+    "z30": undefined,
+    "z40": undefined,
+    "z50": undefined,
+  },
+  "self": Object {
+    "auto": StyleSheet {
+      "alignSelf": "auto",
+    },
+    "center": StyleSheet {
+      "alignSelf": "center",
+    },
+    "end": StyleSheet {
+      "alignSelf": "flex-end",
+    },
+    "start": StyleSheet {
+      "alignSelf": "flex-start",
+    },
+    "stretch": StyleSheet {
+      "alignSelf": "stretch",
+    },
+  },
+  "tablet": Object {
+    "absolute": StyleSheet {
+      "position": "absolute",
+    },
+    "bg": Object {
+      "base": StyleSheet {
+        "backgroundColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "backgroundColor": "#000",
+      },
+      "trim": StyleSheet {
+        "backgroundColor": "#ddd",
+      },
+    },
+    "border": Object {
+      "base": StyleSheet {
+        "borderColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderColor": "#ddd",
+      },
+    },
+    "borderBottom": Object {
+      "base": StyleSheet {
+        "borderBottomColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderBottomColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderBottomWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderBottomWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderBottomWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderBottomColor": "#ddd",
+      },
+    },
+    "borderLeft": Object {
+      "base": StyleSheet {
+        "borderLeftColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderLeftColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderLeftWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderLeftWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderLeftWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderLeftColor": "#ddd",
+      },
+    },
+    "borderRight": Object {
+      "base": StyleSheet {
+        "borderRightColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderRightColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderRightWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderRightWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderRightWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderRightColor": "#ddd",
+      },
+    },
+    "borderTop": Object {
+      "base": StyleSheet {
+        "borderTopColor": "#fff",
+      },
+      "fg": StyleSheet {
+        "borderTopColor": "#000",
+      },
+      "lg": StyleSheet {
+        "borderTopWidth": 44,
+      },
+      "px": StyleSheet {
+        "borderTopWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "borderTopWidth": 22,
+      },
+      "trim": StyleSheet {
+        "borderTopColor": "#ddd",
+      },
+    },
+    "colors": Object {
+      "base": "#fff",
+      "fg": "#000",
+      "trim": "#ddd",
+    },
+    "content": Object {
+      "around": StyleSheet {
+        "alignContent": "space-around",
+      },
+      "between": StyleSheet {
+        "alignContent": "space-between",
+      },
+      "center": StyleSheet {
+        "alignContent": "center",
+      },
+      "end": StyleSheet {
+        "alignContent": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignContent": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignContent": "stretch",
+      },
+    },
+    "flex": Object {
+      "col": StyleSheet {
+        "flexDirection": "column",
+      },
+      "colR": StyleSheet {
+        "flexDirection": "column-reverse",
+      },
+      "grow": StyleSheet {
+        "flexGrow": 1,
+      },
+      "grow0": StyleSheet {
+        "flexGrow": 0,
+      },
+      "noWrap": StyleSheet {
+        "flexWrap": "nowrap",
+      },
+      "one": StyleSheet {
+        "flex": 1,
+      },
+      "row": StyleSheet {
+        "flexDirection": "row",
+      },
+      "rowR": StyleSheet {
+        "flexDirection": "row-reverse",
+      },
+      "shrink": StyleSheet {
+        "flexShrink": 1,
+      },
+      "shrink0": StyleSheet {
+        "flexShrink": 0,
+      },
+      "wrap": StyleSheet {
+        "flexWrap": "wrap",
+      },
+    },
+    "font": Object {
+      "bold": StyleSheet {
+        "fontWeight": "600",
+      },
+      "regular": StyleSheet {
+        "fontWeight": "400",
+      },
+    },
+    "h": Object {
+      "full": StyleSheet {
+        "height": "100%",
+      },
+      "half": StyleSheet {
+        "height": "50%",
+      },
+      "lg": StyleSheet {
+        "height": 44,
+      },
+      "px": StyleSheet {
+        "height": 0.5,
+      },
+      "sm": StyleSheet {
+        "height": 22,
+      },
+    },
+    "inset": Object {
+      "bottom0": StyleSheet {
+        "top": 0,
+      },
+      "left0": StyleSheet {
+        "top": 0,
+      },
+      "right0": StyleSheet {
+        "top": 0,
+      },
+      "top0": StyleSheet {
+        "top": 0,
+      },
+      "x0": StyleSheet {
+        "left": 0,
+        "right": 0,
+      },
+      "y0": StyleSheet {
+        "bottom": 0,
+        "top": 0,
+      },
+      "zero": StyleSheet {
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+      },
+    },
+    "items": Object {
+      "baseline": StyleSheet {
+        "alignItems": "baseline",
+      },
+      "center": StyleSheet {
+        "alignItems": "center",
+      },
+      "end": StyleSheet {
+        "alignItems": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignItems": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignItems": "stretch",
+      },
+    },
+    "justify": Object {
+      "around": StyleSheet {
+        "justifyContent": "space-around",
+      },
+      "between": StyleSheet {
+        "justifyContent": "space-between",
+      },
+      "center": StyleSheet {
+        "justifyContent": "center",
+      },
+      "end": StyleSheet {
+        "justifyContent": "flex-end",
+      },
+      "evenly": StyleSheet {
+        "justifyContent": "space-evenly",
+      },
+      "start": StyleSheet {
+        "justifyContent": "flex-start",
+      },
+    },
+    "m": Object {
+      "full": StyleSheet {
+        "margin": "100%",
+      },
+      "half": StyleSheet {
+        "margin": "50%",
+      },
+      "lg": StyleSheet {
+        "margin": 44,
+      },
+      "px": StyleSheet {
+        "margin": 0.5,
+      },
+      "sm": StyleSheet {
+        "margin": 22,
+      },
+    },
+    "maxH": Object {
+      "full": StyleSheet {
+        "maxHeight": "100%",
+      },
+      "half": StyleSheet {
+        "maxHeight": "50%",
+      },
+      "lg": StyleSheet {
+        "maxHeight": 44,
+      },
+      "px": StyleSheet {
+        "maxHeight": 0.5,
+      },
+      "sm": StyleSheet {
+        "maxHeight": 22,
+      },
+    },
+    "maxW": Object {
+      "full": StyleSheet {
+        "maxWidth": "100%",
+      },
+      "half": StyleSheet {
+        "maxWidth": "50%",
+      },
+      "lg": StyleSheet {
+        "maxWidth": 44,
+      },
+      "px": StyleSheet {
+        "maxWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "maxWidth": 22,
+      },
+    },
+    "mb": Object {
+      "full": StyleSheet {
+        "marginBottom": "100%",
+      },
+      "half": StyleSheet {
+        "marginBottom": "50%",
+      },
+      "lg": StyleSheet {
+        "marginBottom": 44,
+      },
+      "px": StyleSheet {
+        "marginBottom": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginBottom": 22,
+      },
+    },
+    "me": Object {
+      "full": StyleSheet {
+        "marginEnd": "100%",
+      },
+      "half": StyleSheet {
+        "marginEnd": "50%",
+      },
+      "lg": StyleSheet {
+        "marginEnd": 44,
+      },
+      "px": StyleSheet {
+        "marginEnd": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginEnd": 22,
+      },
+    },
+    "minH": Object {
+      "full": StyleSheet {
+        "minHeight": "100%",
+      },
+      "half": StyleSheet {
+        "minHeight": "50%",
+      },
+      "lg": StyleSheet {
+        "minHeight": 44,
+      },
+      "px": StyleSheet {
+        "minHeight": 0.5,
+      },
+      "sm": StyleSheet {
+        "minHeight": 22,
+      },
+    },
+    "minW": Object {
+      "full": StyleSheet {
+        "minWidth": "100%",
+      },
+      "half": StyleSheet {
+        "minWidth": "50%",
+      },
+      "lg": StyleSheet {
+        "minWidth": 44,
+      },
+      "px": StyleSheet {
+        "minWidth": 0.5,
+      },
+      "sm": StyleSheet {
+        "minWidth": 22,
+      },
+    },
+    "ml": Object {
+      "full": StyleSheet {
+        "marginLeft": "100%",
+      },
+      "half": StyleSheet {
+        "marginLeft": "50%",
+      },
+      "lg": StyleSheet {
+        "marginLeft": 44,
+      },
+      "px": StyleSheet {
+        "marginLeft": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginLeft": 22,
+      },
+    },
+    "mr": Object {
+      "full": StyleSheet {
+        "marginRight": "100%",
+      },
+      "half": StyleSheet {
+        "marginRight": "50%",
+      },
+      "lg": StyleSheet {
+        "marginRight": 44,
+      },
+      "px": StyleSheet {
+        "marginRight": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginRight": 22,
+      },
+    },
+    "ms": Object {
+      "full": StyleSheet {
+        "marginStart": "100%",
+      },
+      "half": StyleSheet {
+        "marginStart": "50%",
+      },
+      "lg": StyleSheet {
+        "marginStart": 44,
+      },
+      "px": StyleSheet {
+        "marginStart": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginStart": 22,
+      },
+    },
+    "mt": Object {
+      "full": StyleSheet {
+        "marginTop": "100%",
+      },
+      "half": StyleSheet {
+        "marginTop": "50%",
+      },
+      "lg": StyleSheet {
+        "marginTop": 44,
+      },
+      "px": StyleSheet {
+        "marginTop": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginTop": 22,
+      },
+    },
+    "mx": Object {
+      "full": StyleSheet {
+        "marginHorizontal": "100%",
+      },
+      "half": StyleSheet {
+        "marginHorizontal": "50%",
+      },
+      "lg": StyleSheet {
+        "marginHorizontal": 44,
+      },
+      "px": StyleSheet {
+        "marginHorizontal": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginHorizontal": 22,
+      },
+    },
+    "my": Object {
+      "full": StyleSheet {
+        "marginVertical": "100%",
+      },
+      "half": StyleSheet {
+        "marginVertical": "50%",
+      },
+      "lg": StyleSheet {
+        "marginVertical": 44,
+      },
+      "px": StyleSheet {
+        "marginVertical": 0.5,
+      },
+      "sm": StyleSheet {
+        "marginVertical": 22,
+      },
+    },
+    "overflow": Object {
+      "hidden": StyleSheet {
+        "overflow": "hidden",
+      },
+      "scroll": StyleSheet {
+        "overflow": "scroll",
+      },
+      "visible": StyleSheet {
+        "overflow": "visible",
+      },
+    },
+    "p": Object {
+      "full": StyleSheet {
+        "padding": "100%",
+      },
+      "half": StyleSheet {
+        "padding": "50%",
+      },
+      "lg": StyleSheet {
+        "padding": 44,
+      },
+      "px": StyleSheet {
+        "padding": 0.5,
+      },
+      "sm": StyleSheet {
+        "padding": 22,
+      },
+    },
+    "pb": Object {
+      "full": StyleSheet {
+        "paddingBottom": "100%",
+      },
+      "half": StyleSheet {
+        "paddingBottom": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingBottom": 44,
+      },
+      "px": StyleSheet {
+        "paddingBottom": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingBottom": 22,
+      },
+    },
+    "pe": Object {
+      "full": StyleSheet {
+        "paddingEnd": "100%",
+      },
+      "half": StyleSheet {
+        "paddingEnd": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingEnd": 44,
+      },
+      "px": StyleSheet {
+        "paddingEnd": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingEnd": 22,
+      },
+    },
+    "pl": Object {
+      "full": StyleSheet {
+        "paddingLeft": "100%",
+      },
+      "half": StyleSheet {
+        "paddingLeft": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingLeft": 44,
+      },
+      "px": StyleSheet {
+        "paddingLeft": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingLeft": 22,
+      },
+    },
+    "pr": Object {
+      "full": StyleSheet {
+        "paddingRight": "100%",
+      },
+      "half": StyleSheet {
+        "paddingRight": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingRight": 44,
+      },
+      "px": StyleSheet {
+        "paddingRight": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingRight": 22,
+      },
+    },
+    "ps": Object {
+      "full": StyleSheet {
+        "paddingStart": "100%",
+      },
+      "half": StyleSheet {
+        "paddingStart": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingStart": 44,
+      },
+      "px": StyleSheet {
+        "paddingStart": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingStart": 22,
+      },
+    },
+    "pt": Object {
+      "full": StyleSheet {
+        "paddingTop": "100%",
+      },
+      "half": StyleSheet {
+        "paddingTop": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingTop": 44,
+      },
+      "px": StyleSheet {
+        "paddingTop": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingTop": 22,
+      },
+    },
+    "px": Object {
+      "full": StyleSheet {
+        "paddingHorizontal": "100%",
+      },
+      "half": StyleSheet {
+        "paddingHorizontal": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingHorizontal": 44,
+      },
+      "px": StyleSheet {
+        "paddingHorizontal": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingHorizontal": 22,
+      },
+    },
+    "py": Object {
+      "full": StyleSheet {
+        "paddingVertical": "100%",
+      },
+      "half": StyleSheet {
+        "paddingVertical": "50%",
+      },
+      "lg": StyleSheet {
+        "paddingVertical": 44,
+      },
+      "px": StyleSheet {
+        "paddingVertical": 0.5,
+      },
+      "sm": StyleSheet {
+        "paddingVertical": 22,
+      },
+    },
+    "relative": StyleSheet {
+      "position": "relative",
+    },
+    "rounded": Object {
+      "lg": StyleSheet {
+        "borderRadius": 12,
+      },
+      "sm": StyleSheet {
+        "borderRadius": 4,
+      },
+    },
+    "self": Object {
+      "auto": StyleSheet {
+        "alignSelf": "auto",
+      },
+      "center": StyleSheet {
+        "alignSelf": "center",
+      },
+      "end": StyleSheet {
+        "alignSelf": "flex-end",
+      },
+      "start": StyleSheet {
+        "alignSelf": "flex-start",
+      },
+      "stretch": StyleSheet {
+        "alignSelf": "stretch",
+      },
+    },
+    "text": Object {
+      "base": StyleSheet {
+        "color": "#fff",
+      },
+      "body": StyleSheet {
+        "fontSize": 14,
+      },
+      "capitalize": StyleSheet {
+        "textTransform": "capitalize",
+      },
+      "center": StyleSheet {
+        "textAlign": "center",
+      },
+      "fg": StyleSheet {
+        "color": "#000",
+      },
+      "justify": StyleSheet {
+        "textAlign": "justify",
+      },
+      "left": StyleSheet {
+        "textAlign": "left",
+      },
+      "lineThrough": StyleSheet {
+        "textDecorationLine": "line-through",
+        "textDecorationStyle": "solid",
+      },
+      "lowercase": StyleSheet {
+        "textTransform": "lowercase",
+      },
+      "noTextTransform": StyleSheet {
+        "textTransform": "none",
+      },
+      "noUnderline": StyleSheet {
+        "textDecorationLine": "none",
+      },
+      "right": StyleSheet {
+        "textAlign": "right",
+      },
+      "title": StyleSheet {
+        "fontSize": 24,
+      },
+      "trim": StyleSheet {
+        "color": "#ddd",
+      },
+      "underline": StyleSheet {
+        "textDecorationLine": "underline",
+        "textDecorationStyle": "solid",
+      },
+      "uppercase": StyleSheet {
+        "textTransform": "uppercase",
+      },
+    },
+    "w": Object {
+      "full": StyleSheet {
+        "width": "100%",
+      },
+      "half": StyleSheet {
+        "width": "50%",
+      },
+      "lg": StyleSheet {
+        "width": 44,
+      },
+      "px": StyleSheet {
+        "width": 0.5,
+      },
+      "sm": StyleSheet {
+        "width": 22,
+      },
+    },
+    "z00": StyleSheet {
+      "zIndex": 0,
+    },
+    "z10": StyleSheet {
+      "zIndex": 10,
+    },
+    "z20": StyleSheet {
+      "zIndex": 20,
+    },
+    "z30": StyleSheet {
+      "zIndex": 30,
+    },
+    "z40": StyleSheet {
+      "zIndex": 40,
+    },
+    "z50": StyleSheet {
+      "zIndex": 50,
+    },
+  },
+  "text": Object {
+    "base": StyleSheet {
+      "color": "#fff",
+    },
+    "body": StyleSheet {
+      "fontSize": 14,
+    },
+    "capitalize": StyleSheet {
+      "textTransform": "capitalize",
+    },
+    "center": StyleSheet {
+      "textAlign": "center",
+    },
+    "fg": StyleSheet {
+      "color": "#000",
+    },
+    "justify": StyleSheet {
+      "textAlign": "justify",
+    },
+    "left": StyleSheet {
+      "textAlign": "left",
+    },
+    "lineThrough": StyleSheet {
+      "textDecorationLine": "line-through",
+      "textDecorationStyle": "solid",
+    },
+    "lowercase": StyleSheet {
+      "textTransform": "lowercase",
+    },
+    "noTextTransform": StyleSheet {
+      "textTransform": "none",
+    },
+    "noUnderline": StyleSheet {
+      "textDecorationLine": "none",
+    },
+    "right": StyleSheet {
+      "textAlign": "right",
+    },
+    "title": StyleSheet {
+      "fontSize": 24,
+    },
+    "trim": StyleSheet {
+      "color": "#ddd",
+    },
+    "underline": StyleSheet {
+      "textDecorationLine": "underline",
+      "textDecorationStyle": "solid",
+    },
+    "uppercase": StyleSheet {
+      "textTransform": "uppercase",
+    },
+  },
+  "w": Object {
+    "full": StyleSheet {
+      "width": "100%",
+    },
+    "half": StyleSheet {
+      "width": "50%",
+    },
+    "lg": StyleSheet {
+      "width": 44,
+    },
+    "px": StyleSheet {
+      "width": 0.5,
+    },
+    "sm": StyleSheet {
+      "width": 22,
+    },
+  },
+  "x": Object {
+    "absolute": undefined,
+    "bg": Object {
+      "base": undefined,
+      "fg": undefined,
+      "trim": undefined,
+    },
+    "border": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderBottom": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderLeft": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderRight": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "borderTop": Object {
+      "base": undefined,
+      "fg": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+      "trim": undefined,
+    },
+    "colors": Object {
+      "base": "#fff",
+      "fg": "#000",
+      "trim": "#ddd",
+    },
+    "content": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "flex": Object {
+      "col": undefined,
+      "colR": undefined,
+      "grow": undefined,
+      "grow0": undefined,
+      "noWrap": undefined,
+      "one": undefined,
+      "row": undefined,
+      "rowR": undefined,
+      "shrink": undefined,
+      "shrink0": undefined,
+      "wrap": undefined,
+    },
+    "font": Object {
+      "bold": undefined,
+      "regular": undefined,
+    },
+    "h": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "inset": Object {
+      "bottom0": undefined,
+      "left0": undefined,
+      "right0": undefined,
+      "top0": undefined,
+      "x0": undefined,
+      "y0": undefined,
+      "zero": undefined,
+    },
+    "items": Object {
+      "baseline": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "justify": Object {
+      "around": undefined,
+      "between": undefined,
+      "center": undefined,
+      "end": undefined,
+      "evenly": undefined,
+      "start": undefined,
+    },
+    "m": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "maxW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "me": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minH": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "minW": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ml": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ms": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "mx": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "my": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "overflow": Object {
+      "hidden": undefined,
+      "scroll": undefined,
+      "visible": undefined,
+    },
+    "p": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pb": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pe": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pl": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pr": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "ps": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "pt": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "px": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "py": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "relative": undefined,
+    "rounded": Object {
+      "lg": undefined,
+      "sm": undefined,
+    },
+    "self": Object {
+      "auto": undefined,
+      "center": undefined,
+      "end": undefined,
+      "start": undefined,
+      "stretch": undefined,
+    },
+    "text": Object {
+      "base": undefined,
+      "body": undefined,
+      "capitalize": undefined,
+      "center": undefined,
+      "fg": undefined,
+      "justify": undefined,
+      "left": undefined,
+      "lineThrough": undefined,
+      "lowercase": undefined,
+      "noTextTransform": undefined,
+      "noUnderline": undefined,
+      "right": undefined,
+      "title": undefined,
+      "trim": undefined,
+      "underline": undefined,
+      "uppercase": undefined,
+    },
+    "w": Object {
+      "full": undefined,
+      "half": undefined,
+      "lg": undefined,
+      "px": undefined,
+      "sm": undefined,
+    },
+    "z00": undefined,
+    "z10": undefined,
+    "z20": undefined,
+    "z30": undefined,
+    "z40": undefined,
+    "z50": undefined,
+  },
+  "z00": StyleSheet {
+    "zIndex": 0,
+  },
+  "z10": StyleSheet {
+    "zIndex": 10,
+  },
+  "z20": StyleSheet {
+    "zIndex": 20,
+  },
+  "z30": StyleSheet {
+    "zIndex": 30,
+  },
+  "z40": StyleSheet {
+    "zIndex": 40,
+  },
+  "z50": StyleSheet {
+    "zIndex": 50,
+  },
+}
+`;

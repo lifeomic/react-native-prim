@@ -6,7 +6,4 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
   },
-  parserOptions: {
-    project: './tsconfig.eslint.json',
-  },
 }

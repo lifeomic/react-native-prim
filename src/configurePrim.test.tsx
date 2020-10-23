@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { renderHook, act } from '@testing-library/react-hooks'
 import { render } from '@testing-library/react-native'
-import configurePrim from './prim'
+import configurePrim from './configurePrim'
 import { StyleSheet, View } from 'react-native'
 
 enum ScreenSize {
@@ -9,11 +9,11 @@ enum ScreenSize {
   x = 'x',
   tablet = 'tablet',
 }
-const sizes = {
+const spacing = {
   px: StyleSheet.hairlineWidth,
-  sm: 22 as const,
-  lg: 44 as const,
-}
+  sm: 22,
+  lg: 44,
+} as const
 
 function testPrim(
   initialMode: 'light' | 'dark',
@@ -23,14 +23,14 @@ function testPrim(
   let setModeHook: ((mode: 'light' | 'dark') => void) | undefined
   function setMode(mode: 'light' | 'dark') {
     expect(setMode).toBeTruthy()
-    act(() => setModeHook(mode))
+    act(() => setModeHook && setModeHook(mode))
   }
 
   // size class
   let setSizeClassHook: ((sizeClass: ScreenSize) => void) | undefined
   function setSizeClass(sizeClass: ScreenSize) {
     expect(setSizeClassHook).toBeTruthy()
-    act(() => setSizeClassHook(sizeClass))
+    act(() => setSizeClassHook && setSizeClassHook(sizeClass))
   }
 
   return {
@@ -48,12 +48,14 @@ function testPrim(
         return sizeClass
       },
       screenSizes: ScreenSize,
-      sizes,
+      spacing,
       colors: {
         light: { base: '#fff', trim: '#ddd', fg: '#000' },
         dark: { base: '#000', trim: '#333', fg: '#fff' },
       },
-      borderRadii: () => ({ sm: 4, lg: 12 }),
+      borderRadius: { sm: 4, lg: 12 },
+      fontSize: { body: 14, title: 24 },
+      fontWeight: { regular: '400', bold: '600' },
     }),
     setMode,
     setSizeClass,
@@ -94,7 +96,7 @@ describe('usePrim', () => {
         base: { backgroundColor: '#fff' },
         fg: { backgroundColor: '#000' },
       },
-      border: { color: { fg: { borderColor: '#000' } } },
+      border: { fg: { borderColor: '#000' } },
     })
     setMode('dark')
     expect(result.current).toMatchObject({
@@ -102,7 +104,7 @@ describe('usePrim', () => {
         base: { backgroundColor: '#000' },
         fg: { backgroundColor: '#fff' },
       },
-      border: { color: { fg: { borderColor: '#fff' } } },
+      border: { fg: { borderColor: '#fff' } },
     })
     setMode('light')
     expect(result.current).toMatchObject({
@@ -110,7 +112,7 @@ describe('usePrim', () => {
         base: { backgroundColor: '#fff' },
         fg: { backgroundColor: '#000' },
       },
-      border: { color: { fg: { borderColor: '#000' } } },
+      border: { fg: { borderColor: '#000' } },
     })
   })
 
@@ -146,7 +148,7 @@ describe('usePrim', () => {
   })
 })
 
-const { PrimProvider, primp, setMode, setSizeClass } = testPrim(
+const { PrimProvider, primmed, setMode, setSizeClass } = testPrim(
   'dark',
   ScreenSize.tablet,
 )
@@ -157,12 +159,12 @@ function renderPrimped(component: Parameters<typeof render>[0]) {
 
 describe('primp', () => {
   it('includes primped styles + style props', () => {
-    const Card = primp(View, (prm) => [
-      prm.se.border.color.trim,
-      prm.x.borderLeft.color.fg,
-      prm.border.width.px,
+    const Card = primmed(View, (prm) => [
+      prm.se.border.trim,
+      prm.x.borderLeft.fg,
+      prm.border.px,
       prm.minH.lg,
-      prm.tablet.border.width.sm,
+      prm.tablet.border.sm,
     ])
     const { toJSON } = renderPrimped(
       <Card style={{ backgroundColor: 'coral' }} />,
@@ -174,9 +176,15 @@ describe('primp', () => {
             Array [
               undefined,
               undefined,
-              Registered { "borderWidth": 0.5 },
-              Registered { "minHeight": 44 },
-              Registered { "borderWidth": 22 },
+              StyleSheet {
+                "borderWidth": 0.5,
+              },
+              StyleSheet {
+                "minHeight": 44,
+              },
+              StyleSheet {
+                "borderWidth": 22,
+              },
             ],
             Object {
               "backgroundColor": "coral",
@@ -193,9 +201,15 @@ describe('primp', () => {
           Array [
             Array [
               undefined,
-              Registered { "borderLeftColor": "#000" },
-              Registered { "borderWidth": 0.5 },
-              Registered { "minHeight": 44 },
+              StyleSheet {
+                "borderLeftColor": "#000",
+              },
+              StyleSheet {
+                "borderWidth": 0.5,
+              },
+              StyleSheet {
+                "minHeight": 44,
+              },
               undefined,
             ],
             Object {
@@ -217,7 +231,7 @@ describe('primp', () => {
       }
     }
 
-    const PrimpedImpairative = primp(Impairative, (prm) => [prm.bg.base])
+    const PrimpedImpairative = primmed(Impairative, (prm) => [prm.bg.base])
     renderPrimped(
       <PrimpedImpairative ref={(ref) => ref && ref.impairativeOp(42)} />,
     )
@@ -233,7 +247,7 @@ describe('primp', () => {
     const Avatar: FragmentComponent = () => <View />
     Avatar.fragments = userGQLFragments
 
-    expect(primp(Avatar, (prm) => prm.flex.one).fragments).toEqual(
+    expect(primmed(Avatar, (prm) => prm.flex.one).fragments).toEqual(
       userGQLFragments,
     )
   })
