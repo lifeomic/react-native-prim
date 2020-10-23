@@ -30,7 +30,7 @@ const disabledStyleSheet: CreateStyleSheet = function <
   ) as T
 }
 
-export interface Children {
+type Children = {
   children?: React.ReactNode
 }
 
@@ -297,8 +297,8 @@ export default function configurePrim<
       }),
       {},
     ) as {
-      [k in keyof ScreenSize]: PrimStyles
-    }
+        [k in keyof ScreenSize]: PrimStyles
+      }
     return {
       mode: currentMode,
       screenSize: currentVariant,
@@ -379,9 +379,8 @@ export default function configurePrim<
         />
       )
     }
-    PrimpedComponent.displayName = `Primped.${
-      Component.displayName || Component.name
-    }`
+    PrimpedComponent.displayName = `Primped.${Component.displayName || Component.name
+      }`
 
     const ForwardRefComponent = React.forwardRef((props, ref) => (
       // I don't know how to implement this without breaking out of the types.

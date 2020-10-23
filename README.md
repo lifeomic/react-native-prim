@@ -38,13 +38,13 @@ const Caption = primmed(Text, prim => [
 const ArticleCard: React.FC<{ article: Article }> = ({ article }) => {
   const prim = usePrim()
   return (
-    <View style=[
+    <View style={[
       prim.p[4],
       prim.border[1],
       prim.border.gray100,
       prim.rounded.lg,
       prim.overflow.hidden,
-    ]>
+    ]}>
       <Caption>article.formattedDate</Title>
       <Title style={prim.mt[2]}>
         {article.title}
