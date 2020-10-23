@@ -163,6 +163,9 @@ export default function configurePrim<
       },
       font: {
         ...ssWithValuesForAttribute(config.fontWeight, 'fontWeight'),
+        ...ss({
+          italic: { fontStyle: 'italic' },
+        }),
       },
       text: {
         ...ssWithValuesForAttribute(config.fontSize, 'fontSize'),
