@@ -2,14 +2,13 @@
   "name": "@lifeomic/prim",
   "version": "1.0.0",
   "description": "Prim is a customizable TypeScript atomic styles framework for React Native.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc --build tsconfig.build.json",
-    "test": "jest",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx index.ts src/**/*.tsx src/**/*.ts",
     "clean": "rm -rf dist",
-    "prebuild": "yarn clean"
+    "build": "tsc --build tsconfig.build.json",
+    "prebuild": "yarn clean",
+    "postbuild": "cp package.json ./dist/",
+    "test": "jest",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx index.ts src/**/*.tsx src/**/*.ts"
   },
   "keywords": [
     "tailwingcss",
