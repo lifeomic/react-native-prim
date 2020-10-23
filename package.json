@@ -20,6 +20,11 @@
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx index.ts src/**/*.tsx src/**/*.ts"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "peerDependencies": {
     "hoist-non-react-statics": ">=3.3.2",
     "react": ">=16.13.1",
