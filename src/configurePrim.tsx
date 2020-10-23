@@ -366,27 +366,27 @@ export default function configurePrim<
     P extends { style?: StyleProp<any> },
     T extends React.ComponentType<P>
   >(Component: T, styles: (prim: PrimTheme) => StyleProp<ViewStyle>) {
-    const PrimpedComponent: React.FC<
+    const PrimmedComponent: React.FC<
       P & { forwardedRef?: React.Ref<Component> }
     > = ({ forwardedRef, ...props }) => {
       const prim = usePrim()
-      const primpedStyles = styles(prim)
+      const primmedStyles = styles(prim)
       return (
         <Component
           {...(props as any)}
-          style={[primpedStyles, props.style]}
+          style={[primmedStyles, props.style]}
           ref={forwardedRef}
         />
       )
     }
-    PrimpedComponent.displayName = `Primped.${
+    PrimmedComponent.displayName = `Primmed.${
       Component.displayName || Component.name
     }`
 
     const ForwardRefComponent = React.forwardRef((props, ref) => (
       // I don't know how to implement this without breaking out of the types.
       // The overloads are ensuring correct usage, so we should be good?
-      <PrimpedComponent {...(props as any)} forwardedRef={ref} />
+      <PrimmedComponent {...(props as any)} forwardedRef={ref} />
     ))
     return hoistNonReactStatics(ForwardRefComponent, Component)
   }
