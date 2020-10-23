@@ -23,14 +23,11 @@ Object {
     "fg": StyleSheet {
       "borderColor": "#fff",
     },
-    "lg": StyleSheet {
-      "borderWidth": 44,
-    },
-    "px": StyleSheet {
+    "hairline": StyleSheet {
       "borderWidth": 0.5,
     },
     "sm": StyleSheet {
-      "borderWidth": 22,
+      "borderWidth": 1,
     },
     "trim": StyleSheet {
       "borderColor": "#333",
@@ -674,8 +671,7 @@ Object {
     "border": Object {
       "base": undefined,
       "fg": undefined,
-      "lg": undefined,
-      "px": undefined,
+      "hairline": undefined,
       "sm": undefined,
       "trim": undefined,
     },
@@ -1002,8 +998,7 @@ Object {
     "border": Object {
       "base": undefined,
       "fg": undefined,
-      "lg": undefined,
-      "px": undefined,
+      "hairline": undefined,
       "sm": undefined,
       "trim": undefined,
     },
@@ -1394,14 +1389,11 @@ Object {
       "fg": StyleSheet {
         "borderColor": "#fff",
       },
-      "lg": StyleSheet {
-        "borderWidth": 44,
-      },
-      "px": StyleSheet {
+      "hairline": StyleSheet {
         "borderWidth": 0.5,
       },
       "sm": StyleSheet {
-        "borderWidth": 22,
+        "borderWidth": 1,
       },
       "trim": StyleSheet {
         "borderColor": "#333",
@@ -2182,14 +2174,11 @@ Object {
     "fg": StyleSheet {
       "borderColor": "#000",
     },
-    "lg": StyleSheet {
-      "borderWidth": 44,
-    },
-    "px": StyleSheet {
+    "hairline": StyleSheet {
       "borderWidth": 0.5,
     },
     "sm": StyleSheet {
-      "borderWidth": 22,
+      "borderWidth": 1,
     },
     "trim": StyleSheet {
       "borderColor": "#ddd",
@@ -2845,14 +2834,11 @@ Object {
       "fg": StyleSheet {
         "borderColor": "#000",
       },
-      "lg": StyleSheet {
-        "borderWidth": 44,
-      },
-      "px": StyleSheet {
+      "hairline": StyleSheet {
         "borderWidth": 0.5,
       },
       "sm": StyleSheet {
-        "borderWidth": 22,
+        "borderWidth": 1,
       },
       "trim": StyleSheet {
         "borderColor": "#ddd",
@@ -3616,8 +3602,7 @@ Object {
     "border": Object {
       "base": undefined,
       "fg": undefined,
-      "lg": undefined,
-      "px": undefined,
+      "hairline": undefined,
       "sm": undefined,
       "trim": undefined,
     },
@@ -3996,8 +3981,7 @@ Object {
     "border": Object {
       "base": undefined,
       "fg": undefined,
-      "lg": undefined,
-      "px": undefined,
+      "hairline": undefined,
       "sm": undefined,
       "trim": undefined,
     },
@@ -4341,14 +4325,11 @@ Object {
     "fg": StyleSheet {
       "borderColor": "#000",
     },
-    "lg": StyleSheet {
-      "borderWidth": 44,
-    },
-    "px": StyleSheet {
+    "hairline": StyleSheet {
       "borderWidth": 0.5,
     },
     "sm": StyleSheet {
-      "borderWidth": 22,
+      "borderWidth": 1,
     },
     "trim": StyleSheet {
       "borderColor": "#ddd",
@@ -4992,8 +4973,7 @@ Object {
     "border": Object {
       "base": undefined,
       "fg": undefined,
-      "lg": undefined,
-      "px": undefined,
+      "hairline": undefined,
       "sm": undefined,
       "trim": undefined,
     },
@@ -5332,14 +5312,11 @@ Object {
       "fg": StyleSheet {
         "borderColor": "#000",
       },
-      "lg": StyleSheet {
-        "borderWidth": 44,
-      },
-      "px": StyleSheet {
+      "hairline": StyleSheet {
         "borderWidth": 0.5,
       },
       "sm": StyleSheet {
-        "borderWidth": 22,
+        "borderWidth": 1,
       },
       "trim": StyleSheet {
         "borderColor": "#ddd",
@@ -6155,8 +6132,7 @@ Object {
     "border": Object {
       "base": undefined,
       "fg": undefined,
-      "lg": undefined,
-      "px": undefined,
+      "hairline": undefined,
       "sm": undefined,
       "trim": undefined,
     },
