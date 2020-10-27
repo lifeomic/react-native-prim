@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { renderHook, act } from '@testing-library/react-hooks'
 import { render } from '@testing-library/react-native'
 import configurePrim from './configurePrim'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 
 enum ScreenSize {
   se = 'se',
@@ -18,9 +18,9 @@ const spacing = {
 const borderWidth = {
   hairline: StyleSheet.hairlineWidth,
   sm: 1,
-}
+} as const
 
-function testPrim(
+function testHooks(
   initialMode: 'light' | 'dark',
   initialScreenSize: ScreenSize,
 ) {
@@ -32,39 +32,52 @@ function testPrim(
   }
 
   // size class
-  let setSizeClassHook: ((sizeClass: ScreenSize) => void) | undefined
-  function setSizeClass(sizeClass: ScreenSize) {
-    expect(setSizeClassHook).toBeTruthy()
-    act(() => setSizeClassHook && setSizeClassHook(sizeClass))
+  let setScreenSizeHook: ((sizeClass: ScreenSize) => void) | undefined
+  function setScreenSize(sizeClass: ScreenSize) {
+    expect(setScreenSizeHook).toBeTruthy()
+    act(() => setScreenSizeHook && setScreenSizeHook(sizeClass))
   }
 
   return {
-    ...configurePrim({
-      useDarkMode: () => {
-        const [mode, setMode] = useState<'light' | 'dark'>(initialMode)
-        setModeHook = setMode
-        return mode
-      },
-      useScreenSize: (): ScreenSize => {
-        const [sizeClass, setSizeClass] = useState<ScreenSize>(
-          initialScreenSize,
-        )
-        setSizeClassHook = setSizeClass
-        return sizeClass
-      },
+    setMode,
+    useDarkMode: () => {
+      const [mode, setMode] = useState<'light' | 'dark'>(initialMode)
+      setModeHook = setMode
+      return mode
+    },
+    setScreenSize,
+    useScreenSize: (): ScreenSize => {
+      const [sizeClass, setScreenSize] = useState<ScreenSize>(initialScreenSize)
+      setScreenSizeHook = setScreenSize
+      return sizeClass
+    },
+  }
+}
+
+function testOptions(
+  initialMode: 'light' | 'dark',
+  initialScreenSize: ScreenSize,
+) {
+  const { useDarkMode, useScreenSize, ...setters } = testHooks(
+    initialMode,
+    initialScreenSize,
+  )
+  return {
+    options: {
+      useScreenSize,
+      useDarkMode,
       screenSizes: ScreenSize,
       spacing,
       colors: {
         light: { base: '#fff', trim: '#ddd', fg: '#000' },
         dark: { base: '#000', trim: '#333', fg: '#fff' },
       },
-      borderRadius: { sm: 4, lg: 12 },
+      borderRadius: { sm: 4, lg: 12 } as const,
       borderWidth,
-      fontSize: { body: 14, title: 24 },
-      fontWeight: { regular: '400', bold: '600' },
-    }),
-    setMode,
-    setSizeClass,
+      fontSize: { body: 14, title: 24 } as const,
+      fontWeight: { regular: '400', bold: '600' } as const,
+    },
+    ...setters,
   }
 }
 
@@ -72,10 +85,11 @@ function renderUsePrim(
   mode: 'light' | 'dark' = 'light',
   screenSize: ScreenSize = ScreenSize.se,
 ) {
-  const { PrimProvider, usePrim, ...testAPI } = testPrim(mode, screenSize)
+  const { options, ...setters } = testOptions(mode, screenSize)
+  const { PrimProvider, usePrim } = configurePrim(options)
   return {
     ...renderHook(() => usePrim(), { wrapper: PrimProvider }),
-    ...testAPI,
+    ...setters,
   }
 }
 
@@ -123,28 +137,28 @@ describe('usePrim', () => {
   })
 
   it('size variant specific styles w/ useDeviceSizeClass()', () => {
-    const { result, setSizeClass } = renderUsePrim()
+    const { result, setScreenSize } = renderUsePrim()
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
       se: { w: { sm: { width: 22 } } },
       x: { w: { sm: undefined } },
       tablet: { w: { sm: undefined } },
     })
-    setSizeClass(ScreenSize.tablet)
+    setScreenSize(ScreenSize.tablet)
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
       se: { w: { sm: undefined } },
       x: { w: { sm: undefined } },
       tablet: { w: { sm: { width: 22 } } },
     })
-    setSizeClass(ScreenSize.x)
+    setScreenSize(ScreenSize.x)
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
       se: { w: { sm: undefined } },
       x: { w: { sm: { width: 22 } } },
       tablet: { w: { sm: undefined } },
     })
-    setSizeClass(ScreenSize.se)
+    setScreenSize(ScreenSize.se)
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
       se: { w: { sm: { width: 22 } } },
@@ -154,17 +168,18 @@ describe('usePrim', () => {
   })
 })
 
-const { PrimProvider, primmed, setMode, setSizeClass } = testPrim(
+const { options, setMode, setScreenSize } = testOptions(
   'dark',
   ScreenSize.tablet,
 )
+const { PrimProvider, primmed } = configurePrim(options)
 
 function renderPrimped(component: Parameters<typeof render>[0]) {
   return render(component, { wrapper: PrimProvider })
 }
 
-describe('primp', () => {
-  it('includes primped styles + style props', () => {
+describe('primmed', () => {
+  it('includes primmed styles + style props', () => {
     const Card = primmed(View, (prm) => [
       prm.se.border.trim,
       prm.x.borderLeft.fg,
@@ -199,7 +214,7 @@ describe('primp', () => {
         }
       />
     `)
-    setSizeClass(ScreenSize.x)
+    setScreenSize(ScreenSize.x)
     setMode('light')
     expect(toJSON()).toMatchInlineSnapshot(`
       <View
@@ -256,5 +271,63 @@ describe('primp', () => {
     expect(primmed(Avatar, (prm) => prm.flex.one).fragments).toEqual(
       userGQLFragments,
     )
+  })
+})
+
+describe('Custom Atoms', () => {
+  it('includes custom atoms in the prim theme', () => {
+    const { options, setScreenSize, setMode } = testOptions(
+      'dark',
+      ScreenSize.tablet,
+    )
+    const { PrimProvider, primmed } = configurePrim(options, (prim) => ({
+      h1: [prim.text.fg, prim.tablet.maxW.lg, prim.se.maxW.sm],
+    }))
+
+    const H1 = primmed(Text, (prim) => prim.h1)
+    const { toJSON } = render(<H1>Hello!</H1>, { wrapper: PrimProvider })
+    expect(toJSON()).toMatchInlineSnapshot(`
+      <Text
+        style={
+          Array [
+            Array [
+              StyleSheet {
+                "color": "#fff",
+              },
+              StyleSheet {
+                "maxWidth": 44,
+              },
+              undefined,
+            ],
+            undefined,
+          ]
+        }
+      >
+        Hello!
+      </Text>
+    `)
+
+    setScreenSize(ScreenSize.se)
+    setMode('light')
+    expect(toJSON()).toMatchInlineSnapshot(`
+      <Text
+        style={
+          Array [
+            Array [
+              StyleSheet {
+                "color": "#000",
+              },
+              undefined,
+              StyleSheet {
+                "maxWidth": 22,
+              },
+            ],
+            undefined,
+          ]
+        }
+      >
+        Hello!
+      </Text>
+    `)
   })
 })

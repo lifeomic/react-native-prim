@@ -1,22 +1,41 @@
-import React, { Component, useContext } from 'react'
-import { StyleProp, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import hoistNonReactStatics from 'hoist-non-react-statics'
+import React, { useContext } from 'react'
+import { TextStyle, ViewStyle, StyleSheet, StyleProp } from 'react-native'
 import { useMemoOne } from 'use-memo-one'
 
-// a string-value enum such as this one:
-//   enum CustomScreenSize {
-//     small = 'small'
-//     medium = 'medium'
-//     large = 'large'
-//     extraLarge = 'extraLarge'
-//   }
-// conforms to the following `StringValueEnum` type. this is usefule
-// for creating generic type constraints for such a type.
-type StringValueEnum = {
-  [id: string]: string
+type Children = {
+  children?: React.ReactNode
 }
 
 type CreateStyleSheet = typeof StyleSheet.create
+
+type ColorsConstraint = Record<string, ViewStyle['backgroundColor']>
+type ScreenSizeConstraint = Record<string, string>
+type SpacingConstraint = Record<string, ViewStyle['width']>
+type BorderRadiusConstraint = Record<string, ViewStyle['borderRadius']>
+type BorderWidthConstraint = Record<string, ViewStyle['borderWidth']>
+type FontSizeConstraint = Record<string, TextStyle['fontSize']>
+type FontWeightConstraint = Record<string, TextStyle['fontWeight']>
+
+type PrimOptions<
+  Colors extends ColorsConstraint,
+  ScreenSize extends ScreenSizeConstraint,
+  Spacing extends SpacingConstraint,
+  BorderRadii extends BorderRadiusConstraint,
+  BorderWidth extends BorderWidthConstraint,
+  FontSize extends FontSizeConstraint,
+  FontWeight extends FontWeightConstraint
+> = {
+  colors: { light: Colors; dark: Colors }
+  useDarkMode: () => 'light' | 'dark'
+  screenSizes: ScreenSize
+  useScreenSize: () => keyof ScreenSize
+  spacing: Spacing
+  borderRadius: BorderRadii
+  borderWidth: BorderWidth
+  fontSize: FontSize
+  fontWeight: FontWeight
+}
 
 const disabledStyleSheet: CreateStyleSheet = function <
   T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>
@@ -30,35 +49,67 @@ const disabledStyleSheet: CreateStyleSheet = function <
   ) as T
 }
 
-type Children = {
-  children?: React.ReactNode
-}
+type PrimStyles<
+  C extends ColorsConstraint,
+  Ss extends ScreenSizeConstraint,
+  Sp extends SpacingConstraint,
+  Br extends BorderRadiusConstraint,
+  Bw extends BorderWidthConstraint,
+  Fs extends FontSizeConstraint,
+  Fw extends FontWeightConstraint
+> = ReturnType<PrimConfiguration<C, Ss, Sp, Br, Bw, Fs, Fw>['primStyles']>
 
-// It might be useful to separate the Prim types from the function, but the
-// inference is nice, and the types are less abbreviated during useage this way.
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export default function configurePrim<
-  Colors extends Record<string, TextStyle['color']>,
-  ScreenSize extends StringValueEnum,
-  Spacing extends Record<string, ViewStyle['width']>,
-  BorderRadii extends Record<string, ViewStyle['borderRadius']>,
-  BorderWidth extends Record<string, ViewStyle['borderWidth']>,
-  FontSize extends Record<string, TextStyle['fontSize']>,
-  FontWeight extends Record<string, TextStyle['fontWeight']>
->(config: {
-  useDarkMode: () => 'light' | 'dark'
-  colors: { light: Colors; dark: Colors }
-  screenSizes: ScreenSize
-  spacing: Spacing
-  // useDeviceSizeClass is between experimental and half-baked idea on the fit-
-  // for-use spectrum
-  useScreenSize: () => keyof ScreenSize
-  borderRadius: BorderRadii
-  borderWidth: BorderWidth
-  fontSize: FontSize
-  fontWeight: FontWeight
-}) {
-  function primStyles(colors: Colors, ss: CreateStyleSheet) {
+type PrimTheme<
+  C extends ColorsConstraint,
+  Ss extends ScreenSizeConstraint,
+  Sp extends SpacingConstraint,
+  Br extends BorderRadiusConstraint,
+  Bw extends BorderWidthConstraint,
+  Fs extends FontSizeConstraint,
+  Fw extends FontWeightConstraint
+> = PrimStyles<C, Ss, Sp, Br, Bw, Fs, Fw> &
+  {
+    [k in keyof Ss]: PrimStyles<C, Ss, Sp, Br, Bw, Fs, Fw>
+  } & { mode: 'light' | 'dark'; screenSize: keyof Ss }
+
+// PrimConfiguration came about because it is not possible (as of TS 4.0.3) to
+// infer the return type of a generic function.Solution: wrap the function in a
+// generic class.See https://stackoverflow.com/a/59072991. For now it is merely
+// an implementation detail.The public interface of Prim does not expose it.
+class PrimConfiguration<
+  Colors extends ColorsConstraint,
+  ScreenSize extends ScreenSizeConstraint,
+  Spacing extends SpacingConstraint,
+  BorderRadii extends BorderRadiusConstraint,
+  BorderWidth extends BorderWidthConstraint,
+  FontSize extends FontSizeConstraint,
+  FontWeight extends FontWeightConstraint
+> {
+  private readonly options: PrimOptions<
+    Colors,
+    ScreenSize,
+    Spacing,
+    BorderRadii,
+    BorderWidth,
+    FontSize,
+    FontWeight
+  >
+
+  constructor(
+    options: PrimOptions<
+      Colors,
+      ScreenSize,
+      Spacing,
+      BorderRadii,
+      BorderWidth,
+      FontSize,
+      FontWeight
+    >,
+  ) {
+    this.options = options
+  }
+
+  readonly primStyles = (colors: Colors, ss: CreateStyleSheet) => {
     function ssWithValuesForAttribute<
       Attribute extends keyof ViewStyle | keyof TextStyle,
       SubConfig extends Record<string, any>
@@ -78,11 +129,13 @@ export default function configurePrim<
           .reduce((styles, style) => ({ ...styles, ...style }), {}) as any),
       })
     }
-    function ssForForAttributeWithRelativeSizes<
+    const ssForForAttributeWithRelativeSizes = <
       Attribute extends keyof ViewStyle | keyof TextStyle
-    >(attribute: Attribute) {
+    >(
+      attribute: Attribute,
+    ) => {
       return {
-        ...ssWithValuesForAttribute(config.spacing, attribute),
+        ...ssWithValuesForAttribute(this.options.spacing, attribute),
         ...ss({
           full: { [attribute]: '100%' as const },
           half: { [attribute]: '50%' as const },
@@ -143,32 +196,32 @@ export default function configurePrim<
       bg: ssWithValuesForAttribute(colors, 'backgroundColor'),
       border: {
         ...ssWithValuesForAttribute(colors, 'borderColor'),
-        ...ssWithValuesForAttribute(config.borderWidth, 'borderWidth'),
+        ...ssWithValuesForAttribute(this.options.borderWidth, 'borderWidth'),
       },
       borderTop: {
         ...ssWithValuesForAttribute(colors, 'borderTopColor'),
-        ...ssWithValuesForAttribute(config.spacing, 'borderTopWidth'),
+        ...ssWithValuesForAttribute(this.options.spacing, 'borderTopWidth'),
       },
       borderBottom: {
         ...ssWithValuesForAttribute(colors, 'borderBottomColor'),
-        ...ssWithValuesForAttribute(config.spacing, 'borderBottomWidth'),
+        ...ssWithValuesForAttribute(this.options.spacing, 'borderBottomWidth'),
       },
       borderRight: {
         ...ssWithValuesForAttribute(colors, 'borderRightColor'),
-        ...ssWithValuesForAttribute(config.spacing, 'borderRightWidth'),
+        ...ssWithValuesForAttribute(this.options.spacing, 'borderRightWidth'),
       },
       borderLeft: {
         ...ssWithValuesForAttribute(colors, 'borderLeftColor'),
-        ...ssWithValuesForAttribute(config.spacing, 'borderLeftWidth'),
+        ...ssWithValuesForAttribute(this.options.spacing, 'borderLeftWidth'),
       },
       font: {
-        ...ssWithValuesForAttribute(config.fontWeight, 'fontWeight'),
+        ...ssWithValuesForAttribute(this.options.fontWeight, 'fontWeight'),
         ...ss({
           italic: { fontStyle: 'italic' },
         }),
       },
       text: {
-        ...ssWithValuesForAttribute(config.fontSize, 'fontSize'),
+        ...ssWithValuesForAttribute(this.options.fontSize, 'fontSize'),
         ...ssWithValuesForAttribute(colors, 'color'),
         ...ss({
           left: { textAlign: 'left' },
@@ -231,7 +284,10 @@ export default function configurePrim<
       minH: ssForForAttributeWithRelativeSizes('minHeight'),
       maxH: ssForForAttributeWithRelativeSizes('maxHeight'),
 
-      rounded: ssWithValuesForAttribute(config.borderRadius, 'borderRadius'),
+      rounded: ssWithValuesForAttribute(
+        this.options.borderRadius,
+        'borderRadius',
+      ),
 
       ...ss({
         absolute: { position: 'absolute' },
@@ -278,41 +334,91 @@ export default function configurePrim<
     }
   }
 
-  type PrimStyles = ReturnType<typeof primStyles>
-  type PrimTheme = {
-    mode: 'light' | 'dark'
-    screenSize: keyof ScreenSize
-  } & PrimStyles &
-    {
-      [v in keyof ScreenSize]: PrimStyles
-    }
+  readonly usePrimTheme = (): PrimTheme<
+    Colors,
+    ScreenSize,
+    Spacing,
+    BorderRadii,
+    BorderWidth,
+    FontSize,
+    FontWeight
+  > => {
+    type Styles = PrimStyles<
+      Colors,
+      ScreenSize,
+      Spacing,
+      BorderRadii,
+      BorderWidth,
+      FontSize,
+      FontWeight
+    >
+    const selectedMode = this.options.useDarkMode()
+    const colors = this.options.colors[selectedMode]
+    const selectedScreenSize = this.options.useScreenSize()
 
-  function primTheme(
-    currentMode: 'light' | 'dark',
-    currentVariant: keyof ScreenSize,
-    colors: Colors,
-  ): PrimTheme {
-    const onPrimStyles = primStyles(colors, StyleSheet.create)
-    const offPrimStyles = primStyles(colors, disabledStyleSheet)
-    const screenSizeStyles = Object.keys(config.screenSizes).reduce(
-      (screenSizes, screenSize) => ({
-        ...screenSizes,
-        [screenSize]:
-          screenSize === currentVariant ? onPrimStyles : offPrimStyles,
-      }),
-      {},
-    ) as {
-      [k in keyof ScreenSize]: PrimStyles
-    }
-    return {
-      mode: currentMode,
-      screenSize: currentVariant,
-      ...onPrimStyles,
-      ...screenSizeStyles,
-    }
+    const prim = useMemoOne(() => {
+      const enabledStyles = this.primStyles(colors, StyleSheet.create)
+      const disabledStyles = this.primStyles(colors, disabledStyleSheet)
+      const screenSizeStyles = Object.keys(this.options.screenSizes).reduce(
+        (screenSizes, screenSize) => ({
+          ...screenSizes,
+          [screenSize]:
+            screenSize === selectedScreenSize ? enabledStyles : disabledStyles,
+        }),
+        {},
+      ) as {
+        [k in keyof ScreenSize]: Styles
+      }
+      return {
+        mode: selectedMode,
+        screenSize: selectedScreenSize,
+        ...enabledStyles,
+        ...screenSizeStyles,
+      }
+    }, [selectedMode, colors, selectedScreenSize])
+
+    return prim
   }
+}
 
-  const PrimContext = React.createContext<null | PrimTheme>(null)
+// leveraging type inference ftw!
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export default function configurePrim<
+  Colors extends ColorsConstraint,
+  ScreenSize extends ScreenSizeConstraint,
+  Spacing extends SpacingConstraint,
+  BorderRadii extends BorderRadiusConstraint,
+  BorderWidth extends BorderWidthConstraint,
+  FontSize extends FontSizeConstraint,
+  FontWeight extends FontWeightConstraint,
+  CustomAtoms extends Record<string, StyleProp<any>> = Record<string, unknown>
+>(
+  options: PrimOptions<
+    Colors,
+    ScreenSize,
+    Spacing,
+    BorderRadii,
+    BorderWidth,
+    FontSize,
+    FontWeight
+  >,
+  customAtoms: (
+    prim: PrimTheme<
+      Colors,
+      ScreenSize,
+      Spacing,
+      BorderRadii,
+      BorderWidth,
+      FontSize,
+      FontWeight
+    >,
+  ) => CustomAtoms = () => ({} as CustomAtoms),
+) {
+  const usePrimTheme = new PrimConfiguration(options).usePrimTheme
+  type ThisTheme = ReturnType<typeof usePrimTheme>
+  type CustomTheme = ThisTheme & CustomAtoms
+
+  const PrimContext = React.createContext<null | CustomTheme>(null)
   const usePrim = () => {
     // the exported PrimProvider does not allow the PrimeTheme to be null
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -321,17 +427,14 @@ export default function configurePrim<
   }
 
   const PrimProvider: React.FC = ({ children }) => {
-    const mode = config.useDarkMode()
-    const colors = config.colors[mode]
-    const screenSize = config.useScreenSize()
-
-    const prim = useMemoOne(() => primTheme(mode, screenSize, colors), [
-      mode,
-      colors,
-      screenSize,
-    ])
-
-    return <PrimContext.Provider value={prim}>{children}</PrimContext.Provider>
+    const theme = usePrimTheme()
+    const value = useMemoOne(() => {
+      return {
+        ...theme,
+        ...customAtoms(theme),
+      }
+    }, [theme])
+    return <PrimContext.Provider value={value}>{children}</PrimContext.Provider>
   }
 
   function primmed<
@@ -339,7 +442,7 @@ export default function configurePrim<
     T extends React.ComponentClass<P>
   >(
     Component: T,
-    styles: (prim: PrimTheme) => StyleProp<TextStyle>,
+    styles: (prim: CustomTheme) => StyleProp<TextStyle>,
   ): React.ForwardRefExoticComponent<
     P & Children & { ref?: React.Ref<InstanceType<T>> }
   > &
@@ -349,7 +452,7 @@ export default function configurePrim<
     T extends React.ComponentClass<P>
   >(
     Component: T,
-    styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
+    styles: (prim: CustomTheme) => StyleProp<ViewStyle>,
   ): React.ForwardRefExoticComponent<
     P & Children & { ref?: React.Ref<InstanceType<T>> }
   > &
@@ -359,21 +462,22 @@ export default function configurePrim<
     T extends React.ForwardRefExoticComponent<P>
   >(
     Component: React.ForwardRefExoticComponent<P>,
-    styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
+    styles: (prim: CustomTheme) => StyleProp<ViewStyle>,
   ): React.ForwardRefExoticComponent<P & Children> &
     hoistNonReactStatics.NonReactStatics<T>
   function primmed<P extends { style?: StyleProp<any> }, T extends React.FC<P>>(
     Component: T,
-    styles: (prim: PrimTheme) => StyleProp<ViewStyle>,
+    styles: (prim: CustomTheme) => StyleProp<ViewStyle>,
   ): React.ForwardRefExoticComponent<P & Children> &
     hoistNonReactStatics.NonReactStatics<T>
   function primmed<
     P extends { style?: StyleProp<any> },
     T extends React.ComponentType<P>
-  >(Component: T, styles: (prim: PrimTheme) => StyleProp<ViewStyle>) {
-    const PrimmedComponent: React.FC<
-      P & { forwardedRef?: React.Ref<Component> }
-    > = ({ forwardedRef, ...props }) => {
+  >(Component: T, styles: (prim: CustomTheme) => StyleProp<ViewStyle>) {
+    const PrimmedComponent: React.FC<P & { forwardedRef?: React.Ref<T> }> = ({
+      forwardedRef,
+      ...props
+    }) => {
       const prim = usePrim()
       const primmedStyles = styles(prim)
       return (
