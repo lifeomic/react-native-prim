@@ -1,4 +1,4 @@
 import configurePrim from './configurePrim'
-import defaultConfig from './defaultConfig'
+import defaultOptions from './defaultOptions'
 
-export const { PrimProvider, usePrim, primmed } = configurePrim(defaultConfig)
+export const { PrimProvider, usePrim, primmed } = configurePrim(defaultOptions)

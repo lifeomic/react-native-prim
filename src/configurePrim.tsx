@@ -70,7 +70,10 @@ type PrimTheme<
 > = PrimStyles<C, Ss, Sp, Br, Bw, Fs, Fw> &
   {
     [k in keyof Ss]: PrimStyles<C, Ss, Sp, Br, Bw, Fs, Fw>
-  } & { mode: 'light' | 'dark'; screenSize: keyof Ss }
+  } & {
+    mode: 'light' | 'dark'
+    screenSize: keyof Ss
+  }
 
 // PrimConfiguration came about because it is not possible (as of TS 4.0.3) to
 // infer the return type of a generic function.Solution: wrap the function in a
@@ -334,7 +337,7 @@ class PrimConfiguration<
     }
   }
 
-  readonly usePrimTheme = (): PrimTheme<
+  readonly createPrimThemeHook: () => () => PrimTheme<
     Colors,
     ScreenSize,
     Spacing,
@@ -342,7 +345,7 @@ class PrimConfiguration<
     BorderWidth,
     FontSize,
     FontWeight
-  > => {
+  > = () => {
     type Styles = PrimStyles<
       Colors,
       ScreenSize,
@@ -352,32 +355,40 @@ class PrimConfiguration<
       FontSize,
       FontWeight
     >
-    const selectedMode = this.options.useDarkMode()
-    const colors = this.options.colors[selectedMode]
-    const selectedScreenSize = this.options.useScreenSize()
 
-    const prim = useMemoOne(() => {
-      const enabledStyles = this.primStyles(colors, StyleSheet.create)
-      const disabledStyles = this.primStyles(colors, disabledStyleSheet)
-      const screenSizeStyles = Object.keys(this.options.screenSizes).reduce(
-        (screenSizes, screenSize) => ({
-          ...screenSizes,
-          [screenSize]:
-            screenSize === selectedScreenSize ? enabledStyles : disabledStyles,
-        }),
-        {},
-      ) as {
-        [k in keyof ScreenSize]: Styles
-      }
-      return {
-        mode: selectedMode,
-        screenSize: selectedScreenSize,
-        ...enabledStyles,
-        ...screenSizeStyles,
-      }
-    }, [selectedMode, colors, selectedScreenSize])
+    const { useDarkMode, useScreenSize, screenSizes, colors } = this.options
+    const primStyles = this.primStyles
 
-    return prim
+    return () => {
+      const selectedMode = useDarkMode()
+      const selectedColors = colors[selectedMode]
+      const selectedScreenSize = useScreenSize()
+
+      const prim = useMemoOne(() => {
+        const enabledStyles = primStyles(selectedColors, StyleSheet.create)
+        const disabledStyles = primStyles(selectedColors, disabledStyleSheet)
+        const screenSizeStyles = Object.keys(screenSizes).reduce(
+          (screenSizes, screenSize) => ({
+            ...screenSizes,
+            [screenSize]:
+              screenSize === selectedScreenSize
+                ? enabledStyles
+                : disabledStyles,
+          }),
+          {},
+        ) as {
+          [k in keyof ScreenSize]: Styles
+        }
+        return {
+          mode: selectedMode,
+          screenSize: selectedScreenSize,
+          ...enabledStyles,
+          ...screenSizeStyles,
+        }
+      }, [selectedMode, colors, selectedScreenSize])
+
+      return prim
+    }
   }
 }
 
@@ -414,8 +425,16 @@ export default function configurePrim<
     >,
   ) => CustomAtoms = () => ({} as CustomAtoms),
 ) {
-  const usePrimTheme = new PrimConfiguration(options).usePrimTheme
-  type ThisTheme = ReturnType<typeof usePrimTheme>
+  const usePrimTheme = new PrimConfiguration(options).createPrimThemeHook()
+  type ThisTheme = PrimTheme<
+    Colors,
+    ScreenSize,
+    Spacing,
+    BorderRadii,
+    BorderWidth,
+    FontSize,
+    FontWeight
+  >
   type CustomTheme = ThisTheme & CustomAtoms
 
   const PrimContext = React.createContext<null | CustomTheme>(null)

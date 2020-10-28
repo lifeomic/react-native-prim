@@ -18,7 +18,7 @@
     "prebuild": "yarn clean",
     "postbuild": "cp package.json ./dist/",
     "test": "jest",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx index.ts src/**/*.tsx src/**/*.ts"
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx src/**/*.tsx src/**/*.ts"
   },
   "husky": {
     "hooks": {
