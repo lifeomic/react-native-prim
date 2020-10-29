@@ -1,6 +1,6 @@
 {
   "name": "@lifeomic/prim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prim is a customizable TypeScript atomic styles framework for React Native.",
   "repository": "git@github.com:lifeomic/react-native-prim.git",
   "author": "LifeOmic <oss@lifeomic.com>",
@@ -18,7 +18,7 @@
     "prebuild": "yarn clean",
     "postbuild": "cp package.json ./dist/",
     "test": "jest",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx index.ts src/**/*.tsx src/**/*.ts"
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx src/**/*.tsx src/**/*.ts"
   },
   "husky": {
     "hooks": {

@@ -177,6 +177,9 @@ Object {
     "bold": StyleSheet {
       "fontWeight": "600",
     },
+    "italic": StyleSheet {
+      "fontStyle": "italic",
+    },
     "regular": StyleSheet {
       "fontWeight": "400",
     },
@@ -735,6 +738,7 @@ Object {
     },
     "font": Object {
       "bold": undefined,
+      "italic": undefined,
       "regular": undefined,
     },
     "h": Object {
@@ -1062,6 +1066,7 @@ Object {
     },
     "font": Object {
       "bold": undefined,
+      "italic": undefined,
       "regular": undefined,
     },
     "h": Object {
@@ -1542,6 +1547,9 @@ Object {
     "font": Object {
       "bold": StyleSheet {
         "fontWeight": "600",
+      },
+      "italic": StyleSheet {
+        "fontStyle": "italic",
       },
       "regular": StyleSheet {
         "fontWeight": "400",
@@ -2328,6 +2336,9 @@ Object {
     "bold": StyleSheet {
       "fontWeight": "600",
     },
+    "italic": StyleSheet {
+      "fontStyle": "italic",
+    },
     "regular": StyleSheet {
       "fontWeight": "400",
     },
@@ -2988,6 +2999,9 @@ Object {
       "bold": StyleSheet {
         "fontWeight": "600",
       },
+      "italic": StyleSheet {
+        "fontStyle": "italic",
+      },
       "regular": StyleSheet {
         "fontWeight": "400",
       },
@@ -3666,6 +3680,7 @@ Object {
     },
     "font": Object {
       "bold": undefined,
+      "italic": undefined,
       "regular": undefined,
     },
     "h": Object {
@@ -4045,6 +4060,7 @@ Object {
     },
     "font": Object {
       "bold": undefined,
+      "italic": undefined,
       "regular": undefined,
     },
     "h": Object {
@@ -4478,6 +4494,9 @@ Object {
   "font": Object {
     "bold": StyleSheet {
       "fontWeight": "600",
+    },
+    "italic": StyleSheet {
+      "fontStyle": "italic",
     },
     "regular": StyleSheet {
       "fontWeight": "400",
@@ -5037,6 +5056,7 @@ Object {
     },
     "font": Object {
       "bold": undefined,
+      "italic": undefined,
       "regular": undefined,
     },
     "h": Object {
@@ -5465,6 +5485,9 @@ Object {
     "font": Object {
       "bold": StyleSheet {
         "fontWeight": "600",
+      },
+      "italic": StyleSheet {
+        "fontStyle": "italic",
       },
       "regular": StyleSheet {
         "fontWeight": "400",
@@ -6196,6 +6219,7 @@ Object {
     },
     "font": Object {
       "bold": undefined,
+      "italic": undefined,
       "regular": undefined,
     },
     "h": Object {

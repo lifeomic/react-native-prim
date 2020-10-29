@@ -7,7 +7,7 @@ export enum ScreenSize {
   tablet = 'tablet',
   lg = 'lg',
   xl = 'xl',
-  xl2 = 'xl2',
+  xxl = 'xxl',
 }
 
 const sizeForWidth = (w: number): ScreenSize => {
@@ -29,7 +29,7 @@ const sizeForWidth = (w: number): ScreenSize => {
   if (w <= 1300) {
     return ScreenSize.xl
   }
-  return ScreenSize.xl2
+  return ScreenSize.xxl
 }
 
 export const useScreenSize = (): ScreenSize => {

@@ -5,7 +5,7 @@ import { borderRadius, borderWidth } from './border'
 import { useDarkMode } from './useDarkMode'
 import { ScreenSize, useScreenSize } from './ScreenSize'
 
-const defaultConfig = {
+const defaultOptions = {
   colors,
   spacing,
   fontWeight,
@@ -17,4 +17,4 @@ const defaultConfig = {
   screenSizes: ScreenSize,
 }
 
-export default defaultConfig
+export default defaultOptions
