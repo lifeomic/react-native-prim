@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2018",
+    "module": "es2015",
     "declaration": true,
     "strict": true,
     "jsx": "react",
