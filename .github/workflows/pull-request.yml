@@ -29,13 +29,13 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Install
         run: yarn install --frozen-lockfile
-      - name: Build
-        run: yarn build
       - name: Version
         env:
           PRE_ID: pr-${{ github.event.number }}-${{ github.run_id }}
         run: |
           npm version prepatch --git-tag-version=false --preid="${PRE_ID}-$(date '+%s')"
+      - name: Build
+        run: yarn build
       - name: PrePublish
         env:
           NODE_AUTH_TOKEN: ${{secrets.LIFEOMIC_NPM_TOKEN}}
