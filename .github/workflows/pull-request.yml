@@ -30,7 +30,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-          msg:
-            'A prerelease version has been published. Version:
-            ${{$PRE_RELEASE_VERSION}}'
+          msg: 'Published Prerelease Version: ${{$PRE_RELEASE_VERSION}}'
           check_for_duplicate_msg: true
