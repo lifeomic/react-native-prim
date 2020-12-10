@@ -1,6 +1,6 @@
 name: Pull Request Validation
 
-on: pull_request_target
+on: pull_request
 
 jobs:
   build:
@@ -16,19 +16,3 @@ jobs:
           yarn lint
           yarn test
           yarn build
-      - name: Publish Prerelease
-        run: |
-          yarn build
-          npm version prerelease --preid=${{github.run_id}}-${{github.run_number}}
-          npm publish ./dist --access public
-          export PRE_RELEASE_VERSION=`node -p "require('./package.json').version"`
-          echo "::set-env name=PRE_RELEASE_VERSION::$PRE_RELEASE_VERSION"
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.LIFEOMIC_NPM_TOKEN}}
-      - name: Post Prerelease version to PR
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        with:
-          msg: 'Prerelease version: ${{ env.PRE_RELEASE_VERSION }}'
-          check_for_duplicate_msg: true
