@@ -3,43 +3,52 @@ name: Release
 on:
   push:
     branches:
-      - master
-    tags:
-      - 'v*'
+      - 'master'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Exit if not on master branch
-        if: endsWith(github.ref, 'master') == false
-        run: exit 0
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
-      - name: Lint, test, and build
+      - name: Install
+        run: yarn install --frozen-lockfile
+      - name: Test
+        run: yarn test
+      - name: Build
+        run: yarn build
+      - id: tagExistsAndVersion
+        name: Check if tags exist in NPM and GIT
         run: |
-          yarn
-          yarn lint
-          yarn test
-          yarn build
-      - name: Publish to npm
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: |
-          yarn build
-          npm publish ./dist --access public
+          set +e
+          packageName="$(node -p "require('./package').name")"
+          packageVersion="$(node -p "require('./package').version")"
+          packageNameAndVersion="${packageName}@${packageVersion}"
+
+          npm view "${packageNameAndVersion}" dist.tarball | grep "${packageVersion}" > /dev/null
+          npmTagExists="$([ "$?" = "0" ] && BOOL="true" || BOOL="false"; echo $BOOL)"
+
+          set -e
+          echo "::set-output name=npmTagExists::${npmTagExists}"
+          echo "::set-output name=packageVersion::${packageVersion}"
+      - name: Publish
+        if: ${{ steps.tagExistsAndVersion.outputs.npmTagExists == 'false'}}
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.LIFEOMIC_NPM_TOKEN}}
       - name: Create Release
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: ${{ steps.tagExistsAndVersion.outputs.npmTagExists == 'false'}}
         id: create_release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          tag_name: v${{ steps.tagExistsAndVersion.outputs.packageVersion }}
+          release_name: v${{ steps.tagExistsAndVersion.outputs.packageVersion }}
           draft: false
           prerelease: false
