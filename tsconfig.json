@@ -17,11 +17,5 @@
     "baseUrl": "./src/",
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": [
-    "node_modules",
-    "dist/*",
-    "babel.config.js",
-    "jest.*.js",
-    "coverage"
-  ]
+  "exclude": ["node_modules", "dist/*", "coverage"]
 }
