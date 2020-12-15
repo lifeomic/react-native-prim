@@ -15,12 +15,11 @@
   "main": "dist/commonjs/index.js",
   "module": "dist/module/index.js",
   "react-native": "src/index.ts",
-  "types": "src/index.d.ts",
+  "types": "dist/typescript/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "bob build",
     "prebuild": "yarn clean",
-    "postbuild": "cp package.json ./dist/",
+    "build": "bob build",
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx src/**/*.tsx src/**/*.ts"
   },
@@ -73,7 +72,12 @@
     "targets": [
       "commonjs",
       "module",
-      "typescript"
+      [
+        "typescript",
+        {
+          "project": "./tsconfig.build.json"
+        }
+      ]
     ]
   }
 }
