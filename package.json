@@ -19,6 +19,7 @@
   "scripts": {
     "build": "bob build",
     "test": "jest",
+    "tsc": "tsc --noEmit",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx src/**/*.tsx src/**/*.ts"
   },
   "husky": {
