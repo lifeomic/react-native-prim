@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { renderHook, act } from '@testing-library/react-hooks'
 import { render } from '@testing-library/react-native'
-import configurePrim from './configurePrim'
+import configurePrim from '../configurePrim'
 import { StyleSheet, View, Text } from 'react-native'
 
 enum ScreenSize {

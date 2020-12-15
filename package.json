@@ -17,8 +17,6 @@
   "react-native": "src/index.ts",
   "types": "dist/typescript/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist",
-    "prebuild": "yarn clean",
     "build": "bob build",
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx src/**/*.tsx src/**/*.ts"
