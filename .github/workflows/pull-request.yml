@@ -14,6 +14,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
+      - name: TypeScript
+        run: yarn tsc
       - name: Test
         run: yarn test
       - name: Build
@@ -40,4 +42,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.LIFEOMIC_NPM_TOKEN}}
           PR_TAG: pr-${{ github.event.number }}
-        run: cd dist && npm publish --tag "${PR_TAG}"
+        run: npm publish --tag "${PR_TAG}"

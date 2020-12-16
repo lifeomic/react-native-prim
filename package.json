@@ -1,6 +1,6 @@
 {
   "name": "@lifeomic/prim",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Prim is a customizable TypeScript atomic styles framework for React Native.",
   "repository": "git@github.com:lifeomic/react-native-prim.git",
   "author": "LifeOmic <oss@lifeomic.com>",
@@ -12,12 +12,14 @@
     "react",
     "typescript"
   ],
+  "main": "dist/commonjs/index.js",
+  "module": "dist/module/index.js",
+  "react-native": "src/index.ts",
+  "types": "dist/typescript/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "tsc --build tsconfig.build.json",
-    "prebuild": "yarn clean",
-    "postbuild": "cp package.json ./dist/",
+    "build": "bob build",
     "test": "jest",
+    "tsc": "tsc --noEmit",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx src/**/*.tsx src/**/*.ts"
   },
   "husky": {
@@ -30,12 +32,13 @@
     "use-memo-one": "^1.0.0"
   },
   "peerDependencies": {
-    "react": ">=16.13.1",
-    "react-native": ">=0.63.2"
+    "react": "*",
+    "react-native": ">=0.50.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/runtime": "^7.11.2",
+    "@react-native-community/bob": "^0.16.2",
     "@testing-library/react-hooks": "^3.4.1",
     "@testing-library/react-native": "^7.0.2",
     "@types/hoist-non-react-statics": "^3.3.1",
@@ -61,5 +64,19 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "dist",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "./tsconfig.build.json"
+        }
+      ]
+    ]
   }
 }
