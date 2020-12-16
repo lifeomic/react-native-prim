@@ -11,8 +11,7 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "types": ["react", "react-native"]
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/index.ts"]
 }
