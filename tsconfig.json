@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "es2015",
     "lib": ["es6", "es2016", "es2018"],
     "jsx": "react-native",
     "strict": true,
@@ -11,8 +10,7 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "types": ["react", "react-native"]
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/index.ts"]
 }

@@ -140,8 +140,8 @@ class PrimConfiguration<
       return {
         ...ssWithValuesForAttribute(this.options.spacing, attribute),
         ...ss({
-          full: { [attribute]: '100%' as const },
-          half: { [attribute]: '50%' as const },
+          ['full' as const]: { [attribute]: '100%' as const },
+          ['half' as const]: { [attribute]: '50%' as const },
         }),
       }
     }
