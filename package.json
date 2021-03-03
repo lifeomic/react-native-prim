@@ -13,7 +13,6 @@
     "typescript"
   ],
   "main": "dist/commonjs/index.js",
-  "module": "dist/module/index.js",
   "react-native": "src/index.ts",
   "types": "dist/typescript/index.d.ts",
   "scripts": {
@@ -50,6 +49,7 @@
     "@typescript-eslint/parser": "^4.2.0",
     "babel-jest": "^26.3.0",
     "eslint": "^7.9.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "hoist-non-react-statics": "^3.3.2",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
@@ -70,7 +70,6 @@
     "output": "dist",
     "targets": [
       "commonjs",
-      "module",
       [
         "typescript",
         {
