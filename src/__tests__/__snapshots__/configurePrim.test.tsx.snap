@@ -2,9 +2,6 @@
 
 exports[`usePrim styles dark mode x sizeClass 1`] = `
 Object {
-  "absolute": StyleSheet {
-    "position": "absolute",
-  },
   "bg": Object {
     "base": StyleSheet {
       "backgroundColor": "#000",
@@ -567,6 +564,14 @@ Object {
       "paddingLeft": 22,
     },
   },
+  "pos": Object {
+    "absolute": StyleSheet {
+      "position": "absolute",
+    },
+    "relative": StyleSheet {
+      "position": "relative",
+    },
+  },
   "pr": Object {
     "full": StyleSheet {
       "paddingRight": "100%",
@@ -652,9 +657,6 @@ Object {
       "paddingVertical": 22,
     },
   },
-  "relative": StyleSheet {
-    "position": "relative",
-  },
   "rounded": Object {
     "lg": StyleSheet {
       "borderRadius": 12,
@@ -665,7 +667,6 @@ Object {
   },
   "screenSize": "x",
   "se": Object {
-    "absolute": undefined,
     "bg": Object {
       "base": undefined,
       "fg": undefined,
@@ -896,6 +897,10 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "pos": Object {
+      "absolute": undefined,
+      "relative": undefined,
+    },
     "pr": Object {
       "full": undefined,
       "half": undefined,
@@ -931,7 +936,6 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "relative": undefined,
     "rounded": Object {
       "lg": undefined,
       "sm": undefined,
@@ -968,12 +972,14 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "z00": undefined,
-    "z10": undefined,
-    "z20": undefined,
-    "z30": undefined,
-    "z40": undefined,
-    "z50": undefined,
+    "z": Object {
+      "0": undefined,
+      "10": undefined,
+      "20": undefined,
+      "30": undefined,
+      "40": undefined,
+      "50": undefined,
+    },
   },
   "self": Object {
     "auto": StyleSheet {
@@ -993,7 +999,6 @@ Object {
     },
   },
   "tablet": Object {
-    "absolute": undefined,
     "bg": Object {
       "base": undefined,
       "fg": undefined,
@@ -1224,6 +1229,10 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "pos": Object {
+      "absolute": undefined,
+      "relative": undefined,
+    },
     "pr": Object {
       "full": undefined,
       "half": undefined,
@@ -1259,7 +1268,6 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "relative": undefined,
     "rounded": Object {
       "lg": undefined,
       "sm": undefined,
@@ -1296,12 +1304,14 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "z00": undefined,
-    "z10": undefined,
-    "z20": undefined,
-    "z30": undefined,
-    "z40": undefined,
-    "z50": undefined,
+    "z": Object {
+      "0": undefined,
+      "10": undefined,
+      "20": undefined,
+      "30": undefined,
+      "40": undefined,
+      "50": undefined,
+    },
   },
   "text": Object {
     "base": StyleSheet {
@@ -1373,9 +1383,6 @@ Object {
     },
   },
   "x": Object {
-    "absolute": StyleSheet {
-      "position": "absolute",
-    },
     "bg": Object {
       "base": StyleSheet {
         "backgroundColor": "#000",
@@ -1937,6 +1944,14 @@ Object {
         "paddingLeft": 22,
       },
     },
+    "pos": Object {
+      "absolute": StyleSheet {
+        "position": "absolute",
+      },
+      "relative": StyleSheet {
+        "position": "relative",
+      },
+    },
     "pr": Object {
       "full": StyleSheet {
         "paddingRight": "100%",
@@ -2021,9 +2036,6 @@ Object {
       "sm": StyleSheet {
         "paddingVertical": 22,
       },
-    },
-    "relative": StyleSheet {
-      "position": "relative",
     },
     "rounded": Object {
       "lg": StyleSheet {
@@ -2119,51 +2131,52 @@ Object {
         "width": 22,
       },
     },
-    "z00": StyleSheet {
+    "z": Object {
+      "0": StyleSheet {
+        "zIndex": 0,
+      },
+      "10": StyleSheet {
+        "zIndex": 10,
+      },
+      "20": StyleSheet {
+        "zIndex": 20,
+      },
+      "30": StyleSheet {
+        "zIndex": 30,
+      },
+      "40": StyleSheet {
+        "zIndex": 40,
+      },
+      "50": StyleSheet {
+        "zIndex": 50,
+      },
+    },
+  },
+  "z": Object {
+    "0": StyleSheet {
       "zIndex": 0,
     },
-    "z10": StyleSheet {
+    "10": StyleSheet {
       "zIndex": 10,
     },
-    "z20": StyleSheet {
+    "20": StyleSheet {
       "zIndex": 20,
     },
-    "z30": StyleSheet {
+    "30": StyleSheet {
       "zIndex": 30,
     },
-    "z40": StyleSheet {
+    "40": StyleSheet {
       "zIndex": 40,
     },
-    "z50": StyleSheet {
+    "50": StyleSheet {
       "zIndex": 50,
     },
-  },
-  "z00": StyleSheet {
-    "zIndex": 0,
-  },
-  "z10": StyleSheet {
-    "zIndex": 10,
-  },
-  "z20": StyleSheet {
-    "zIndex": 20,
-  },
-  "z30": StyleSheet {
-    "zIndex": 30,
-  },
-  "z40": StyleSheet {
-    "zIndex": 40,
-  },
-  "z50": StyleSheet {
-    "zIndex": 50,
   },
 }
 `;
 
 exports[`usePrim styles light mode se sizeClass 1`] = `
 Object {
-  "absolute": StyleSheet {
-    "position": "absolute",
-  },
   "bg": Object {
     "base": StyleSheet {
       "backgroundColor": "#fff",
@@ -2726,6 +2739,14 @@ Object {
       "paddingLeft": 22,
     },
   },
+  "pos": Object {
+    "absolute": StyleSheet {
+      "position": "absolute",
+    },
+    "relative": StyleSheet {
+      "position": "relative",
+    },
+  },
   "pr": Object {
     "full": StyleSheet {
       "paddingRight": "100%",
@@ -2810,9 +2831,6 @@ Object {
     "sm": StyleSheet {
       "paddingVertical": 22,
     },
-  },
-  "relative": StyleSheet {
-    "position": "relative",
   },
   "rounded": Object {
     "lg": StyleSheet {
@@ -2824,9 +2842,6 @@ Object {
   },
   "screenSize": "se",
   "se": Object {
-    "absolute": StyleSheet {
-      "position": "absolute",
-    },
     "bg": Object {
       "base": StyleSheet {
         "backgroundColor": "#fff",
@@ -3388,6 +3403,14 @@ Object {
         "paddingLeft": 22,
       },
     },
+    "pos": Object {
+      "absolute": StyleSheet {
+        "position": "absolute",
+      },
+      "relative": StyleSheet {
+        "position": "relative",
+      },
+    },
     "pr": Object {
       "full": StyleSheet {
         "paddingRight": "100%",
@@ -3472,9 +3495,6 @@ Object {
       "sm": StyleSheet {
         "paddingVertical": 22,
       },
-    },
-    "relative": StyleSheet {
-      "position": "relative",
     },
     "rounded": Object {
       "lg": StyleSheet {
@@ -3570,23 +3590,25 @@ Object {
         "width": 22,
       },
     },
-    "z00": StyleSheet {
-      "zIndex": 0,
-    },
-    "z10": StyleSheet {
-      "zIndex": 10,
-    },
-    "z20": StyleSheet {
-      "zIndex": 20,
-    },
-    "z30": StyleSheet {
-      "zIndex": 30,
-    },
-    "z40": StyleSheet {
-      "zIndex": 40,
-    },
-    "z50": StyleSheet {
-      "zIndex": 50,
+    "z": Object {
+      "0": StyleSheet {
+        "zIndex": 0,
+      },
+      "10": StyleSheet {
+        "zIndex": 10,
+      },
+      "20": StyleSheet {
+        "zIndex": 20,
+      },
+      "30": StyleSheet {
+        "zIndex": 30,
+      },
+      "40": StyleSheet {
+        "zIndex": 40,
+      },
+      "50": StyleSheet {
+        "zIndex": 50,
+      },
     },
   },
   "self": Object {
@@ -3607,7 +3629,6 @@ Object {
     },
   },
   "tablet": Object {
-    "absolute": undefined,
     "bg": Object {
       "base": undefined,
       "fg": undefined,
@@ -3838,6 +3859,10 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "pos": Object {
+      "absolute": undefined,
+      "relative": undefined,
+    },
     "pr": Object {
       "full": undefined,
       "half": undefined,
@@ -3873,7 +3898,6 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "relative": undefined,
     "rounded": Object {
       "lg": undefined,
       "sm": undefined,
@@ -3910,12 +3934,14 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "z00": undefined,
-    "z10": undefined,
-    "z20": undefined,
-    "z30": undefined,
-    "z40": undefined,
-    "z50": undefined,
+    "z": Object {
+      "0": undefined,
+      "10": undefined,
+      "20": undefined,
+      "30": undefined,
+      "40": undefined,
+      "50": undefined,
+    },
   },
   "text": Object {
     "base": StyleSheet {
@@ -3987,7 +4013,6 @@ Object {
     },
   },
   "x": Object {
-    "absolute": undefined,
     "bg": Object {
       "base": undefined,
       "fg": undefined,
@@ -4218,6 +4243,10 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "pos": Object {
+      "absolute": undefined,
+      "relative": undefined,
+    },
     "pr": Object {
       "full": undefined,
       "half": undefined,
@@ -4253,7 +4282,6 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "relative": undefined,
     "rounded": Object {
       "lg": undefined,
       "sm": undefined,
@@ -4290,39 +4318,40 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "z00": undefined,
-    "z10": undefined,
-    "z20": undefined,
-    "z30": undefined,
-    "z40": undefined,
-    "z50": undefined,
+    "z": Object {
+      "0": undefined,
+      "10": undefined,
+      "20": undefined,
+      "30": undefined,
+      "40": undefined,
+      "50": undefined,
+    },
   },
-  "z00": StyleSheet {
-    "zIndex": 0,
-  },
-  "z10": StyleSheet {
-    "zIndex": 10,
-  },
-  "z20": StyleSheet {
-    "zIndex": 20,
-  },
-  "z30": StyleSheet {
-    "zIndex": 30,
-  },
-  "z40": StyleSheet {
-    "zIndex": 40,
-  },
-  "z50": StyleSheet {
-    "zIndex": 50,
+  "z": Object {
+    "0": StyleSheet {
+      "zIndex": 0,
+    },
+    "10": StyleSheet {
+      "zIndex": 10,
+    },
+    "20": StyleSheet {
+      "zIndex": 20,
+    },
+    "30": StyleSheet {
+      "zIndex": 30,
+    },
+    "40": StyleSheet {
+      "zIndex": 40,
+    },
+    "50": StyleSheet {
+      "zIndex": 50,
+    },
   },
 }
 `;
 
 exports[`usePrim styles light mode tablet sizeClass 1`] = `
 Object {
-  "absolute": StyleSheet {
-    "position": "absolute",
-  },
   "bg": Object {
     "base": StyleSheet {
       "backgroundColor": "#fff",
@@ -4885,6 +4914,14 @@ Object {
       "paddingLeft": 22,
     },
   },
+  "pos": Object {
+    "absolute": StyleSheet {
+      "position": "absolute",
+    },
+    "relative": StyleSheet {
+      "position": "relative",
+    },
+  },
   "pr": Object {
     "full": StyleSheet {
       "paddingRight": "100%",
@@ -4970,9 +5007,6 @@ Object {
       "paddingVertical": 22,
     },
   },
-  "relative": StyleSheet {
-    "position": "relative",
-  },
   "rounded": Object {
     "lg": StyleSheet {
       "borderRadius": 12,
@@ -4983,7 +5017,6 @@ Object {
   },
   "screenSize": "tablet",
   "se": Object {
-    "absolute": undefined,
     "bg": Object {
       "base": undefined,
       "fg": undefined,
@@ -5214,6 +5247,10 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "pos": Object {
+      "absolute": undefined,
+      "relative": undefined,
+    },
     "pr": Object {
       "full": undefined,
       "half": undefined,
@@ -5249,7 +5286,6 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "relative": undefined,
     "rounded": Object {
       "lg": undefined,
       "sm": undefined,
@@ -5286,12 +5322,14 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "z00": undefined,
-    "z10": undefined,
-    "z20": undefined,
-    "z30": undefined,
-    "z40": undefined,
-    "z50": undefined,
+    "z": Object {
+      "0": undefined,
+      "10": undefined,
+      "20": undefined,
+      "30": undefined,
+      "40": undefined,
+      "50": undefined,
+    },
   },
   "self": Object {
     "auto": StyleSheet {
@@ -5311,9 +5349,6 @@ Object {
     },
   },
   "tablet": Object {
-    "absolute": StyleSheet {
-      "position": "absolute",
-    },
     "bg": Object {
       "base": StyleSheet {
         "backgroundColor": "#fff",
@@ -5875,6 +5910,14 @@ Object {
         "paddingLeft": 22,
       },
     },
+    "pos": Object {
+      "absolute": StyleSheet {
+        "position": "absolute",
+      },
+      "relative": StyleSheet {
+        "position": "relative",
+      },
+    },
     "pr": Object {
       "full": StyleSheet {
         "paddingRight": "100%",
@@ -5959,9 +6002,6 @@ Object {
       "sm": StyleSheet {
         "paddingVertical": 22,
       },
-    },
-    "relative": StyleSheet {
-      "position": "relative",
     },
     "rounded": Object {
       "lg": StyleSheet {
@@ -6057,23 +6097,25 @@ Object {
         "width": 22,
       },
     },
-    "z00": StyleSheet {
-      "zIndex": 0,
-    },
-    "z10": StyleSheet {
-      "zIndex": 10,
-    },
-    "z20": StyleSheet {
-      "zIndex": 20,
-    },
-    "z30": StyleSheet {
-      "zIndex": 30,
-    },
-    "z40": StyleSheet {
-      "zIndex": 40,
-    },
-    "z50": StyleSheet {
-      "zIndex": 50,
+    "z": Object {
+      "0": StyleSheet {
+        "zIndex": 0,
+      },
+      "10": StyleSheet {
+        "zIndex": 10,
+      },
+      "20": StyleSheet {
+        "zIndex": 20,
+      },
+      "30": StyleSheet {
+        "zIndex": 30,
+      },
+      "40": StyleSheet {
+        "zIndex": 40,
+      },
+      "50": StyleSheet {
+        "zIndex": 50,
+      },
     },
   },
   "text": Object {
@@ -6146,7 +6188,6 @@ Object {
     },
   },
   "x": Object {
-    "absolute": undefined,
     "bg": Object {
       "base": undefined,
       "fg": undefined,
@@ -6377,6 +6418,10 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "pos": Object {
+      "absolute": undefined,
+      "relative": undefined,
+    },
     "pr": Object {
       "full": undefined,
       "half": undefined,
@@ -6412,7 +6457,6 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "relative": undefined,
     "rounded": Object {
       "lg": undefined,
       "sm": undefined,
@@ -6449,30 +6493,34 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
-    "z00": undefined,
-    "z10": undefined,
-    "z20": undefined,
-    "z30": undefined,
-    "z40": undefined,
-    "z50": undefined,
+    "z": Object {
+      "0": undefined,
+      "10": undefined,
+      "20": undefined,
+      "30": undefined,
+      "40": undefined,
+      "50": undefined,
+    },
   },
-  "z00": StyleSheet {
-    "zIndex": 0,
-  },
-  "z10": StyleSheet {
-    "zIndex": 10,
-  },
-  "z20": StyleSheet {
-    "zIndex": 20,
-  },
-  "z30": StyleSheet {
-    "zIndex": 30,
-  },
-  "z40": StyleSheet {
-    "zIndex": 40,
-  },
-  "z50": StyleSheet {
-    "zIndex": 50,
+  "z": Object {
+    "0": StyleSheet {
+      "zIndex": 0,
+    },
+    "10": StyleSheet {
+      "zIndex": 10,
+    },
+    "20": StyleSheet {
+      "zIndex": 20,
+    },
+    "30": StyleSheet {
+      "zIndex": 30,
+    },
+    "40": StyleSheet {
+      "zIndex": 40,
+    },
+    "50": StyleSheet {
+      "zIndex": 50,
+    },
   },
 }
 `;

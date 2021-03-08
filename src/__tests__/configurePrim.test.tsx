@@ -185,7 +185,7 @@ describe('primmed', () => {
       prm.x.borderLeft.fg,
       prm.border.sm,
       prm.minH.lg,
-      prm.tablet.border.sm,
+      prm.tablet.pos.absolute,
     ])
     const { toJSON } = renderPrimped(
       <Card style={{ backgroundColor: 'coral' }} />,
@@ -204,7 +204,7 @@ describe('primmed', () => {
                 "minHeight": 44,
               },
               StyleSheet {
-                "borderWidth": 1,
+                "position": "absolute",
               },
             ],
             Object {

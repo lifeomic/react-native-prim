@@ -113,36 +113,35 @@ class PrimConfiguration<
   }
 
   readonly primStyles = (colors: Colors, ss: CreateStyleSheet) => {
-    function ssWithValuesForAttribute<
+    function valuesForAttribute<
       Attribute extends keyof ViewStyle | keyof TextStyle,
       SubConfig extends Record<string, any>
-    >(subConfigs: SubConfig, attribute: Attribute) {
-      return ss<
-        {
-          [c in keyof SubConfig]: {
-            [ca in Attribute]: SubConfig[c]
-          }
-        }
-      >({
-        ...(Object.entries(subConfigs)
+    >(
+      subConfigs: SubConfig,
+      attribute: Attribute,
+    ): {
+      [c in keyof SubConfig]: {
+        [ca in Attribute]: SubConfig[c]
+      }
+    } {
+      return (
+        Object.entries(subConfigs)
           .map(([name, size]) => ({
             [name]: { [attribute]: size },
           }))
           // `any` is needed here because `Object.entries` erases the key type
-          .reduce((styles, style) => ({ ...styles, ...style }), {}) as any),
-      })
+          .reduce((styles, style) => ({ ...styles, ...style }), {}) as any
+      )
     }
-    const ssForForAttributeWithRelativeSizes = <
+    const spacingWRelativeForAttribute = <
       Attribute extends keyof ViewStyle | keyof TextStyle
     >(
       attribute: Attribute,
     ) => {
       return {
-        ...ssWithValuesForAttribute(this.options.spacing, attribute),
-        ...ss({
-          ['full' as const]: { [attribute]: '100%' as const },
-          ['half' as const]: { [attribute]: '50%' as const },
-        }),
+        ...valuesForAttribute(this.options.spacing, attribute),
+        ['full' as const]: { [attribute]: '100%' as const },
+        ['half' as const]: { [attribute]: '50%' as const },
       }
     }
 
@@ -196,114 +195,109 @@ class PrimConfiguration<
         visible: { overflow: 'visible' },
         scroll: { overflow: 'scroll' },
       }),
-      bg: ssWithValuesForAttribute(colors, 'backgroundColor'),
-      border: {
-        ...ssWithValuesForAttribute(colors, 'borderColor'),
-        ...ssWithValuesForAttribute(this.options.borderWidth, 'borderWidth'),
-      },
-      borderTop: {
-        ...ssWithValuesForAttribute(colors, 'borderTopColor'),
-        ...ssWithValuesForAttribute(this.options.spacing, 'borderTopWidth'),
-      },
-      borderBottom: {
-        ...ssWithValuesForAttribute(colors, 'borderBottomColor'),
-        ...ssWithValuesForAttribute(this.options.spacing, 'borderBottomWidth'),
-      },
-      borderRight: {
-        ...ssWithValuesForAttribute(colors, 'borderRightColor'),
-        ...ssWithValuesForAttribute(this.options.spacing, 'borderRightWidth'),
-      },
-      borderLeft: {
-        ...ssWithValuesForAttribute(colors, 'borderLeftColor'),
-        ...ssWithValuesForAttribute(this.options.spacing, 'borderLeftWidth'),
-      },
-      font: {
-        ...ssWithValuesForAttribute(this.options.fontWeight, 'fontWeight'),
-        ...ss({
-          italic: { fontStyle: 'italic' },
-        }),
-      },
-      text: {
-        ...ssWithValuesForAttribute(this.options.fontSize, 'fontSize'),
-        ...ssWithValuesForAttribute(colors, 'color'),
-        ...ss({
-          left: { textAlign: 'left' },
-          center: { textAlign: 'center' },
-          right: { textAlign: 'right' },
-          justify: { textAlign: 'justify' },
-          underline: {
-            textDecorationStyle: 'solid',
-            textDecorationLine: 'underline',
-          },
-          lineThrough: {
-            textDecorationStyle: 'solid',
-            textDecorationLine: 'line-through',
-          },
-          noUnderline: {
-            textDecorationLine: 'none',
-          },
-          uppercase: {
-            textTransform: 'uppercase',
-          },
-          lowercase: {
-            textTransform: 'lowercase',
-          },
-          capitalize: {
-            textTransform: 'capitalize',
-          },
-          noTextTransform: {
-            textTransform: 'none',
-          },
-        } as const),
-      },
+      bg: ss(valuesForAttribute(colors, 'backgroundColor')),
+      border: ss({
+        ...valuesForAttribute(colors, 'borderColor'),
+        ...valuesForAttribute(this.options.borderWidth, 'borderWidth'),
+      }),
+      borderTop: ss({
+        ...valuesForAttribute(colors, 'borderTopColor'),
+        ...valuesForAttribute(this.options.spacing, 'borderTopWidth'),
+      }),
+      borderBottom: ss({
+        ...valuesForAttribute(colors, 'borderBottomColor'),
+        ...valuesForAttribute(this.options.spacing, 'borderBottomWidth'),
+      }),
+      borderRight: ss({
+        ...valuesForAttribute(colors, 'borderRightColor'),
+        ...valuesForAttribute(this.options.spacing, 'borderRightWidth'),
+      }),
+      borderLeft: ss({
+        ...valuesForAttribute(colors, 'borderLeftColor'),
+        ...valuesForAttribute(this.options.spacing, 'borderLeftWidth'),
+      }),
+      font: ss({
+        ...valuesForAttribute(this.options.fontWeight, 'fontWeight'),
+        italic: { fontStyle: 'italic' },
+      }),
+      text: ss({
+        ...valuesForAttribute(this.options.fontSize, 'fontSize'),
+        ...valuesForAttribute(colors, 'color'),
+        left: { textAlign: 'left' },
+        center: { textAlign: 'center' },
+        right: { textAlign: 'right' },
+        justify: { textAlign: 'justify' },
+        underline: {
+          textDecorationStyle: 'solid',
+          textDecorationLine: 'underline',
+        },
+        lineThrough: {
+          textDecorationStyle: 'solid',
+          textDecorationLine: 'line-through',
+        },
+        noUnderline: {
+          textDecorationLine: 'none',
+        },
+        uppercase: {
+          textTransform: 'uppercase',
+        },
+        lowercase: {
+          textTransform: 'lowercase',
+        },
+        capitalize: {
+          textTransform: 'capitalize',
+        },
+        noTextTransform: {
+          textTransform: 'none',
+        },
+      }),
 
       // padding
-      p: ssForForAttributeWithRelativeSizes('padding'),
-      px: ssForForAttributeWithRelativeSizes('paddingHorizontal'),
-      py: ssForForAttributeWithRelativeSizes('paddingVertical'),
-      pt: ssForForAttributeWithRelativeSizes('paddingTop'),
-      pr: ssForForAttributeWithRelativeSizes('paddingRight'),
-      pb: ssForForAttributeWithRelativeSizes('paddingBottom'),
-      pl: ssForForAttributeWithRelativeSizes('paddingLeft'),
-      ps: ssForForAttributeWithRelativeSizes('paddingStart'),
-      pe: ssForForAttributeWithRelativeSizes('paddingEnd'),
+      p: ss(spacingWRelativeForAttribute('padding')),
+      px: ss(spacingWRelativeForAttribute('paddingHorizontal')),
+      py: ss(spacingWRelativeForAttribute('paddingVertical')),
+      pt: ss(spacingWRelativeForAttribute('paddingTop')),
+      pr: ss(spacingWRelativeForAttribute('paddingRight')),
+      pb: ss(spacingWRelativeForAttribute('paddingBottom')),
+      pl: ss(spacingWRelativeForAttribute('paddingLeft')),
+      ps: ss(spacingWRelativeForAttribute('paddingStart')),
+      pe: ss(spacingWRelativeForAttribute('paddingEnd')),
 
       // margin
-      m: ssForForAttributeWithRelativeSizes('margin'),
-      mx: ssForForAttributeWithRelativeSizes('marginHorizontal'),
-      my: ssForForAttributeWithRelativeSizes('marginVertical'),
-      mt: ssForForAttributeWithRelativeSizes('marginTop'),
-      mr: ssForForAttributeWithRelativeSizes('marginRight'),
-      mb: ssForForAttributeWithRelativeSizes('marginBottom'),
-      ml: ssForForAttributeWithRelativeSizes('marginLeft'),
-      ms: ssForForAttributeWithRelativeSizes('marginStart'),
-      me: ssForForAttributeWithRelativeSizes('marginEnd'),
+      m: ss(spacingWRelativeForAttribute('margin')),
+      mx: ss(spacingWRelativeForAttribute('marginHorizontal')),
+      my: ss(spacingWRelativeForAttribute('marginVertical')),
+      mt: ss(spacingWRelativeForAttribute('marginTop')),
+      mr: ss(spacingWRelativeForAttribute('marginRight')),
+      mb: ss(spacingWRelativeForAttribute('marginBottom')),
+      ml: ss(spacingWRelativeForAttribute('marginLeft')),
+      ms: ss(spacingWRelativeForAttribute('marginStart')),
+      me: ss(spacingWRelativeForAttribute('marginEnd')),
 
       // sizing
-      w: ssForForAttributeWithRelativeSizes('width'),
-      minW: ssForForAttributeWithRelativeSizes('minWidth'),
-      maxW: ssForForAttributeWithRelativeSizes('maxWidth'),
-      h: ssForForAttributeWithRelativeSizes('height'),
-      minH: ssForForAttributeWithRelativeSizes('minHeight'),
-      maxH: ssForForAttributeWithRelativeSizes('maxHeight'),
+      w: ss(spacingWRelativeForAttribute('width')),
+      minW: ss(spacingWRelativeForAttribute('minWidth')),
+      maxW: ss(spacingWRelativeForAttribute('maxWidth')),
+      h: ss(spacingWRelativeForAttribute('height')),
+      minH: ss(spacingWRelativeForAttribute('minHeight')),
+      maxH: ss(spacingWRelativeForAttribute('maxHeight')),
 
-      rounded: ssWithValuesForAttribute(
-        this.options.borderRadius,
-        'borderRadius',
+      rounded: ss(
+        valuesForAttribute(this.options.borderRadius, 'borderRadius'),
       ),
 
-      ...ss({
+      pos: ss({
         absolute: { position: 'absolute' },
         relative: { position: 'relative' },
       }),
 
-      ...ss({
-        z00: { zIndex: 0 },
-        z10: { zIndex: 10 },
-        z20: { zIndex: 20 },
-        z30: { zIndex: 30 },
-        z40: { zIndex: 40 },
-        z50: { zIndex: 50 },
+      z: ss({
+        [0]: { zIndex: 0 },
+        [10]: { zIndex: 10 },
+        [20]: { zIndex: 20 },
+        [30]: { zIndex: 30 },
+        [40]: { zIndex: 40 },
+        [50]: { zIndex: 50 },
       } as const),
 
       inset: ss({
