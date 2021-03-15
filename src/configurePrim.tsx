@@ -334,6 +334,24 @@ class PrimConfiguration<
           top: 0,
         },
       } as const),
+
+      opacity: ss({
+        0: { opacity: 0 },
+        5: { opacity: 0.05 },
+        10: { opacity: 0.1 },
+        20: { opacity: 0.2 },
+        25: { opacity: 0.25 },
+        30: { opacity: 0.3 },
+        40: { opacity: 0.4 },
+        50: { opacity: 0.5 },
+        60: { opacity: 0.6 },
+        70: { opacity: 0.7 },
+        75: { opacity: 0.75 },
+        80: { opacity: 0.8 },
+        90: { opacity: 0.9 },
+        95: { opacity: 0.95 },
+        100: { opacity: 1 },
+      } as const),
     }
   }
 

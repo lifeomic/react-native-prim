@@ -488,6 +488,53 @@ Object {
       "marginVertical": 22,
     },
   },
+  "opacity": Object {
+    "0": StyleSheet {
+      "opacity": 0,
+    },
+    "10": StyleSheet {
+      "opacity": 0.1,
+    },
+    "100": StyleSheet {
+      "opacity": 1,
+    },
+    "20": StyleSheet {
+      "opacity": 0.2,
+    },
+    "25": StyleSheet {
+      "opacity": 0.25,
+    },
+    "30": StyleSheet {
+      "opacity": 0.3,
+    },
+    "40": StyleSheet {
+      "opacity": 0.4,
+    },
+    "5": StyleSheet {
+      "opacity": 0.05,
+    },
+    "50": StyleSheet {
+      "opacity": 0.5,
+    },
+    "60": StyleSheet {
+      "opacity": 0.6,
+    },
+    "70": StyleSheet {
+      "opacity": 0.7,
+    },
+    "75": StyleSheet {
+      "opacity": 0.75,
+    },
+    "80": StyleSheet {
+      "opacity": 0.8,
+    },
+    "90": StyleSheet {
+      "opacity": 0.9,
+    },
+    "95": StyleSheet {
+      "opacity": 0.95,
+    },
+  },
   "overflow": Object {
     "hidden": StyleSheet {
       "overflow": "hidden",
@@ -863,6 +910,23 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "opacity": Object {
+      "0": undefined,
+      "10": undefined,
+      "100": undefined,
+      "20": undefined,
+      "25": undefined,
+      "30": undefined,
+      "40": undefined,
+      "5": undefined,
+      "50": undefined,
+      "60": undefined,
+      "70": undefined,
+      "75": undefined,
+      "80": undefined,
+      "90": undefined,
+      "95": undefined,
+    },
     "overflow": Object {
       "hidden": undefined,
       "scroll": undefined,
@@ -1190,6 +1254,23 @@ Object {
       "lg": undefined,
       "px": undefined,
       "sm": undefined,
+    },
+    "opacity": Object {
+      "0": undefined,
+      "10": undefined,
+      "100": undefined,
+      "20": undefined,
+      "25": undefined,
+      "30": undefined,
+      "40": undefined,
+      "5": undefined,
+      "50": undefined,
+      "60": undefined,
+      "70": undefined,
+      "75": undefined,
+      "80": undefined,
+      "90": undefined,
+      "95": undefined,
     },
     "overflow": Object {
       "hidden": undefined,
@@ -1856,6 +1937,53 @@ Object {
       },
       "sm": StyleSheet {
         "marginVertical": 22,
+      },
+    },
+    "opacity": Object {
+      "0": StyleSheet {
+        "opacity": 0,
+      },
+      "10": StyleSheet {
+        "opacity": 0.1,
+      },
+      "100": StyleSheet {
+        "opacity": 1,
+      },
+      "20": StyleSheet {
+        "opacity": 0.2,
+      },
+      "25": StyleSheet {
+        "opacity": 0.25,
+      },
+      "30": StyleSheet {
+        "opacity": 0.3,
+      },
+      "40": StyleSheet {
+        "opacity": 0.4,
+      },
+      "5": StyleSheet {
+        "opacity": 0.05,
+      },
+      "50": StyleSheet {
+        "opacity": 0.5,
+      },
+      "60": StyleSheet {
+        "opacity": 0.6,
+      },
+      "70": StyleSheet {
+        "opacity": 0.7,
+      },
+      "75": StyleSheet {
+        "opacity": 0.75,
+      },
+      "80": StyleSheet {
+        "opacity": 0.8,
+      },
+      "90": StyleSheet {
+        "opacity": 0.9,
+      },
+      "95": StyleSheet {
+        "opacity": 0.95,
       },
     },
     "overflow": Object {
@@ -2647,6 +2775,53 @@ Object {
       "marginVertical": 22,
     },
   },
+  "opacity": Object {
+    "0": StyleSheet {
+      "opacity": 0,
+    },
+    "10": StyleSheet {
+      "opacity": 0.1,
+    },
+    "100": StyleSheet {
+      "opacity": 1,
+    },
+    "20": StyleSheet {
+      "opacity": 0.2,
+    },
+    "25": StyleSheet {
+      "opacity": 0.25,
+    },
+    "30": StyleSheet {
+      "opacity": 0.3,
+    },
+    "40": StyleSheet {
+      "opacity": 0.4,
+    },
+    "5": StyleSheet {
+      "opacity": 0.05,
+    },
+    "50": StyleSheet {
+      "opacity": 0.5,
+    },
+    "60": StyleSheet {
+      "opacity": 0.6,
+    },
+    "70": StyleSheet {
+      "opacity": 0.7,
+    },
+    "75": StyleSheet {
+      "opacity": 0.75,
+    },
+    "80": StyleSheet {
+      "opacity": 0.8,
+    },
+    "90": StyleSheet {
+      "opacity": 0.9,
+    },
+    "95": StyleSheet {
+      "opacity": 0.95,
+    },
+  },
   "overflow": Object {
     "hidden": StyleSheet {
       "overflow": "hidden",
@@ -3309,6 +3484,53 @@ Object {
         "marginVertical": 22,
       },
     },
+    "opacity": Object {
+      "0": StyleSheet {
+        "opacity": 0,
+      },
+      "10": StyleSheet {
+        "opacity": 0.1,
+      },
+      "100": StyleSheet {
+        "opacity": 1,
+      },
+      "20": StyleSheet {
+        "opacity": 0.2,
+      },
+      "25": StyleSheet {
+        "opacity": 0.25,
+      },
+      "30": StyleSheet {
+        "opacity": 0.3,
+      },
+      "40": StyleSheet {
+        "opacity": 0.4,
+      },
+      "5": StyleSheet {
+        "opacity": 0.05,
+      },
+      "50": StyleSheet {
+        "opacity": 0.5,
+      },
+      "60": StyleSheet {
+        "opacity": 0.6,
+      },
+      "70": StyleSheet {
+        "opacity": 0.7,
+      },
+      "75": StyleSheet {
+        "opacity": 0.75,
+      },
+      "80": StyleSheet {
+        "opacity": 0.8,
+      },
+      "90": StyleSheet {
+        "opacity": 0.9,
+      },
+      "95": StyleSheet {
+        "opacity": 0.95,
+      },
+    },
     "overflow": Object {
       "hidden": StyleSheet {
         "overflow": "hidden",
@@ -3805,6 +4027,23 @@ Object {
       "px": undefined,
       "sm": undefined,
     },
+    "opacity": Object {
+      "0": undefined,
+      "10": undefined,
+      "100": undefined,
+      "20": undefined,
+      "25": undefined,
+      "30": undefined,
+      "40": undefined,
+      "5": undefined,
+      "50": undefined,
+      "60": undefined,
+      "70": undefined,
+      "75": undefined,
+      "80": undefined,
+      "90": undefined,
+      "95": undefined,
+    },
     "overflow": Object {
       "hidden": undefined,
       "scroll": undefined,
@@ -4184,6 +4423,23 @@ Object {
       "lg": undefined,
       "px": undefined,
       "sm": undefined,
+    },
+    "opacity": Object {
+      "0": undefined,
+      "10": undefined,
+      "100": undefined,
+      "20": undefined,
+      "25": undefined,
+      "30": undefined,
+      "40": undefined,
+      "5": undefined,
+      "50": undefined,
+      "60": undefined,
+      "70": undefined,
+      "75": undefined,
+      "80": undefined,
+      "90": undefined,
+      "95": undefined,
     },
     "overflow": Object {
       "hidden": undefined,
@@ -4806,6 +5062,53 @@ Object {
       "marginVertical": 22,
     },
   },
+  "opacity": Object {
+    "0": StyleSheet {
+      "opacity": 0,
+    },
+    "10": StyleSheet {
+      "opacity": 0.1,
+    },
+    "100": StyleSheet {
+      "opacity": 1,
+    },
+    "20": StyleSheet {
+      "opacity": 0.2,
+    },
+    "25": StyleSheet {
+      "opacity": 0.25,
+    },
+    "30": StyleSheet {
+      "opacity": 0.3,
+    },
+    "40": StyleSheet {
+      "opacity": 0.4,
+    },
+    "5": StyleSheet {
+      "opacity": 0.05,
+    },
+    "50": StyleSheet {
+      "opacity": 0.5,
+    },
+    "60": StyleSheet {
+      "opacity": 0.6,
+    },
+    "70": StyleSheet {
+      "opacity": 0.7,
+    },
+    "75": StyleSheet {
+      "opacity": 0.75,
+    },
+    "80": StyleSheet {
+      "opacity": 0.8,
+    },
+    "90": StyleSheet {
+      "opacity": 0.9,
+    },
+    "95": StyleSheet {
+      "opacity": 0.95,
+    },
+  },
   "overflow": Object {
     "hidden": StyleSheet {
       "overflow": "hidden",
@@ -5180,6 +5483,23 @@ Object {
       "lg": undefined,
       "px": undefined,
       "sm": undefined,
+    },
+    "opacity": Object {
+      "0": undefined,
+      "10": undefined,
+      "100": undefined,
+      "20": undefined,
+      "25": undefined,
+      "30": undefined,
+      "40": undefined,
+      "5": undefined,
+      "50": undefined,
+      "60": undefined,
+      "70": undefined,
+      "75": undefined,
+      "80": undefined,
+      "90": undefined,
+      "95": undefined,
     },
     "overflow": Object {
       "hidden": undefined,
@@ -5796,6 +6116,53 @@ Object {
         "marginVertical": 22,
       },
     },
+    "opacity": Object {
+      "0": StyleSheet {
+        "opacity": 0,
+      },
+      "10": StyleSheet {
+        "opacity": 0.1,
+      },
+      "100": StyleSheet {
+        "opacity": 1,
+      },
+      "20": StyleSheet {
+        "opacity": 0.2,
+      },
+      "25": StyleSheet {
+        "opacity": 0.25,
+      },
+      "30": StyleSheet {
+        "opacity": 0.3,
+      },
+      "40": StyleSheet {
+        "opacity": 0.4,
+      },
+      "5": StyleSheet {
+        "opacity": 0.05,
+      },
+      "50": StyleSheet {
+        "opacity": 0.5,
+      },
+      "60": StyleSheet {
+        "opacity": 0.6,
+      },
+      "70": StyleSheet {
+        "opacity": 0.7,
+      },
+      "75": StyleSheet {
+        "opacity": 0.75,
+      },
+      "80": StyleSheet {
+        "opacity": 0.8,
+      },
+      "90": StyleSheet {
+        "opacity": 0.9,
+      },
+      "95": StyleSheet {
+        "opacity": 0.95,
+      },
+    },
     "overflow": Object {
       "hidden": StyleSheet {
         "overflow": "hidden",
@@ -6343,6 +6710,23 @@ Object {
       "lg": undefined,
       "px": undefined,
       "sm": undefined,
+    },
+    "opacity": Object {
+      "0": undefined,
+      "10": undefined,
+      "100": undefined,
+      "20": undefined,
+      "25": undefined,
+      "30": undefined,
+      "40": undefined,
+      "5": undefined,
+      "50": undefined,
+      "60": undefined,
+      "70": undefined,
+      "75": undefined,
+      "80": undefined,
+      "90": undefined,
+      "95": undefined,
     },
     "overflow": Object {
       "hidden": undefined,
