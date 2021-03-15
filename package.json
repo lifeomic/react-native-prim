@@ -1,6 +1,6 @@
 {
   "name": "@lifeomic/prim",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "Prim is a customizable TypeScript atomic styles framework for React Native.",
   "repository": "git@github.com:lifeomic/react-native-prim.git",
   "author": "LifeOmic <oss@lifeomic.com>",
