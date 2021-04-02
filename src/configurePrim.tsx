@@ -39,14 +39,8 @@ type PrimOptions<
 
 const disabledStyleSheet: CreateStyleSheet = function <
   T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>
->(styles: T | StyleSheet.NamedStyles<T>): T {
-  return Object.entries(styles).reduce(
-    (styles, [key]) => ({
-      ...styles,
-      [key]: undefined,
-    }),
-    {},
-  ) as T
+>(_styles: T | StyleSheet.NamedStyles<T>): T {
+  return {} as T
 }
 
 type PrimStyles<
@@ -117,20 +111,17 @@ class PrimConfiguration<
       Attribute extends keyof ViewStyle | keyof TextStyle,
       SubConfig extends Record<string, any>
     >(subConfigs: SubConfig, attribute: Attribute) {
+      const styles: any = {}
+      for (const configName in subConfigs) {
+        styles[configName] = { [attribute]: subConfigs[configName] }
+      }
       return ss<
         {
           [c in keyof SubConfig]: {
             [ca in Attribute]: SubConfig[c]
           }
         }
-      >({
-        ...(Object.entries(subConfigs)
-          .map(([name, size]) => ({
-            [name]: { [attribute]: size },
-          }))
-          // `any` is needed here because `Object.entries` erases the key type
-          .reduce((styles, style) => ({ ...styles, ...style }), {}) as any),
-      })
+      >(styles)
     }
     const ssForForAttributeWithRelativeSizes = <
       Attribute extends keyof ViewStyle | keyof TextStyle
@@ -385,23 +376,18 @@ class PrimConfiguration<
       const prim = useMemoOne(() => {
         const enabledStyles = primStyles(selectedColors, StyleSheet.create)
         const disabledStyles = primStyles(selectedColors, disabledStyleSheet)
-        const screenSizeStyles = Object.keys(screenSizes).reduce(
-          (screenSizes, screenSize) => ({
-            ...screenSizes,
-            [screenSize]:
-              screenSize === selectedScreenSize
-                ? enabledStyles
-                : disabledStyles,
-          }),
-          {},
-        ) as {
-          [k in keyof ScreenSize]: Styles
+        const screenSizeStyles: any = {}
+        for (const screenSize in screenSizes) {
+          screenSizeStyles[screenSize] =
+            screenSize === selectedScreenSize ? enabledStyles : disabledStyles
         }
         return {
           mode: selectedMode,
           screenSize: selectedScreenSize,
           ...enabledStyles,
-          ...screenSizeStyles,
+          ...(screenSizeStyles as {
+            [k in keyof ScreenSize]: Styles
+          }),
         }
       }, [selectedMode, colors, selectedScreenSize])
 

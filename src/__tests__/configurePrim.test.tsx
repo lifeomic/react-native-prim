@@ -141,29 +141,29 @@ describe('usePrim', () => {
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
       se: { w: { sm: { width: 22 } } },
-      x: { w: { sm: undefined } },
-      tablet: { w: { sm: undefined } },
+      x: { w: {} },
+      tablet: { w: {} },
     })
     setScreenSize(ScreenSize.tablet)
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
-      se: { w: { sm: undefined } },
-      x: { w: { sm: undefined } },
+      se: { w: {} },
+      x: { w: {} },
       tablet: { w: { sm: { width: 22 } } },
     })
     setScreenSize(ScreenSize.x)
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
-      se: { w: { sm: undefined } },
+      se: { w: {} },
       x: { w: { sm: { width: 22 } } },
-      tablet: { w: { sm: undefined } },
+      tablet: { w: {} },
     })
     setScreenSize(ScreenSize.se)
     expect(result.current).toMatchObject({
       w: { sm: { width: 22 } },
       se: { w: { sm: { width: 22 } } },
-      x: { w: { sm: undefined } },
-      tablet: { w: { sm: undefined } },
+      x: { w: {} },
+      tablet: { w: {} },
     })
   })
 })
