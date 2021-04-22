@@ -1,5 +1,5 @@
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { TextStyle, ViewStyle, StyleSheet, StyleProp } from 'react-native'
 import { useMemoOne } from 'use-memo-one'
 
@@ -439,7 +439,7 @@ export default function configurePrim<
     FontSize,
     FontWeight
   >
-  type CustomTheme = ThisTheme & CustomAtoms
+  type CustomTheme = ThisTheme & CustomAtoms & { startupTime: number }
 
   const PrimContext = React.createContext<null | CustomTheme>(null)
   const usePrim = () => {
@@ -450,6 +450,7 @@ export default function configurePrim<
   }
 
   const PrimProvider: React.FC = ({ children }) => {
+    const before = Date.now()
     const theme = usePrimTheme()
     const value = useMemoOne(() => {
       return {
@@ -457,7 +458,20 @@ export default function configurePrim<
         ...customAtoms(theme),
       }
     }, [theme])
-    return <PrimContext.Provider value={value}>{children}</PrimContext.Provider>
+    const after = Date.now()
+    const [startupTime] = useState(after - before)
+    const profiledValue = useMemoOne(
+      () => ({
+        ...value,
+        startupTime,
+      }),
+      [value, startupTime],
+    )
+    return (
+      <PrimContext.Provider value={profiledValue}>
+        {children}
+      </PrimContext.Provider>
+    )
   }
 
   function primmed<
