@@ -39,8 +39,12 @@ type PrimOptions<
 
 const disabledStyleSheet: CreateStyleSheet = function <
   T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>
->(_styles: T | StyleSheet.NamedStyles<T>): T {
-  return {} as T
+>(styles: T | StyleSheet.NamedStyles<T>): T {
+  const disabledStyles: any = {}
+  for (const style in styles) {
+    disabledStyles[style] = undefined
+  }
+  return disabledStyles as T
 }
 
 type PrimStyles<
